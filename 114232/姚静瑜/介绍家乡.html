@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的家乡</title>
+    <style>
+        /* 页面基础样式 */
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            list-height:1.6;
+        }
+        
+        /* 页头样式 */
+        header {
+            background-color: #5fb261;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;/* 最大宽度 */  
+            margin: 0 auto; /* 居中 */  
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* 卡片布局 */
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            padding: 15px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius:10px 10px 10px 10px;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color:#333;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* 音频播放区域 */
+        .audio-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* 视频样式 */
+        .video-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #9af99d;
+            color: rgb(7, 0, 0);
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>欢迎来到我的家乡湖州</h1>
+    </header>
+
+    <div class="container">
+        <!-- 卡片1：图片展示 -->
+        <div class="card">
+            <img src="家乡.JPG" alt="家乡风景">
+            <div class="card-content">
+                <h2 class="card-title">美丽的家乡</h2>
+                <p class="card-description">我的家乡湖州南浔是江南水乡，青石板路串起古桥老宅，河边摇橹船慢悠悠晃过。中西风格的老宅藏着故事，
+                    百间楼烟火气十足，街边羊肉面热腾腾，适合慢慢走，感受时光停在水波里。</p>
+            </div>
+        </div>
+
+        <!-- 卡片2：视频展示 -->
+        <div class="card video-container">
+            <h2 class="card-title">湖州南浔</h2>
+            <video controls>
+                <source src="南浔古镇.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- 卡片3：背景音乐 -->
+        <div class="card audio-container">
+            <h2 class="card-title">背景音乐</h2>
+            <audio controls autoplay>
+                <source src="青花瓷.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 姓名：姚静瑜 | 联系电话: 13587940873</p>
+    </footer>
+
+</body>
+</html>
