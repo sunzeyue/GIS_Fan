@@ -1,0 +1,22 @@
+/* 颜色渐变动画 */
+.color-change {
+    animation: rainbow 3s infinite;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* 关键帧动画 */
+@keyframes rainbow {
+    0%   { color: red; }
+    25%  { color: yellow; }
+    50%  { color: blue; }
+    75%  { color: green; }
+    100% { color: red; }
+}
+
+/* 可选：添加悬停效果 */
+.color-change:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
