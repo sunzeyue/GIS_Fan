@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        #top {
+            width: 100%;
+            height: 100px;
+            color: #3f72af;
+            background-color: #e3fdfd;
+            text-align: center;
+            line-height: 100px; /* 调整为与高度相同 */
+            font-size: 30px;
+            border-radius: 15px;
+        }
+        #main {
+            margin: 20px;
+            padding: 20px;
+            background: linear-gradient(to right, #defcf9, #cca8e9);
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #person_picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            transition: transform 1s;
+        }
+        #person_picture:hover {
+            transform: rotate(360deg);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: none; /* 隐藏表格边框 */
+        }
+        table, th, td {
+            border: none; /* 隐藏单元格边框 */
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td:first-child {
+            width: 10%;
+        }
+        .audio-player {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">个人简介</div>
+    <div id="main">
+        <img src="person.jpg" alt="个人照片" id="person_picture">
+        <h2>李沛泽</h2>
+        <p>我是李沛泽，这是我的个人主页，你可以在这里了解我。</p>
+        <h3>个人简介</h3>
+        <p>现就读于中国地质大学地理与信息工程学院，2023级本科生，专业为地理信息科学。</p>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>李沛泽</td>
+                <td>年龄</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>学校</td>
+                <td>中国地质大学</td>
+                <td>专业</td>
+                <td>地理信息科学</td>
+            </tr>
+            <tr>
+                <td>年级</td>
+                <td>2023级</td>
+                <td>爱好</td>
+                <td>编程、阅读</td>
+            </tr>
+            <tr>
+                <td>家乡</td>
+                <td>河北 邯郸</td>
+                <td>电话</td>
+                <td>18632022208</td>
+            </tr>
+            <tr>
+                <td>邮箱</td>
+                <td><a href="https://mail.163.com/">18632022208@163.com</a></td>
+            </tr>
+        </table>
+
+        <audio controls autoplay>
+            <source src="intro.mp3" type="audio/mpeg" >
+            您的浏览器不支持音频元素。
+        </audio>
+    </div>
+</body>
+</html>
