@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>程钰文的自我介绍</title>
+    <link rel="stylesheet" href="CSS\首页.css">
+    
+    <link rel="stylesheet" href="CSS\leaflet.css">
+    <script src="JS\leaflet.js"></script>
+    <script src="JS\leaflet.ChineseTmsProviders.js"></script>
+   
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="site-header">
+        <div class="container">
+            <a class="logo" href=""></a >
+            <div class="search-box">
+                <input type="text" placeholder="程钰文的自我介绍">
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+
+        <div class="slide">
+            <ul>
+                <li>
+                    <a href="#"><img id="Avatar" src="images\Avatar.png" alt=""></a>
+                    <div class="slide-list" style="z-index: 1001;">
+                        <div class="heartContainer">
+                            <div class="heart"></div>
+                        </div>
+
+                    </div>
+                    
+                </li>
+                
+                <li>
+                    <a href="#"><img src="images\我在这里.png" alt="" style="width: 42px;height: 42px;"></a>
+                    <div class="slide-list-map">
+                        
+                        <div id="mapid" style="width: 992px;height: 460px;"></div>
+                        
+                        <script>
+                            var myMap = L.map('mapid',{
+                            center:[30.5,114.6],
+                            zoom:12,
+                            zoomControl:true
+                        }); 
+                        
+                                L.tileLayer.chinaProvider('TianDiTu.Normal.Map',{ //加载地图
+                                key:"5f273a217a14c47e7455754e6b600529",
+                                maxZoom:18,
+                                minZoom:5
+                            }).addTo(myMap);
+
+                            L.tileLayer.chinaProvider('TianDiTu.Normal.Annotion',{ //加载地图
+                                key:"5f273a217a14c47e7455754e6b600529",
+                                maxZoom:18,
+                                minZoom:5
+                            }).addTo(myMap);
+                    
+                            var geojsonFeature={
+                                "type":"Feature",
+                                "properties":{
+                                    "名称":"中国地质大学（武汉）未来城校区",
+                                },
+                                "geometry":{
+                                    "type":"Point",
+                                    "coordinates":[114.61225032806398,30.45973503762294]
+                                }
+                            };
+                            L.geoJSON(geojsonFeature).addTo(myMap);
+
+         
+                        </script>
+                    </div>
+                    
+                </li>
+                <li>
+                    <a href="#">个人信息</a>
+                    <div class="slide-list" style="z-index: 1001;">
+                        <div style="padding-left: 5%;" >
+                            <p class="textContent">姓名：程钰文</p>
+                            <p class="textContent">年龄:20</p>
+                            <p class="textContent">籍贯：贵州贵阳</p>
+                            <p class="textContent">爱好：音乐,
+                                阅读,
+                                运动,
+                            电影</p>
+                            <p class="textContent">邮箱:3337454623@qq.com</p>
+                            <p class="textContent">电话:18286091512</p>
+                            <p class="textContent"></p>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li>
+                    <a href="#">我的专业</a>
+                    <div class="slide-list"><a href="https://baike.baidu.com/item/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/2553662"  style="padding-left: 40%;">
+                        <p class="textContent"   >地理信息科学</p></a>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;地理信息科学（Geographic Information Science，简称GIScience）是一门集地理学、计算机科学、遥感技术、空间统计与数据分析于一体的交叉学科，专注于地理空间数据的采集、
+                            管理、分析、可视化与应用。该专业以地理信息系统（GIS）为核心工具，结合卫星遥感、全球定位系统（GPS）、大数据和人工智能等技术，
+                            研究地球表层自然与人文现象的时空分布规律及其动态变化。随着数字化转型加速，地理信息科学在智慧城市、自然资源管理、气候变化研究、商业选址、无人驾驶等领域应用广泛。毕业生可在政府部门（如自然资源、生态环境、测绘部门）、
+                            科研机构、互联网企业（如地图导航、位置服务）、环境咨询公司等领域从事技术研发、数据分析或项目管理等工作。学科兼具科学探索与社会价值，是连接数字世界与真实空间的重要桥梁。
+
+                        </p>
+                    </div>
+                </li>
+                <li>
+               <a href="#">我与音乐</a>
+                    <div class="slide-list">
+                        <h3 style="padding-left: 40%;">我的收藏音乐</h3>
+                        <h4 style="padding-left: 42%;">贝加尔湖畔</h4>
+                        <div class="audioDiv">
+                            <audio  src="data\1月29日 上午12点02分(3).m4a..mp3" controls  loop >
+                           
+                            </audio>
+                        </div>
+                        <h4 style="padding-left: 42%;">Not&nbsp; Like&nbsp; Us</h4>
+                        <div class="audioDiv">
+                            <audio  src="data\notLikeUs.mp3" controls  loop >
+                           
+                            </audio>
+                        </div>
+                        <h4 style="padding-left: 42%;">特别的人</h4>
+                        <div class="audioDiv">
+                            <audio  src="data\specialOne.mp3" controls  loop >
+                           
+                            </audio>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li>
+                    <a href="#">我与影视</a>
+                    <div class="slide-list" >
+                        <div style="padding-left: 40%;"><h3>我的收藏视频</h3></div>
+                        <div style="padding-left: 20%;">
+                            
+                        <h4>Pulp &nbsp;&nbsp;Fiction!</h4>
+                        <video src="data\pulpfication.mp4" controls width="600px"></video>
+                        </div>
+                        
+                    </div>
+                </li>
+                <li>
+                    <a href="#">我与体育</a>
+                    <div class="slide-list">
+                    <div> <p class="textContent" style="text-align: center;">篮球 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;羽毛球</p></div>
+                    
+                    <div style="justify-content: center;display: flex;">
+                        <img src="images\篮球.jpg" alt="" style="padding-left: 40px;" >
+                        <img src="images\羽毛球.jpg" alt="" style="padding-left: 50px;" >
+                    </div>
+                    
+                    
+                    </div>
+                </li>
+                
+            </ul>
+    
+         </div>
+        
+    </nav>
+
+    <!-- 脚部 -->
+    <footer class="site-footer">
+        <div class="footer-links container">
+            <div class="link-group">
+                <h3>资源跳转</h3>
+                <a href="https://www.bilibili.com/"><h4 style="color:palevioletred">Bilibili</h4></a>
+            </div>
+            <div class="link-group">
+                <h3>关于我</h3>
+                <a href="https://github.com/"><h4 style="color:black">GitHUb</h4></a>
+                <a href="https://gitee.com/"><h4 style="color:red">GitEE</h4></a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>自我介绍</p >
+        </div>
+    </footer>
+</body>
+</html>
