@@ -1,0 +1,186 @@
+/* 全局样式 */
+body {
+    font-family: 'Montserrat', 'Noto Serif SC', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #007BFF, #ADD8E6, #E6E6FA);
+    color: #333;
+}
+
+/* 网页头部样式 */
+header {
+    background: linear-gradient(to right, #007BFF, #ADD8E6);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.basic-info {
+    font-size: 20px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #b3e0ff;
+}
+
+/* 音乐播放部分样式 */
+.music-player {
+    background: linear-gradient(to left, #007BFF, #ADD8E6);
+    color: white;
+    text-align: center;
+    padding: 30px 0; /* 减小内边距，缩小大小 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.music-player h2 {
+    font-size: 28px; /* 减小标题字体大小 */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+audio {
+    width: 60%; /* 减小音频播放器宽度 */
+    max-width: 400px;
+}
+
+/* 个人信息部分样式 */
+.personal-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    margin: 60px;
+    border-radius: 12px;
+}
+
+.photo {
+    margin-right: 60px;
+}
+
+.photo img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid #007BFF;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 2;
+}
+
+/* 学校信息部分样式 */
+.school-info {
+    background: linear-gradient(to left, #007BFF, #ADD8E6);
+    color: white;
+    text-align: center;
+    padding: 70px 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.school-info h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.school-info p {
+    font-size: 22px;
+}
+
+/* 个人爱好信息部分样式 */
+.hobbies-info {
+    text-align: center;
+    padding: 70px 60px;
+}
+
+.hobbies-info h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hobby-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hobby-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hobby-box:hover {
+    transform: scale(1.05);
+}
+
+.hobby-box img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.hobby-box p {
+    font-size: 18px;
+}
+
+/* 个人技能介绍部分样式 */
+.skills-info {
+    background: linear-gradient(to right, #007BFF, #ADD8E6);
+    color: white;
+    text-align: center;
+    padding: 70px 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills-info h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.skills-info table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.skills-info th,
+.skills-info td {
+    padding: 15px;
+    border: 1px solid #b3e0ff;
+}
+
+.skills-info th {
+    background-color: #007BFF;
+}
+
+/* 网页底部样式 */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 18px;
+}
