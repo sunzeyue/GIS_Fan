@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宁夏五宝</title>
+    <style>
+      /* 全局样式 */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://q0.itc.cn/images01/20241104/93d8025afad64f5e920c9bb46325eb22.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #333;
+      }
+
+      /* 标题和分割线样式 */
+      h1 {
+        text-align: center;
+        margin: 20px auto;
+        width: fit-content;
+        font-size: 48px;
+        font-family: KaiTi, serif;
+        background: linear-gradient(90deg, #feb47b, #31adf5);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+
+      h2 {
+        text-align: center;
+        margin: 0 auto 20px;
+        width: fit-content;
+        color: #000000;
+        font-size: 28px;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid #000000;
+        width: 80%;
+        margin: 20px auto;
+      }
+
+      /* 头部样式 */
+      .header {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        filter: brightness(0.8);
+      }
+
+      /* 内容区域样式 */
+      .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      /* 每个宝贝介绍部分的容器样式 */
+      .item-container {
+        border: 4px solid #ffd147;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .item-container:hover {
+        transform: scale(1.02);
+      }
+
+      /* 每个宝贝介绍部分样式 */
+      .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .text-container {
+        width: 60%;
+      }
+
+      .image {
+        width: 35%;
+        text-align: right;
+      }
+
+      .image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .image img:hover {
+        transform: scale(1.05);
+      }
+
+      /* 浮动窗口样式 */
+      .floating-window {
+        position: fixed;
+        top: 50px;
+        left: 20px;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 2px solid #ffd147;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        transition: left 0.3s ease;
+      }
+
+      @media (max-width: 1200px) {
+        .floating-window {
+          left: -220px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          flex-direction: column;
+        }
+
+        .text-container,
+        .image {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 头部图片 -->
+    <div class="header">
+      <img
+        src="https://www.nxnews.net/tp/tjxw/202212/W020221219261938003947.jpg"
+        alt="宁夏风景图"
+      />
+    </div>
+    <!-- 主标题 -->
+    <h1>宁夏五宝</h1>
+
+    <!-- 浮动窗口 -->
+    <div class="floating-window">
+      <h3>宁夏回族自治区介绍</h3>
+      <p>
+        宁夏回族自治区，简称宁，是中国五大少数民族自治区之一。处在中国西部的黄河上游地区，东邻陕西省，
+        西部、北部接内蒙古自治区，南部与甘肃省相连。
+      </p>
+      <p>
+        宁夏是中华文明的发祥地之一，历史上是“丝绸之路”的要道，素有“塞上江南”之美誉。
+      </p>
+    </div>
+
+    <!-- 内容容器 -->
+    <div class="content">
+      <!-- 红宝：枸杞 -->
+      <div class="item-container">
+        <h2>红宝：枸杞</h2>
+        <hr />
+        <div class="section">
+          <div class="text-container">
+            <p>
+              枸杞是木本植物，浆里呈鲜红色，形似纺锤，更似红玛瑙坠，是宁夏的传统名牌出口商品，以皮薄、
+              肉厚、籽少、品质优良驰名中外。历史上是皇室贡品。
+            </p>
+            <p>
+              枸杞是一种名贵中药，营养成份十分丰富，
+              并有很高的药物价值，不仅含铁、磷、钙等物质，而且还含有大量糖、脂肪、蛋白质及氨基酸、多
+              糖色素、维生素、甾醇、甙类等，有润肺清肝、滋肾、益气、生精、助阳、祛风、明目、强筋骨的
+              功能。
+            </p>
+            <p>
+              现应市者多为经过脱水处理的干果，用法主要有三：入药、泡酒泡茶、做菜。它的系列产品
+              有：干鲜枸杞、枸杞菜、枸杞酒、枸杞水晶糖、鲜枸杞罐头，枸杞蜂蜜等。
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://q1.itc.cn/images01/20240729/b17ebe29c78344d88d431b9464140c72.jpeg"
+              alt="枸杞"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 黄宝：甘草 -->
+      <div class="item-container">
+        <h2>黄宝：甘草</h2>
+        <hr />
+        <div class="section">
+          <div class="text-container">
+            <p>
+              甘草，豆科，多年生草本植物。宁夏甘草以骨重粉足、条干顺直、口面新鲜、加工精细著称。出口叫
+              “西正甘草”或“西正草”。
+            </p>
+            <p>
+              有解毒、祛痰、止痛、解痉、抗癌等功能，并有补脾益气、滋阴润肺、缓急
+              解毒、调和百药的效果。
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://copyright.bdstatic.com/vcg/creative/62f83a05ed23c78d6e4d0d7dbb1dee44.jpg@h_1280"
+              alt="甘草"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 蓝宝：贺兰石 -->
+      <div class="item-container">
+        <h2>蓝宝：贺兰石</h2>
+        <hr />
+        <div class="section">
+          <div class="text-container">
+            <p>
+              贺兰石产于海拔2600米左右的贺兰山悬崖上，石料结构均匀，质地细腻，刚柔相宜。用它刻制的贺兰砚
+              ，具有发墨、存墨、护毫、耐用等优点。
+            </p>
+            <p>
+              贺兰石天然形成深紫绿两色，相互辉映，色彩鲜明，紫底绿彩
+              ，形态繁多奇妙，好像平柔绒上镶嵌着各式各样的翡翠。除两彩、三彩、多彩外，还有“石眼”、“玉带”
+              、“银线”、“云纹”等特殊结构，妙不可言。雕刻艺人因石制宜，精心用料，雕出千姿百态的贺兰砚。
+            </p>
+            <p>
+              历
+              史上贺兰砚曾与端砚、歙砚齐名，素有“一端二歙三贺兰”之说。它不仅是“文房四宝”的实用品，而且是
+              珍贵的工艺收藏品。除刻制砚台外，贺兰石还被用来刻制成印章、镇纸、笔架等，都是雅致的文房贵品。
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://img2.baidu.com/it/u=2042488216,117469081&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
+              alt="贺兰石"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 白宝：滩羊皮 -->
+      <div class="item-container">
+        <h2>白宝：滩羊皮</h2>
+        <hr />
+        <div class="section">
+          <div class="text-container">
+            <p>
+              滩羊皮裘皮用绵羊品种，在世界裘皮中独树一帜。有二毛、沙毛之分，毛色有纯白、纯黑、浅褐、杂色几种
+              ，多为纯白色。黑色皮又叫紫羔皮，因其少而贵。
+            </p>
+            <p>
+              白色皮张毛色洁白，光泽如玉，皮板薄如厚纸，但质地坚
+              韧，柔软丰匀。毛穗呈现出特有的波浪弯，好像一湖涟漪、轻盈柔软，美观大方，保温性极佳，实为各类裘
+              皮中之佼佼者，很早以来就是传统的名牌出口商品。
+            </p>
+            <p>
+              滩羊毛纤维细长均匀，绒毛轻柔蓬松，富弹性。也是制
+              作毛毯、披肩、围脖等装饰品的高级原料。宁夏产的提花毛毯，以其优良的品质和独特的风格驰名世界。
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://p4.itc.cn/images01/20210129/96bfc5b3842046039dc190fc9bfd3a3b.jpeg"
+              alt="滩羊皮"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- 黑宝：发菜 -->
+      <div class="item-container">
+        <h2>黑宝：发菜</h2>
+        <hr />
+        <div class="section">
+          <div class="text-container">
+            <p>
+              发菜在植物分类学中，属兰藻门，念珠藻的一种。是一种自然生长的珍贵的食用菌藻，产于干旱半干旱的宁夏中
+              南部地区，逢雨萌发，深秋早春时节采收。制作过程是将采回的带杂质的“毛菜”拣选，去杂质，润湿晒干包装。
+            </p>
+            <p>
+              新鲜发菜呈蓝绿色或褐色，风干后乌黑，形态酷似东方女子的秀发，故得名。它是一种高档食品，与海参、鱼肚
+              、燕窝、鱿鱼、猴头、鱼翅、熊掌合称“美味八珍”，是喜庆筵宴必不可少的山珍。
+            </p>
+            <p>
+              发菜的营养十分丰富，而且极
+              易被人体吸收。其蛋白质含量为鸡蛋的20倍，含糖类、脂肪、钙质也较多，更富磷、铁等矿物质。在医学上有助
+              消化、解积腻、清胃肠、降血压等功能，手术后的病人吃发菜，还能促使伤口愈合。
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="http://img0.baidu.com/it/u=3653632433,3263191390&fm=253&app=138&f=JPEG?w=800&h=1067"
+              alt="发菜"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
