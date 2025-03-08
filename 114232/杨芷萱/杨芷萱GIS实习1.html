@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哪吒2：魔童脑海观影推荐</title>
+    <style>
+        :root {
+            --main-red: #b73b45;
+            --deep-blue: #67a0f5b5;
+            --border-color: #1a1a1a; /* 新增黑色系变量 */
+            --gold-accent: #fdc704; /* 新增金色点缀 */
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            color: #e2f2f7;
+            background: 
+                linear-gradient(45deg, rgba(63, 141, 250, 0.925) 0%, rgba(244, 50, 6, 0.762) 100%),
+                repeating-linear-gradient(
+                    45deg,
+                    rgba(49, 198, 248, 0.636) 0px,
+                    rgba(249, 80, 1, 0.804) 2px,
+                    transparent 2px,
+                    transparent 4px
+                ); /* 双层渐变背景+金色细纹 */
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* 新增装饰性光效 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, 
+                rgba(91, 184, 238, 0.301) 0%,
+                rgba(55, 99, 194, 0.712) 70%);
+            z-index: -1;
+            animation: glow 10s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { opacity: 0.3; }
+            to { opacity: 0.7; }
+        }
+
+        /* 视频容器修改 */
+        .video-wrapper {
+            position: relative;
+            width: 90%; /* 增加宽度占比 */
+            max-width: 1200px; /* 设置最大宽度 */
+            margin: 3rem auto; /* 增加垂直间距 */
+            padding-bottom: 50%; /* 调整比例使显示更大 */
+            border: 3px solid #1a1a1a; /* 同步黑色边框 */
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none; /* 移除iframe原有边框 */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        /* 图片画廊修改 */
+        .image-gallery img {
+            border: 2px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover img {
+            border-color: var(--gold-accent);
+            filter: brightness(1.1);
+        }
+
+        .image-caption {
+            background: linear-gradient(to top, 
+                rgba(0,0,0,0.9) 0%, 
+                rgba(0,0,0,0.6) 100%);
+            font-family: 'Microsoft YaHei', sans-serif;
+            color: var(--gold-accent);
+        }
+
+        /* 推荐语升级 */
+        .recommendation {
+            border-left: 4px solid var(--gold-accent);
+            background: rgba(245, 80, 4, 0.193);
+            padding: 2.3rem; /* 增加内边距 */
+            margin: 2.8rem 0;
+        }
+        
+        .recommendation h3 {
+            font-size: 2em; /* 原默认约1.5em */
+            margin-bottom: 1.8rem;
+            letter-spacing: 1px; /* 增加字间距 */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 添加文字阴影 */
+        }
+
+/* 正文放大 */
+        .recommendation p {
+            font-size: 1.1em; /* 原默认1em */
+            line-height: 1; /* 增加行高 */
+            margin: 1.2rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        /* 响应式导航栏 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.6rem;
+            background: linear-gradient(135deg, var(--main-red) 50%, #22c3f8);
+        }
+        .navbar a {
+            color: rgb(34, 2, 2);
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .navbar a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* 剧情图 */
+        .plot-card {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            margin: 3rem auto;
+            max-width: 1200px;
+            background: rgba(50, 24, 24, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        .plot-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /*插入的剧情图片区*/
+        .image-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            margin: 2rem 0;
+            scroll-behavior: smooth;
+        }
+        .gallery-item {
+            flex: 0 0 300px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid var(--main-red);
+        }
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            width: 100%;
+            padding: 0.8rem;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home">首页</a>
+        <a href="#plot">观影推荐</a>
+        <a href="https://www.iqiyi.com/v_19rrcuke28.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01"">观看前作</a>
+    </nav>
+
+    <main class="container">
+        <!-- 剧情简介区域 -->
+        <section class="plot-card" id="plot">
+            <img src="C:\Users\lenovo\Videos\哪吒\水墨双人.png" alt="电影海报" class="plot-image">
+            <div>
+                <h2 style="color: rgb(2, 21, 59);">魔童觉醒·抗争之战</h2>
+                <p>《哪吒2:魔童闹海》是《哪吒》系列电影的第二部作品，由饺子（原名杨宇）编剧并导演，于2025年1月29日在中国大陆上映。‌影片延续了第一部的背景和人物设定，讲述了天劫之后，哪吒和敖丙的灵魂得以保留，但他们的肉身即将魂飞魄散。为了拯救他们，太乙真人决定使用七色宝莲为二人重塑肉身，但这个过程充满了重重困难和挑战。‌
+                    在重塑肉身的过程中，申公豹借由西海龙王之能袭击陈塘关，东海龙王敖光等四海龙王出现，敖丙出现意外。哪吒为了自己和陈塘关，也为了恢复敖丙肉身，哪吒与附身的敖丙一同踏上考核成仙之路。哪吒和敖丙的关系在种种阴谋误会下不断变化，最终携手对敌，共同面对不公和未来。‌
+                </p>
+                <a href="https://www.iqiyi.com/v_19rrcuke28.html?vfm=2008_aldbd&fc=828fb30b722f3164&fv=p_02_01"" style="color:var=rgb(79, 219, 210);">→ 补看《哪吒1》完整剧情</a>
+            </div>
+        </section>
+
+        <div>
+            <strong style="font-size: 1.2em; display: block; margin: 1rem 0; 
+                     text-shadow: 0 2px 4px rgba(0,0,0,0.3);">  震撼预告片抢先看 </strong>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="C:\Users\lenovo\Videos\哪吒\哪吒2预告片.mp4" 
+                    allowfullscreen></iframe>
+        </div>
+        </div>
+
+         <!-- 剧情图片区域 -->
+         <div class="gallery-container" style="margin: 3rem 0;">
+            <h3 style="font-size: 1.4em; border-left: 4px solid var(--gold-accent);
+                     padding-left: 1rem; margin-bottom: 1.5rem;"> 精彩剧情瞬间 </h3>
+            <div class="image-gallery">
+                <figure class="gallery-item">
+                    <img src="C:\Users\lenovo\Videos\哪吒\石矶娘娘.jpg" alt="可爱石矶娘娘">
+                    <figcaption class="image-caption">可爱石矶娘娘</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="C:\Users\lenovo\Videos\哪吒\结界兽.jpg" alt="青铜活宝结界兽">
+                    <figcaption class="image-caption">青铜活宝结界兽</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="C:\Users\lenovo\Videos\哪吒\敖丙.jpg" alt="敖丙抵抗三龙王">
+                    <figcaption class="image-caption">敖丙肉身破碎</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="C:\Users\lenovo\Videos\哪吒\藕粉.jpg" alt="藕饼两人藕粉身">
+                    <figcaption class="image-caption">藕粉哪吒敖丙</figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+        <div class="recommendation">
+            <h3 style="color: rgba(78, 22, 121, 0.842);">观影人留言</h3 >
+            <p>「特效场面超越前作，建模大幅优化!」</p>
+            <p >「剧情与特效的完美结合，笑中有泪。」</p>
+            <p>「深度挖掘中国传统神话，在继承传统中创新实现」</p>
+            <p>「听我的去看！绝对不亏！！」</p>
+            <p>「好看就一个字，我要说n多次~」</p>
+            <p>「哪吒2给了我们一个很大的惊喜，上映前很多人并不看好它，认为票房绝对会比第一部低，事实给了他们重重的一击」</p>
+            <p>「有些片段真的百看不厌啊家人们，随我加入n刷阵营吧哈哈哈哈哈哈」</p>
+            <p>「哪吒2真的是全年龄段适看啊」</p>
+            <p>「信我，去看IMAX 2D巨幕厅，进去告诉你什么叫爽的无与伦比！」</p>
+            <p>「前面的，IMAX 2D确实爽，但是我要告诉你，你根本不懂杜比厅的音效色彩有多完美！背景瀑布声都一清二楚的！」</p>
+            <p>「所有人记得慎去看4D的，看完感觉我从头被打到尾啊救命」</p>
+            <p>「总结：快去看！」</p>
+            <p>「哪吒的票房已经说明了一切」</p>
+            <p>「啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊没有别的话想说，反正就是看了血赚！！！」</p>
+        </div>
+    </main>
+</body>
+</html>
