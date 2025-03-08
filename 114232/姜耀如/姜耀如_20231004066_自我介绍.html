@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="blog, personal introduction">
+    <title>My-self Introduction</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* 渐变色背景 */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 容器布局 */
+        .container {
+            max-width: 1000px;
+            width: 90%;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            gap: 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+
+        /* 左侧栏 */
+        .sidebar {
+            width: 260px;
+            background-color: #99FFFF;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .sidebar p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* 右侧内容 */
+        .main-content {
+            flex: 1;
+        }
+
+        .main-content h2 {
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+
+        .main-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .main-content table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .main-content table td:first-child {
+            font-weight: bold;
+            width: 30%;
+        }
+
+        .main-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .main-content ul li {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        /* 分隔线 */
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        /* 音频控件 */
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧栏 -->
+        <div class="sidebar">
+            <img src="images/th.jpg" alt="人物图片">
+            <p>姜耀如</p>
+            <p>13908689926</p>
+            <p>1755686043@qq.com</p>
+        </div>
+
+        <!-- 右侧内容 -->
+        <div class="main-content">
+            <h2>My-self Introduction</h2>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>姜耀如</td>
+                </tr>
+                <tr>
+                    <td>Place:</td>
+                    <td><a href="introduce.html">湖北鄂州</a></td>
+                </tr>
+                <tr>
+                    <td>Sex:</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Height:</td>
+                    <td>180cm</td>
+                </tr>
+                <tr>
+                    <td>Weight:</td>
+                    <td>79kg</td>
+                </tr>
+                <tr>
+                    <td>Birth:</td>
+                    <td>2005-04-29</td>
+                </tr>
+                <tr>
+                    <td>Telephone:</td>
+                    <td>13908689926</td>
+                </tr>
+            </table>
+            <hr>
+            <h2>Education Background</h2>
+            <p><b>2023.09-2027.07</b> <a href="https://www.cug.edu.cn/">中国地质大学(武汉)</a></p>
+            <hr>
+            <h2>Skills</h2>
+            <ul>
+                <li>熟练掌握 C/C++</li>
+                <li>熟悉经典算法与数据结构</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 音频 -->
+    <audio controls autoplay loop>
+        <source src="audio/M500001ApaQ30ivSJc.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+</body>
+</html>
