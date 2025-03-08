@@ -1,0 +1,170 @@
+ 
+ * {
+    padding: 1;
+    margin: 1;
+ }
+ h1{
+    position:absolute;
+    left: 120px;
+    top:0;
+    line-height:80px;
+        color:rgb(137, 222, 218);
+        font-size:1.2cm;
+    }
+h2{
+        color:rgb(133, 212, 235);
+    }
+
+    header{
+    background-color: rgb(255, 239, 247);
+    height:80px;
+    border:5px #bd94a0 solid;
+    padding:30px,50px;
+    margin:30px;
+    }
+
+    header a{
+        color:cornflowerblue;
+        text-decoration:none;
+    }
+    header a:hover{
+        text-decoration: underline;
+    }
+    header li{
+        display:inline;
+        margin-right:4vw;
+    }
+    header ul{
+        position:absolute;
+        right:5vw;
+        top:0;
+        line-height:100px;
+    }
+
+    .a{
+        height:200vh;
+        border:5px #bd94a0 solid;
+        padding:30px,20px,50px;
+        margin:30px;
+        background-image: url("图片/背景2.jpg");
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:flex-end;
+    }
+    .a h2{
+        font-size:80px;
+    }
+    .a p{
+        color:rgb(236, 163, 217);
+        font-size:25px;/*字体大小*/
+        margin:25px 0;
+    }
+
+    .b{
+    background-color: rgb(255, 239, 247);
+    border:5px #bd94a0 solid;
+    margin:30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .b p{
+        color:rgb(240, 133, 192)
+    }
+
+    .c{
+        background-color:rgb(255, 239, 247);
+        border:5px #bd94a0 solid;
+        margin:30px;
+        padding:20px;
+        box-sizing: border-box;
+    }
+
+    .c-container1{
+        background-color: #f8e2f2;
+        border:5px #e4c7d0 solid;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .c-container11{
+        background-color: rgb(255, 239, 247);
+        padding: 10px,50px;
+        text-align: center;
+    }
+
+    .c-container2{
+        background-color: #f8e2f2;
+        border:5px #e4c7d0 solid;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .c-container3{
+        background-color: #f8e2f2;
+        border:5px #e4c7d0 solid;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .c ol{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .c p{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    table {
+        width: 100%; 
+        height: 100px;
+        border-collapse: collapse; /* 表格边框合并 */
+    }
+
+    td {
+        border: 1px solid #000; 
+        width:10%; /* 每个单元格宽度为表格宽度的1/10 */
+        height: 100px; 
+        text-align: center; /* 单元格内容居中 */
+        vertical-align: middle; /* 单元格内容垂直居中 */
+    }
+
+    th {
+        background-color: #f2f2f2; /* 表头背景色 */
+        border: 1px solid #000;
+        padding: 10px;
+    }
+
+    .d{
+        background-color: rgb(255, 239, 247);
+        border:5px #bd94a0 solid;/*边框及边框颜色*/
+        margin:30px;/*外边距*/
+        padding: 20px; /* 内边距 */
+        box-sizing: border-box; /* 包含边框和内边距在内计算盒子尺寸 */
+    }
+
+    .d-container{
+        background-color: #f8e2f2;
+        padding: 10px;
+        text-align: center;
+        border:5px #e4c7d0 solid;
+    }
+
+    footer{
+        background-color: black;
+        color:white;
+        height:60px;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        font-size: 14px;
+    }
