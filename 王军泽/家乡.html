@@ -1,0 +1,35 @@
+<!doctype html>
+ <head>
+  <meta charset="UTF-8">  
+  <title>我的家乡</title>
+ </head>
+ <style>
+		#wrapper{
+			width:1000px;
+			height:800px;
+		}
+</style>
+ <body>
+	<div id="wrapper"></div>
+ </body>
+</html>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.8&key=bec7233e65302894043afaa765e5949f"></script>
+<script>
+    //初始化地图插件
+	window.onload = function(){
+	    var map = new AMap.Map("wrapper", {
+            zoom: 15, //设置地图显示的缩放级别
+            center: [110.8, 32.6] //设置地图中心点坐标
+         });
+ 
+         // 创建一个 Marker 实例：（标记点）
+        var marker = new AMap.Marker({
+           position: new AMap.LngLat(110.8, 32.6), 
+           title: "位置标题"
+        });
+ 
+       // 将创建的点标记添加到已有的地图实例：
+       map.add(marker);
+	}
+</script>
+

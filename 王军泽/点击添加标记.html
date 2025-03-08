@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style>
+    html,
+    body,
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    <title>地大未来城</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <script src="https://webapi.amap.com/maps?v=2.0&key=bec7233e65302894043afaa765e5949f&plugin=AMap.MouseTool"></script>
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<div class="input-card" style="width: 200px">
+   <h4 style="margin-bottom: 10px; font-weight: 600">点击绘制标记（右键完成绘制）</h4>
+   <button class="btn" onclick="drawPolyline()" style="margin-bottom: 5px">绘制线段</button> 
+   <button class="btn" onclick="drawPolygon()" style="margin-bottom: 5px">绘制多边形</button> 
+   <button class="btn" onclick="drawRectangle()" style="margin-bottom: 5px">绘制矩形</button> 
+   <button class="btn" onclick="drawCircle()" style="margin-bottom: 5px">绘制圆形</button>
+   <button class="btn" onclick="drawLabel()" style="margin-bottom: 5px">绘制注记</button>
+</div>
+<script type="text/javascript">
+    var map = new AMap.Map("container", {
+        center: [114.616943, 30.457648],
+        zoom: 17.5,
+        viewMode: '3D',
+    });
+    // 添加 3D 罗盘控制
+    AMap.plugin(['AMap.ControlBar'], function () {
+        map.addControl(new AMap.ControlBar({
+            position: {
+                right: '20px',
+                top: '20px'
+            },
+            showControlButton: true,  // 是否显示倾斜、旋转按钮。默认为 true
+        }));
+    });
+
+    var mouseTool = new AMap.MouseTool(map)
+
+    function drawPolyline () {
+      mouseTool.polyline({
+        strokeColor: "#3366FF", 
+        strokeOpacity: 1,
+        strokeWeight: 6,
+        // 线样式还支持 'dashed'
+        strokeStyle: "solid",
+        // strokeStyle是dashed时有效
+        // strokeDasharray: [10, 5],
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      })
+    }
+
+    function drawPolygon () {
+      mouseTool.polygon({
+        strokeColor: "#FF33FF", 
+        strokeOpacity: 1,
+        strokeWeight: 6,
+        strokeOpacity: 0.2,
+        fillColor: '#1791fc',
+        fillOpacity: 0.4,
+        // 线样式还支持 'dashed'
+        strokeStyle: "solid",
+        // strokeStyle是dashed时有效
+        // strokeDasharray: [30,10],
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      })
+    }
+
+    function drawRectangle () {
+      mouseTool.rectangle({
+        strokeColor:'red',
+        strokeOpacity:0.5,
+        strokeWeight: 6,
+        fillColor:'blue',
+        fillOpacity:0.5,
+        // strokeStyle还支持 solid
+        strokeStyle: 'solid',
+        // strokeDasharray: [30,10],
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      })
+    }
+
+    function drawCircle () {
+      mouseTool.circle({
+        strokeColor: "#FF33FF",
+        strokeOpacity: 1,
+        strokeWeight: 6,
+        strokeOpacity: 0.2,
+        fillColor: '#1791fc',
+        fillOpacity: 0.4,
+        strokeStyle: 'solid',
+        // 线样式还支持 'dashed'
+        // strokeDasharray: [30,10],
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      })
+    }
+
+    
+    function drawLabel() {
+  mouseTool.marker({
+    icon: "./建筑物.png",
+    // 设置是否可以拖拽
+    draggable: true,
+        cursor: 'move',
+  });
+}
+
+    mouseTool.on('draw', function(event) {
+      // event.obj 为绘制出来的覆盖物对象
+      log.info('覆盖物对象绘制完成')
+    })
+
+</script>
+</body>
+</html>

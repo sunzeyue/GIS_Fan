@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>地大未来城</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <style>
+        html, body, #container {
+            height: 100%;
+            width: 100%;
+        }
+        .input-card {
+            width: 200px;
+            right:0px;
+            bottom: 0px;
+        }
+        .custom-marker {
+            background-image: url('https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png');
+            width: 32px;
+            height: 42px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        .custom-marker:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .custom-marker-position {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .custom-label {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .custom-label-position {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div><!--地图底图-->
+<div class="input-card">
+    <label style="color:grey">要素绘制</label>
+    <div class="input-item">
+      <input type="button" class="btn" onclick="addPoint()" value="添加点标记">
+      <input type="button" class="btn" onclick="deletePoint()" value="删除点标记">
+    </div>
+    <div class="input-item">
+      <input type="button" class="btn" onclick="addLine()" value="添加线标记">
+      <input type="button" class="btn" onclick="deleteLine()" value="删除线标记">
+    </div>
+    <div class="input-item">
+      <input type="button" class="btn" id="addPolygonBtn" onclick="addPolygon()" value="添加面标记">
+      <input type="button" class="btn" id="deletePolygonBtn" onclick="deletePolygon()" value="删除面标记">
+    </div>
+    <div class="input-item">
+      <input type="button" class="btn" onclick="addLabel()" value="添加注记">
+      <p>&emsp;&emsp;</p>
+      <input type="button" class="btn" onclick="deleteLabel()" value="删除注记">
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=bec7233e65302894043afaa765e5949f"></script>
+<script>
+    // 创建地图实例
+    var map = new AMap.Map("container", {
+      resizeEnable: true,
+      center: [114.616943, 30.457648],
+      zoom: 17.5,
+      viewMode: '3D',
+      pitch: 45
+    });
+    // 添加 3D 罗盘控制
+    AMap.plugin(['AMap.ControlBar'], function () {
+        map.addControl(new AMap.ControlBar({
+            position: {
+                right: '20px',
+                top: '20px'
+            },
+            showControlButton: true,  // 是否显示倾斜、旋转按钮。默认为 true
+        }));
+    });
+    // 标记对象
+    var markers = [];
+    var line = [];
+    var polygon = [];
+    var labels = [];
+
+    // 添加点标记
+    function addPoint() {
+      var marker = new AMap.Marker({
+        icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png",
+        position: [114.616943, 30.457648],
+        offset: new AMap.Pixel(-13, -30),
+        custom: true,
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      });
+      marker.setMap(map);
+      markers.push(marker);
+    }
+    // 删除点标记
+    function deletePoint() {
+      for (var i = markers.length - 1; i >= 0; i--) {
+        if (markers[i].getMap()) {
+          markers[i].setMap(null);
+          markers.splice(i, 1);
+        }
+      }
+    }
+    // 添加线标记
+    function addLine() {
+      var line = new AMap.Polyline({
+        path: [
+          [114.618834,30.459543],
+          [114.617395,30.457587],
+          [114.618151,30.456487]
+        ],
+        strokeColor: "#FF0000",
+        strokeWeight: 3,
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      });
+      line.setMap(map);
+      this.line.push(line);
+    }
+    // 删除线标记
+    function deleteLine() {
+      for (var i = this.line.length - 1; i >= 0; i--) {
+        if (this.line[i].getMap()) {
+          this.line[i].setMap(null);
+          this.line.splice(i, 1);
+        }
+      }
+    }
+    // 添加面标记
+    function addPolygon() {
+      var polygon = new AMap.Polygon({
+        path: [
+          [114.619827,30.45953],
+          [114.622082,30.45815],
+          [114.621014,30.455222],
+          [114.619516,30.457689]
+        ],
+        strokeColor: "#FF0000",
+        strokeWeight: 3,
+        fillColor: "#00FF00",
+        fillOpacity: 0.5,
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      });
+      polygon.setMap(map);
+      this.polygon.push(polygon);
+    }
+    // 删除面标记
+    function deletePolygon() {
+      for (var i = polygon.length - 1; i >= 0; i--) {
+        if (polygon[i].getMap()) {
+          polygon[i].setMap(null);
+          polygon.splice(i, 1);
+        }
+      }
+    }
+    // 添加注记
+    function addLabel() {
+      var marker = new AMap.Marker({
+        icon: "./地理信息.png",
+        position: [114.61891,30.460721],
+        offset: new AMap.Pixel(-13, -30),
+        custom: true,
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      });
+      marker.setMap(map);
+      markers.push(marker);
+    }
+    // 删除注记
+    function deleteLabel() {
+      for (var i = markers.length - 1; i >= 0; i--) {
+        if (markers[i].getMap()) {
+          markers[i].setMap(null);
+          markers.splice(i, 1);
+        }
+      }
+    }
+
+    // 创建地图实例
+    var map = new AMap.Map("container", {
+      resizeEnable: true,
+      center: [114.616943, 30.457648],
+      zoom: 17.5,
+      viewMode: '3D',
+      pitch: 45
+    });
+    // 添加 3D 罗盘控制
+    AMap.plugin(['AMap.ControlBar'], function () {
+        map.addControl(new AMap.ControlBar({
+            position: {
+                right: '20px',
+                top: '20px'
+            },
+            showControlButton: true,  // 是否显示倾斜、旋转按钮。默认为 true
+        }));
+    });
+    // 标记对象
+    var markers = [];
+    var line = [];
+    var polygon = [];
+    var labels = [];
+
+    // 添加点标记
+    function addPoint() {
+      var marker = new AMap.Marker({
+        icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png",
+        position: [114.616943, 30.457648],
+        offset: new AMap.Pixel(-13, -30),
+        custom: true,
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      });
+      marker.setMap(map);
+      markers.push(marker);
+    }
+    // 删除点标记
+    function deletePoint() {
+      for (var i = markers.length - 1; i >= 0; i--) {
+        if (markers[i].getMap()) {
+          markers[i].setMap(null);
+          markers.splice(i, 1);
+        }
+      }
+    }
+    // 添加线标记
+    function addLine() {
+      var line = new AMap.Polyline({
+        path: [
+          [114.618834,30.459543],
+          [114.617395,30.457587],
+          [114.618151,30.456487]
+        ],
+        strokeColor: "#FF0000",
+        strokeWeight: 3,
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      });
+      line.setMap(map);
+      this.line.push(line);
+    }
+    // 删除线标记
+    function deleteLine() {
+      for (var i = this.line.length - 1; i >= 0; i--) {
+        if (this.line[i].getMap()) {
+          this.line[i].setMap(null);
+          this.line.splice(i, 1);
+        }
+      }
+    }
+    // 添加面标记
+    function addPolygon() {
+      var polygon = new AMap.Polygon({
+        path: [
+          [114.619827,30.45953],
+          [114.622082,30.45815],
+          [114.621014,30.455222],
+          [114.619516,30.457689]
+        ],
+        strokeColor: "#FF0000",
+        strokeWeight: 3,
+        fillColor: "#00FF00",
+        fillOpacity: 0.5,
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      });
+      polygon.setMap(map);
+      this.polygon.push(polygon);
+    }
+    // 删除面标记
+    function deletePolygon() {
+      for (var i = polygon.length - 1; i >= 0; i--) {
+        if (polygon[i].getMap()) {
+          polygon[i].setMap(null);
+          polygon.splice(i, 1);
+        }
+      }
+    }
+    // 添加注记
+    function addLabel() {
+      var marker = new AMap.Marker({
+        icon: "./地理信息GIS.png",
+        position: [114.61891,30.460721],
+        offset: new AMap.Pixel(-13, -30),
+        custom: true,
+        // 设置是否可以拖拽
+        draggable: true,
+        cursor: 'move',
+      });
+      marker.setMap(map);
+      markers.push(marker);
+    }
+    // 删除注记
+    function deleteLabel() {
+      for (var i = markers.length - 1; i >= 0; i--) {
+        if (markers[i].getMap()) {
+          markers[i].setMap(null);
+          markers.splice(i, 1);
+        }
+      }
+    }
+</script>
+</html>

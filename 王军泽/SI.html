@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"content=" IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Self-Introduction</title>
+
+    <style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+ 
+		#box {
+			width: 100vw;
+			height: 100vh;
+			padding: 3px;
+			position: fixed;
+            z-index: -1;
+		}
+	</style>
+
+</head>
+
+<body>
+    <div id="box"></div><!--雪花背景-->
+
+    <div class="wrap"><!--框-->
+    <div class="inner"><!--头文字-->
+    <h1>ABOUT ME</h1>
+
+    <div id="sidebar">
+        <ul>
+            <h2 id="ml">目录</h2>
+            <li><a href="#section1">个人介绍</a></li>
+            <li><a href="#section2">应用：视频插入</a></li>
+            <li><a href="#section3">应用：canvas绘图</a></li>
+            <li><a href="#section4">联系方式</a></li>
+            <li><a href="#section5">精选图片</a></li>
+        </ul>
+    </div>
+
+    <style>
+        	#sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+ 
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+#sidebar ul li {
+    margin-bottom: 10px;
+}
+ 
+#sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+ 
+#content {
+    margin-left: 220px; /* 侧边栏宽度 + 一些间距 */
+    padding: 20px;
+}
+    </style>
+
+    <button id="switchButton">切换背景</button>
+    <link id="css1" rel="stylesheet" href="SI_1.css">
+    <link id="css2" rel="stylesheet" href="SI_2.css"disabled>
+
+    <style>
+    #switchButton {
+        background: #eb94d0;
+        /* 创建渐变 */
+        background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+        background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
+        background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
+        background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
+        background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+        /* 给按钮添加圆角 */
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        text-shadow: 3px 2px 1px #9daef5;
+        -webkit-box-shadow: 6px 5px 24px #666666;
+        -moz-box-shadow: 6px 5px 24px #666666;
+        box-shadow: 6px 5px 24px #666666;
+        font-family: Arial;
+        color: #fafafa;
+        font-size: 27px;
+        padding: 19px;
+        text-decoration: none;
+      }
+      /* 悬停样式 */
+      #switchButton:hover {
+        background: #2079b0;
+        background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
+        background-image: -moz-linear-gradient(top, #2079b0, #eb94d0);
+        background-image: -ms-linear-gradient(top, #2079b0, #eb94d0);
+        background-image: -o-linear-gradient(top, #2079b0, #eb94d0);
+        background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
+        text-decoration: none;
+      }
+    </style>
+
+    <div class="cont1">
+        <img src="./photo.jpg" alt="like" width="150"/>
+    </div>
+
+    <div id="map"><a href="家乡.html">我的家乡</a></div>
+    <style>
+        #map{
+            border:30px solid transparent;
+            width: 70px;
+        }
+        #map {  
+  background-color: #ffffff; /* 设置超链接的背景色 */  
+  padding: 5px 10px; /* 添加内边距，增加超链接的空间感 */  
+}  
+  
+#map:hover {  
+  background-color: #FFD700; /* 设置鼠标悬停时超链接的背景色 */  
+}  
+#map {  
+  transition: transform 0.3s ease-in-out; /* 添加超链接的过渡效果 */  
+}  
+  
+#map:hover {  
+  transform: rotate(360deg); /* 在鼠标悬停时旋转超链接 */  
+}  
+
+
+
+    </style>
+
+    <div class="cont2">
+    <p class="p1" id="section1">个人介绍</p>
+    <h2>王军泽</h2>
+    <p>大家好，我叫王军泽，来自湖北十堰，目前是中国地质大学 地理与信息工程学院的一名学生，就读地理信息科学专业。</p>
+    <p>目前致力于编程语言的学习，希望通过竞赛和项目磨练计算机技能，提升本科含金量。</p>
+    </div>
+
+
+    <div class="video">
+        <p class="p1" id="section2">应用：视频插入</p>
+        <video width="1000" height="650" controls>
+            <source src="https://cn-hbwh-fx-01-16.bilivideo.com/upgcxcode/72/98/1430949872/1430949872-1-16.mp4?e=ig8euxZM2rNcNbRVhwdVhwdlhWdVhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1712305337&gen=playurlv2&os=bcache&oi=994571288&trid=000056725b7abde94543b1334a9c22d57622T&mid=293160877&platform=html5&upsig=dcbe14072f0e96b68056f21abf86f080&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&cdnid=3884&bvc=vod&nettype=0&bw=55631&orderid=0,1&buvid=&build=0&mobi_app=&f=T_0_0&logo=80000000", type="video/mp4">
+        </video>
+    </div>
+    <p class="p1" id="section3">应用：canvas绘图</p>
+    <div class="javascript">
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+    </div>
+
+    <div class="cont3">
+    <p class="p1" id="section4">联系方式</p>
+    <p>QQ:2287886553</p>
+    <p>Phone:13636225096</p>
+    <p>QQ EMAIL:2287886553@qq.com</p>
+    <a href="https://space.bilibili.com/293160877?spm_id_from=333.1007.0.0">访问bilibili主页</a>
+    <a href="https://tieba.baidu.com/home/main?id=tb.1.8123de6c.5ZTsCcjfKpLtjU4o2bYxXA?t=1708363318&fr=index">访问百度贴吧主页</a>
+    </div>
+
+    <div class="cont4">
+        <p class="p1" id="section5">精选图片</p>
+        <img src="http://a1.qpic.cn/psc?/V12Grv9U2mg6wT/ruAMsa53pVQWN7FLK88i5g2N5lTLC.7ItZzPtXK1txs8gUmLPSJQ5UVC17v3C71is6O0asJExFgbqvPBBXargzu9HmYeHzRlbc1K.l8L7M8!/m&ek=1&kp=1&pt=0&bo=4w1ABuMNQAYWECA!&tl=3&vuin=2483178704&tm=1710946800&dis_t=1710948460&dis_k=3112d4157a7e6601a02d78f59ebc5a27&sce=60-4-3&rf=viewer_311"
+        alt="like"
+        width="800"/>
+        <img src="https://img.zcool.cn/community/010d445d5e7b73a80120695c5f8665.jpg@1280w_1l_2o_100sh.jpg"
+        alt="like"
+        width="800"/>
+
+    </div>
+
+</body>
+
+<script type="text/javascript">//1.行星动画
+    var canvas = document.getElementById("canvas");
+    var cxt = canvas.getContext('2d');
+    var time = 0;
+    var EarchRotate = 0;
+    var MoonX = 0;
+    var MoonY = 0;
+    //行星轨道
+    function starRoute(){
+        for(var i=0; i<=8; i++){
+            cxt.save();
+            cxt.translate(500,500);
+            cxt.strokeStyle = '#fff';
+            cxt.beginPath();
+            cxt.arc(0,0,i*55,0,2*Math.PI,false);
+            cxt.closePath();
+            cxt.stroke();
+            cxt.restore();
+        }
+    }
+    //创建Start类型(其实在js中是对象)
+    function Star(name,x,y,r,startColor,endColor,revolution){
+        this.name = name;          //星球名称
+        this.x = x;                //圆心  x,y
+        this.y = y;
+        this.r = r;                //半径  r
+        this.startColor = startColor;        //渐变 start,end
+        this.endColor = endColor;
+        this.revolution = revolution;//公转周期 revolution
+    }
+    Star.prototype = {
+        constructor : Star,
+        drawStar : function(){
+            cxt.save();
+            cxt.translate(500,500);
+            //绘制渐变颜色
+            var gradient = cxt.createRadialGradient(this.x,this.y,0,this.x,this.y,this.r);
+            gradient.addColorStop(0,this.startColor);
+            gradient.addColorStop(1,this.endColor);
+            cxt.fillStyle = gradient;
+            cxt.beginPath();
+            if(this.name == '地球'){
+                //存储转动的角度,找到moon的旋转坐标
+                EarchRotate = time*360/this.revolution*Math.PI/180;
+                MoonX = 165*Math.sin(EarchRotate);
+                MoonY = -165*Math.cos(EarchRotate);
+                cxt.rotate(time*360/this.revolution*Math.PI/180);
+                cxt.arc(this.x,this.y,this.r,0,2*Math.PI,false);
+                cxt.fill();
+            }else if(this.name == '月球'){
+                cxt.save();
+                cxt.translate(MoonX,MoonY); //重置原点，即设置月球旋转中心
+                //月球旋转轨迹
+                cxt.beginPath();
+                cxt.strokeStyle = 'rgba(207,207,207,0.2)';
+                cxt.arc(0,0,30,0,2*Math.PI,false);
+                cxt.stroke();
+                cxt.closePath();
+                //月球圆心坐标
+                var x = 30*Math.cos((time*360/this.revolution-90)*Math.PI/180);
+                var y = 30*Math.sin((time*360/this.revolution-90)*Math.PI/180);
+                cxt.rotate(time*360/this.revolution*Math.PI/180);
+                //月球的渐变颜色
+                var gradientM = cxt.createRadialGradient(x,y,0,x,y,this.r);
+                gradientM.addColorStop(0,this.startColor);
+                gradientM.addColorStop(1,this.endColor);
+                cxt.fillStyle = gradientM;
+                //绘制月球
+                cxt.beginPath();
+                cxt.arc(x,y,this.r,0,2*Math.PI,false);
+                cxt.closePath();
+                cxt.fill();
+                cxt.restore();
+            }else{
+                cxt.rotate(time*360/this.revolution*Math.PI/180);
+                cxt.arc(this.x,this.y,this.r,0,2*Math.PI,false);
+                cxt.fill();
+            }
+            cxt.closePath();
+            cxt.restore();
+            //加上字体
+            cxt.save();
+            cxt.translate(500,500);
+            cxt.fillStyle = '#fff';
+            cxt.font = "bold " + 0.9*this.r + "px Arial";
+            cxt.textAlign = "center";
+            cxt.textBaseline = "middle";
+            // cxt.rotate(time*360/this.revolution*Math.PI/180)
+            if(this.name=='太阳'){
+                cxt.fillText(this.name,this.x,this.y);
+            }else if(this.name=='月球'){
+                cxt.fillText('',this.x,this.y); //月球太小，字体不显示
+            }else{
+                cxt.fillText(this.name,this.x+50,this.y);
+            }
+            cxt.restore();
+        }
+    }
+    function moveStar(){
+        cxt.clearRect(0,0,1000,1000);   //首先清除画布
+        starRoute();
+        var Sun = new Star('太阳',0,0,25,'#ffff00','#ff9900',0);
+        var Mercury = new Star('水星',0,-55,8,'#a69697','#5c3e40',87.70);   //水星
+        var Venus = new Star('金星',0,-110,13,'#c4bbac','#1f1315',224.701);  //金星
+        var Earth = new Star('地球',0,-165,18,'#78b1e8','#050c12',365.2422); //地球
+        var Moon = new Star('月球',0,-195,6,'#a69697','#5c3e40',27.32); //月球
+        var Mars = new Star('火星',0,-220,10,'#cec9b6','#76422d',686.98); //火星
+        var Jupier = new Star('木星',0,-275,25,'#c0a48e','#322222',4332.589); //木星
+        var Saturn = new Star('土星',0,-330,23,'#f7f9e3','#5c4533',10759.5); //土星
+        var Uranus = new Star('天王星',0,-385,20,'#a7e1e5','#19243a',30799.095); //天王星
+        var Neptune = new Star('海王星',0,-440,20,'#0661b2','#1e3b73',60152); //海王星
+        Sun.drawStar();
+        Mercury.drawStar();
+        Venus.drawStar();
+        Earth.drawStar();
+        Moon.drawStar();
+        Mars.drawStar();
+        Jupier.drawStar();
+        Saturn.drawStar();
+        Uranus.drawStar();
+        Neptune.drawStar();
+        time++;
+    }
+    setInterval(moveStar,100)
+    </script>
+
+    <script>//2.雪花飘落
+        (function () {
+            var screenWidth = screen.availWidth; // 获取屏幕宽度
+            var screenHeight = screen.availHeight; // 获取屏幕高度
+            var speed = 1; // 雪花下落的速度
+     
+            function Snow(size, downSize) {
+                this.box = document.getElementById("box"); // 获取容器元素
+                this.size = size; // 雪花数量
+                this.downSize = downSize || 10; // 每次落下的雪花数量，默认为10个
+                this.item = []; // 雪花元素数组
+                this.init(); // 初始化
+                this.start(); // 开始下雪
+            }
+     
+            // 获取相关随机数据的方法
+            Snow.prototype.getRandomThings = function (type) {
+                var res;
+                if (type == 'left') { // 初始的left
+                    res = Math.round(Math.random() * (screenWidth - 30 - 10)) + 10; // 随机生成left值
+                    Math.random() > 0.8 ? (res = -res) : null; // 80%的概率使左边的雪花出现在左侧（left为负值）
+                } else if (type == 'top') { // 初始的top
+                    res = -(Math.round(Math.random() * (50 - 40)) + 40); // 随机生成top值，负值使雪花在屏幕上方
+                } else if (type == 'incre') { // 向下的速度
+                    res = Math.random() * (4 - 1) + 1; // 随机生成向下的速度
+                } else if (type == 'increLeft') { // 向右的速度
+                    res = Math.random() * (0.8 - 0.5) + 0.5; // 随机生成向右的速度
+                } else { // 雪花的大小
+                    res = Math.round(Math.random() * (30 - 10)) + 10; // 随机生成雪花的大小
+                }
+                return res;
+            }
+     
+            Snow.prototype.init = function () {
+                this.box.style.width = screenWidth + 'px'; // 设置容器宽度为屏幕宽度
+                this.box.style.height = screenHeight + 'px'; // 设置容器高度为屏幕高度
+                var fragment = document.createDocumentFragment(); // 创建文档片段，用于性能优化
+                for (var i = 0; i < this.size; i++) { // 创建雪花元素
+                    var left = this.getRandomThings('left'); // 获取随机的left值
+                    var top = this.getRandomThings('top'); // 获取随机的top值
+                    var snowSize = this.getRandomThings('size'); // 获取随机的雪花大小
+                    var snow = document.createElement("div"); // 创建雪花元素
+                    snow.style.cssText = 'position:absolute;color:#FFFFFF;'; // 设置元素样式
+                    snow.style['font-size'] = snowSize + 'px'; // 设置字体大小
+                    snow.style.left = left + 'px'; // 设置left值
+                    snow.style.top = top + 'px'; // 设置top值
+                    snow.innerHTML = '&#10052'; // 设置雪花图标（Unicode编码）
+                    this.item.push(snow); // 添加到雪花元素数组中
+                    fragment.appendChild(snow); // 添加到文档片段中
+                }
+                box.appendChild(fragment); // 将文档片段添加到容器中
+            }
+     
+            Snow.prototype.start = function () {
+                var that = this;
+                var num = 0;
+                for (var i = 0; i < this.size; i++) { // 遍历雪花元素数组
+                    var snow = this.item[i];
+                    if ((i + 1) % this.downSize == 0) { // 每downSize个雪花一组，控制下落速度
+                        num++;
+                    }
+                    (function (s, n) { // 使用闭包保存snow和num的值
+                        setTimeout(function () { // 定时器，实现雪花分批下落
+                            that.doStart(s); // 调用doStart方法使雪花开始下落
+                        }, 1000 * n) // 每隔n秒下落一组雪花
+                    })(snow, num)
+                }
+            }
+     
+            // 针对每个雪花的定时处理
+            Snow.prototype.doStart = function (snow) {
+                var that = this;
+                (function (s) {
+                    var increTop = that.getRandomThings('incre'); // 获取向下的速度
+                    var increLeft = that.getRandomThings('increLeft'); // 获取向右的速度
+                    var x = parseInt(getStyle(s, 'left')), y = parseInt(getStyle(s, 'top')); // 获取当前的left和top值
+     
+                    if (s.timmer) return; // 如果定时器已存在，则不执行后续代码
+                    s.timmer = setInterval(function () { // 设置定时器，使雪花动起来
+                        // 超过右边或者底部重新开始
+                        if (y > (screenHeight - 5) || x > (screenWidth - 30)) {
+                            // 重新回到天上开始往下
+                            increTop = that.getRandomThings('incre');
+                            increLeft = that.getRandomThings('increLeft');
+     
+                            // 重新随机属性
+                            var left = that.getRandomThings('left');
+                            var top = that.getRandomThings('top');
+                            var snowSize = that.getRandomThings('size');
+                            s.style.left = left + 'px';
+                            s.style.top = top + 'px';
+                            s.style['font-size'] = snowSize + 'px';
+                            y = top;
+                            x = left;
+                            n = 0;
+     
+                            return;
+                        }
+     
+                        // 加上系数，当随机数大于0.5时速度加快，小于0.5时速度减慢，形成飘动效果
+                        x += Math.random() > 0.5 ? increLeft * 1.1 : increLeft * 0.9;
+                        y += Math.random() > 0.5 ? increTop * 1.1 : increTop * 0.9;
+     
+                        // 设置left和top值使雪花动起来
+                        s.style.left = x + 'px';
+                        s.style.top = y + 'px';
+                    }, speed); // 每隔speed毫秒执行一次定时器中的代码
+                })(snow)
+            }
+     
+            // 获取元素的样式值
+            function getStyle(obj, prop) {
+                var prevComputedStyle = document.defaultView ? document.defaultView.getComputedStyle(obj, null) : obj.currentStyle;
+                return prevComputedStyle[prop];
+            }
+     
+            new Snow(300, 30); // 创建一个Snow对象，传入雪花数量和每批下落的雪花数量
+        })()
+     
+    </script>
+
+    <script>//3.切换背景（CSS）
+    // 获取按钮和CSS链接元素
+    const switchButton = document.getElementById('switchButton');
+    const css1Link = document.getElementById('css1');
+    const css2Link = document.getElementById('css2');
+
+    // 监听按钮的点击事件
+    switchButton.addEventListener('click', function() {
+        // 检查当前哪个CSS文件是激活的，并切换它们
+        if (css1Link.disabled) {
+            css1Link.disabled = false; // 启用第一个CSS文件
+            css2Link.disabled = true;  // 禁用第二个CSS文件
+        } else {
+            css1Link.disabled = true;  // 禁用第一个CSS文件
+            css2Link.disabled = false; // 启用第二个CSS文件
+        }
+    });
+</script>
+
+<script>//4.界面跳转
+    document.querySelectorAll('#sidebar a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // 阻止链接的默认行为（打开新页面或重新加载页面）
+ 
+        var targetId = this.getAttribute('href'); // 获取目标ID
+        var targetElement = document.querySelector(targetId); // 获取目标元素
+ 
+        if (targetElement) {
+            targetElement.scrollIntoView({behavior: 'smooth'}); // 平滑滚动到目标元素
+        }
+    });
+});
+</script>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style>
+    html,
+    body,
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    <title>地大未来城</title>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <script src="https://webapi.amap.com/maps?v=2.0&key=bec7233e65302894043afaa765e5949f&plugin=AMap.PolygonEditor"></script>
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<div class="input-card" style="width: 120px">
+   <button class="btn" onclick="polyEditor.open()" style="margin-bottom: 5px">开始编辑</button> 
+   <button class="btn" onclick="polyEditor.close()">结束编辑</button> 
+</div>
+<script type="text/javascript">
+    var map = new AMap.Map("container", {
+      center: [114.616943, 30.457648],
+      zoom: 14,
+      viewMode: '3D',
+    });
+    // 添加 3D 罗盘控制
+    AMap.plugin(['AMap.ControlBar'], function () {
+        map.addControl(new AMap.ControlBar({
+            position: {
+                right: '20px',
+                top: '20px'
+            },
+            showControlButton: true,  // 是否显示倾斜、旋转按钮。默认为 true
+        }));
+    });
+
+    //折线的节点坐标数组，每个元素为 AMap.LngLat 对象
+var path = [
+  new AMap.LngLat(114.617008,30.456251),
+  new AMap.LngLat(114.619533,30.455429),
+  new AMap.LngLat(114.621487,30.457445),
+  new AMap.LngLat(114.619702,30.459303),
+];
+var polyline = new AMap.Polyline({
+  path: path,
+  borderWeight: 2, //线条宽度，默认为1
+  strokeColor: "red", //线条颜色
+  lineJoin: "round", //折线拐点连接处样式
+  // 设置是否可以拖拽
+  draggable: true,
+        cursor: 'move',
+});
+//折线 polyline 对象添加到 Map
+map.add(polyline);
+    
+    var path = [
+      [114.619589,30.459456],
+      [114.618526,30.459502],
+      [114.614884,30.458786],
+      [114.616209,30.458257],
+      [114.616029,30.457285]
+    ]
+    var polygon = new AMap.Polygon({
+      path: path,
+      strokeColor: "#FF33FF",
+      strokeWeight: 6,
+      strokeOpacity: 0.2,
+      fillOpacity: 0.4,
+      fillColor: '#1791fc',
+      zIndex: 50,
+      bubble: true,
+      // 设置是否可以拖拽
+      draggable: true,
+        cursor: 'move',
+    })
+
+    map.add([polygon])
+
+  //引入折线编辑器插件
+  map.plugin(["AMap.PolylineEditor"], function () {
+  //实例化折线编辑器，传入地图实例和要进行编辑的折线实例
+  polylineEditor = new AMap.PolylineEditor(map, polyline);
+  //开启编辑模式
+  polylineEditor.open();
+});
+    
+    
+  // 缩放地图到合适的视野级别
+  map.setFitView()
+  var polyEditor;
+  polyEditor = new AMap.PolygonEditor(map, polygon);
+  polyEditor.addAdsorbPolygons(polygon)
+  polyEditor.open();
+</script>
+</body>
+</html>
