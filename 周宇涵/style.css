@@ -1,0 +1,22 @@
+    video{
+        display: block;
+        margin: 0 auto;
+    }
+    *{
+        padding: 1;
+        margin: 2;
+
+    }
+        header,section,footer{
+            background-color: rgba(255, 182, 193, 0.195);
+            border: 5px #bd94a046 solid;
+            padding: 30px 10px 20px 50px;
+            margin: 10px;
+        }
+        h1{
+            color: rgba(255, 196, 0, 0.921);
+            font-size:1.2cm;
+        }
+        h2{
+            color: rgba(240, 128, 128, 0.866);
+        }
