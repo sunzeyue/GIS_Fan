@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+<title>介绍泉州</title>
+<style>
+    footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #999;
+        padding: 10px;
+    }
+     :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+     .container p {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .attraction-table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            box-shadow: 0 1px 20px rgba(0,0,0,0.1);
+        }
+
+
+        .attraction-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        body {
+            font-family: 'Segoe UI', '思源宋体', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+   img{
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+   }
+
+   canvas{
+    display: block;
+    margin:20px auto;
+    border:1px solid #ccc;
+   }
+</style>
+</head>
+<body>
+    <div class="container">
+        <audio controls>
+            <source src="forgotage - 西湖水（Slowed Type Beat）.flac" type="audio/mpeg">
+        </audio>
+
+        <h1>海丝起点·鲤城泉州</h1>
+        
+        <p>泉州，古称刺桐城，位于福建省东南沿海，是联合国唯一认定的海上丝绸之路起点。这座千年古城见证了宋元时期东方第一大港的辉煌历史，如今依然保持着独特的文化魅力。</p>
+        <p>漫步泉州街头，三步一庙，五步一堂，22处代表性古迹遗址串联起千年的文化记忆。从开元寺的东西双塔到清源山的老君岩，从蟳埔渔村的簪花围到南音古乐的袅袅余韵，泉州用最鲜活的方式传承着中华文明。</p>
+
+        <img src="泉州图片.jpg" alt="泉州全景">
+
+        <h2>古城印记</h2>
+        <table class="attraction-table">
+            <thead>
+                <tr>
+                    <th>景点名称</th>
+                    <th>地理位置</th>
+                    <th>特色亮点</th>
+                    <th>建议游览时长</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>开元寺</td>
+                    <td>鲤城区西街</td>
+                    <td>唐代古刹/东西双塔/飞天乐伎</td>
+                    <td>2-3小时</td>
+                </tr>
+                <tr>
+                    <td>清源山</td>
+                    <td>丰泽区清源山麓</td>
+                    <td>老君岩/九日山石刻/天湖</td>
+                    <td>半天</td>
+                </tr>
+                <tr>
+                    <td>洛阳桥</td>
+                    <td>洛江区桥南村</td>
+                    <td>宋代古桥/月光菩萨塔/牡蛎固基</td>
+                    <td>1小时</td>
+                </tr>
+                <tr>
+                    <td>蟳埔民俗村</td>
+                    <td>丰泽区东海社区</td>
+                    <td>蚵壳厝/簪花围/渔家风情</td>
+                    <td>2小时</td>
+                </tr>
+            </tbody>
+        </table>
+        <canvas id="C1" width="400" height="100"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById('C1');
+        const ctx = canvas.getContext('2d');
+
+        
+        ctx.font = '30px 微软雅黑';
+        
+        ctx.fillStyle = '#3498db';
+   
+        ctx.textAlign = 'center';
+   
+        ctx.textBaseline = 'middle';
+
+
+        ctx.fillText('海丝泉州 欢迎您！', canvas.width/2, canvas.height/2);
+    </script>
+ <footer>
+    赖英杰 20231003151 2025年2月28日 中国地质大学（武汉）未来城校区
+</footer>
+</body>
+</html>
