@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 用于响应式设计，使网页在不同设备上正确显示 -->
+  <link rel="stylesheet" href="styles.css">
+  <title>我的家乡——湖北武汉</title>
+
+  
+  <style>
+    .main-content {
+            display: flex; /* 使用 Flexbox 布局 */
+            justify-content: space-between; /* 三部分内容分别对齐到左、中、右 */
+            align-items: flex-start; /* 对齐方式：从顶部开始 */
+            padding: 20px;
+        }
+
+        .content {
+            flex: 1; /* 每个部分占据相等的空间 */
+            padding: 10px;
+        }
+
+        .content.news-section {
+            text-align: center; /* 新闻栏内容居中对齐 */
+        }
+
+        .content.intro-section {
+            text-align: left; /* 魅力武汉内容左对齐 */
+        }
+
+        .content.video-section {
+            text-align: right; /* 视频内容右对齐 */
+        }
+
+        .content img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .content video {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部区域，通常用于放置网站标志、大标题等 -->
+    <header class="header">
+        <div class="header-wrapper">
+            <img src="img1.jpg" alt="头部图片" class="header-img">
+            <h1 class="header-text">我的家乡—湖北武汉</h1>
+        </div>
+    </header>
+
+    <!-- 导航栏，提供网站的主要导航链接 -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="self_introduction.html">自我介绍</a></li>
+            <li><a href="scenic.html">景点</a></li>
+            <li><a href="food.html">美食</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主体内容区域，包含了网页的核心信息 -->
+    <div class="main-content">
+        <div class="content intro-section">
+            <h2 style="color:aquamarine">魅力武汉</h2>
+            <p>地理位置:武汉地处长江中游，是长江经济带核心城市。长江和汉江穿城而过，将武汉分为武昌、汉口、汉阳三镇。</p>
+            <p>历史底蕴:作为国家历史文化名城,武汉拥有3500年历史的盘龙城遗址,见证了这座城市悠久的过去。</p>
+            <p>美食文化：武汉美食丰富多样，热干面以其独特的口感和醇厚的芝麻酱香气闻名全国，还有鸭脖、豆皮等特色小吃，深受食客喜爱。</p>
+        </div>
+        <div class="content news-section">
+            <a href="http://www.cnhubei.com/" target="_blank">
+                <h2 style="text-align: center;color:aqua">新闻栏</h2>
+            </a>
+            <img src="img2.png" alt="新闻图片加载中" style="display: block; margin: 0 auto;">
+        </div>
+        <div class="content video-section">
+            <h2 style="color:lightgreen">精彩视频</h2>
+            <video src="video1.mp4" controls autoplay muted loop>
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+    </div>
+
+    <!-- 页脚区域，通常放置版权信息、联系方式等 -->
+
+
+    <footer class="footer">
+        <p>&copy; 2025 关于我的家乡 - 作者：丁雨薇</p >
+        <p>联系方式:dingyuwei_cug@163.com | 15327578900</p >
+        <ul class="footer-links">
+            <li>隐私政策</li>
+            <li>使用条款</li>
+        </ul>
+    </footer>
+  </div>
+</body>
+</html>

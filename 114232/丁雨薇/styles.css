@@ -1,0 +1,162 @@
+/* 全局样式，设置网页整体的字体等基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* 外边距设为0 */
+    padding: 0;
+    /* 内边距设为0 */
+  }
+  
+  /* 容器样式，设置容器的宽度并使其在页面中居中 */
+.container {
+    width: 80%;
+    /* 设置容器宽度为父元素的80% */
+    margin: 0 auto;
+    /* 上下外边距为0，左右外边距自动，实现水平居中 */
+}
+  
+  /* 头部样式，设置头部的背景颜色、文本颜色和文本对齐方式 */
+.header {
+    position: relative;
+    /* 设置相对定位，为文字在图片上定位做基础 */
+}
+.header-wrapper {
+    position: relative;
+}
+.header-img {
+    width: 100%;
+    height:400px;
+    display: block;
+}
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 使文字在图片水平和垂直方向居中 */
+    color: #00004d;
+    /* 深蓝色字体，十六进制颜色码表示 */
+    margin: 0;
+    text-align: center;
+    font-size:72px;
+}
+
+  /* 导航栏样式 */
+.navbar {
+    background-color: #333;
+    color: white;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar ul li {
+    padding: 10px;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/*设置鼠标悬停在链接上时的背景颜色为稍浅的灰色，增加交互效果。*/
+.navbar ul li a:hover {
+    background-color: #555;
+}
+  
+  /* 主体样式，设置主体区域为flex布局 */
+
+.content {
+    width: 50%;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+.content a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+.content a h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+.content a h2:hover {
+    text-decoration: underline;
+}
+.content img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.sidebar {
+    width: 300px;
+    min-height: 400px;
+    background-color: #e8e8e8;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.video-section {
+    width: 30%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.video-section h2 {
+    color: #333;
+}
+video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+  /* 页脚样式，设置背景颜色、文本颜色和文本对齐方式 */
+.footer {
+    background-color:steelblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.footer p {
+    margin: 5px 0;
+}
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+}
+.footer-links li a:hover {
+    text-decoration: underline;
+}
