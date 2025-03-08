@@ -1,0 +1,15 @@
+.video-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #dcceb0;
+}
+.video-item {
+  flex: 1;
+  border: 1px solid #dcceb0;
+  padding: 10px;
+}
+video {
+  width: 100%;
+  height: auto;
+}

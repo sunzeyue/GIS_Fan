@@ -1,0 +1,26 @@
+table{
+    width: 95%;
+margin: 0 auto;
+height: 800px;
+margin-top: 20px;
+}
+table img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+table p{
+    width: 360px;
+    height: 130px;
+    line-height: 30px;
+    margin: 0px 15px;
+
+}
+table h3{
+    line-height: 50px;
+    color: #d57b35;
+    letter-spacing: 3px;
+    margin: 0px 15px;
+    left: 10px;
+
+}

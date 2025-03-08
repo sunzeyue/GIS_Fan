@@ -1,0 +1,25 @@
+form{
+    width:340px;
+    margin:  0 auto;
+    background-color:white;
+    color: #d57b35;
+    padding: 30px;
+    margin-top: 20px;
+}
+input{
+    width: 280px;
+    height: 35px;
+    margin-bottom: 20px;
+}
+#btn{
+    background-color:#d57b35;
+    border: 2px solid white;
+    color: white;
+    margin-left: 50px;
+    height: 40px;
+   
+}
+#btn:hover{
+   cursor: pointer;
+    background-color: #df8f39;
+}
