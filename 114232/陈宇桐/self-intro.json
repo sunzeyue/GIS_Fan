@@ -1,0 +1,26 @@
+{
+    "name": "Yutong Chen",
+    "age": 20,
+    "gender": "male",
+    "hobbies": ["guitar", "tennis", "programme"],
+    "education": {
+      "university": "China University of Geosciences",
+      "major": "Geographical Information Science",
+      "graduation_year": "2027"
+    },
+    "internship": {
+      "company": "Zondy Cyber",
+      "position": "Intern",
+      "technology_stack": ["HTML", "CSS", "JavaScript", "React", "Node.js"]
+    },
+    "skills": {
+      "frontend": ["HTML", "CSS", "JavaScript", "Vue.js"],
+      "backend": ["Node.js", "Express"],
+      "languages": ["English", "Mandarin","French"]
+    },
+    "contact": {
+      "email": "klause_chenyutong@cug.edu.cn",
+      "phone": "110"
+    }
+  }
+  

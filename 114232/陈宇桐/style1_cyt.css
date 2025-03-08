@@ -1,0 +1,356 @@
+/* 声明全局样式 */
+:root {
+   --blue: #2980b9;
+   --black: #333;
+   --white: #fff;
+   --light-color: #777;
+   --light-bg: #eee;
+   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 全局属性设置 */
+* {
+   /* 设置字体style */
+   font-family: "Microsoft YaHei", sans-serif;
+   margin: 0;
+   padding: 0;
+   /* 自动内减.防止设置边框和内边距撑大盒子 */
+   box-sizing: border-box;
+   /* 文本每个单词首字母大写 */
+   /* text-transform: capitalize; */
+   text-decoration: none;
+}
+/* todo 滚动条样式设置需要留意 */
+/* 设置滚动条整体部分样式 */
+html::-webkit-scrollbar {
+   width: 10px;
+ }
+ 
+ /* 设置滚动条的轨道样式 */
+ html::-webkit-scrollbar-track {
+   background: var(--blue);
+ }
+ 
+ /* 设置滚动条里面的上下移动小方块的样式 */
+ html::-webkit-scrollbar-thumb {
+   background: var(--white);
+   border-radius: 50px;
+ }
+
+
+.title {
+   font-size: 25px;
+   color: var(--blue);
+   margin: 15px;
+}
+
+.container {
+   display: flex;
+   /* 设置背景颜色的渐变 */
+   background: linear-gradient(45deg, deeppink, var(--blue));
+   padding: 150px 10%;
+}
+
+.container .profile {
+   /* 粘性布局 */
+   position: sticky;
+   left: 0;
+   top: 20px;
+   flex: 1000px;
+   align-self: flex-start;
+   background: var(--white);
+
+   /* 约束内容区域 */
+   padding: 20px 0px;
+   /* ?这里如果只是设置内容居中会如何?padding属性参数写死以及写百分数有什么区别 */
+   border-right: 2px, solid, var(--black);
+   text-align: center;
+
+   border-right: 2px solid var(--black);
+}
+
+.profile img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   border: 2px solid var(--black);
+
+   /* !设置图片尺寸比的缩放 */
+   object-fit: cover;
+}
+
+.profile h3 {
+   margin: 10px;
+}
+
+.profile p {
+   color: #2980b9;
+   /* margin: 10px; */
+   /* 这里我设置margin实际上不太好,不如设置padding */
+   padding: 5px;
+}
+
+.profile div {
+   margin: 10px 10px;
+}
+
+/* !a标签的设置仍然是非常重要的点 */
+.profile div a {
+   width: 50px;
+   height: 50px;
+   background: var(--light-bg);
+   font-size: 20px;
+   color: var(--black);
+   line-height: 50px;
+   border-radius: 50%;
+}
+.profile div a:hover {
+   background: var(--blue);
+   color: var(--white);
+   box-shadow: var(--box-shadow);
+ }
+
+
+.profile button {
+   border: none;
+}
+
+.profile button a {
+   /* 转成行内块元素之后,父类的text-align可以让它居中 */
+   display: inline-block;
+   padding: 10px 20px;
+   background: var(--blue);
+   color: var(--white);
+   text-decoration: none;
+   /* 去掉a的下划线 */
+   border-radius: 5px;
+}
+.profile a:hover {
+   background: var(--black);
+}
+
+.container .information {
+   display: block;
+   padding: 20px 30px;
+   background: var(--white);
+}
+
+.information .self p{
+   font-size: 18px;
+   color: var(--light-color);
+   text-indent: 2cap;
+   /* 有文字的地方行高也要设置,并且要在font设置后 */
+   line-height: 2;
+}
+.information .self .bigbox{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   margin-top: 10px;
+   
+}
+.information .self .bigbox .tinybox{
+   flex: 300px;
+}
+.information .self .bigbox .tinybox h3{
+   font-size: 15px;
+}
+.information .self .bigbox .tinybox span{
+   color: var(--light-color);
+   font-size: 15px;
+}
+
+.information .tech{
+   margin-top: 20px;
+}
+.information .tech .bigbox{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   margin-top: 10px;
+}
+.information .tech .tinybox{
+   flex: 100px;
+   background: var(--light-bg);
+   border-radius:5px;
+   padding: 20px;
+   text-align: center;
+}
+.information .tech .tinybox img{
+   height: 50px;
+   object-fit: contain;
+   margin-bottom: 10px;
+}
+.information .tech .tinybox h3{
+   font-size: 15px;
+   color: var(--light-color);
+}
+
+
+.information .skills {
+   margin-top: 20px;
+   /* 使用padding设置间隙也可以 */
+ }
+ 
+ .information .skills .bigbox {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+ }
+ 
+ .information .skills .tinybox {
+   flex: 300px;
+ }
+ 
+ .information .skills .progress h3 {
+   display: flex;
+   /* 弹性布局开启 */
+   justify-content: space-between;
+   /* 一个居左一个居右 */
+   padding: 10px 0;
+   /* 设置间隙 */
+   color: var(--black);
+   font-size: 15px;
+ }
+ 
+ .information .skills .progress span {
+   color: var(--light-color);
+   /* 后面设置覆盖前面 */
+ }
+ 
+ /* !设置进度条效果 */
+ .information .skills .progress .outer {
+   height: 10px;
+   background: var(--light-bg);
+   border-radius: 5px;
+ }
+ 
+ .information .skills .progress .inner {
+   height: 10px;
+   background: var(--blue);
+   border-radius: 5px;
+ }
+ 
+
+
+.information .experiences{
+   margin-top: 20px;
+}
+.information .experiences .bigbox{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   /* 自动换行的设置现在一般不会忘记了,gap的设置有时还是忘记了 */
+}
+.information .experiences .bigbox .tinybox{
+   margin: 10px;
+   padding: 10px 10px;
+   flex: 300px;
+   background: var(--light-bg);
+   border-radius: 5px;
+}
+.information .experiences .bigbox .tinybox span{
+   color: var(--blue);
+   font-size: 15px;
+   line-height: 2;
+}
+.information .experiences .bigbox .tinybox h3{
+   /* padding: 5px 0; */
+   line-height: 2;
+   color: var(--black);
+   font-size: 17px;
+}
+.information .experiences .bigbox .tinybox p{
+   color: var(--black);
+   font-size: 14px;
+   line-height: 1.5;
+}
+
+.information .contact{
+   margin-top: 20px;
+}
+.contact .bigbox{
+   display: flex;
+   flex-wrap: wrap;
+   gap:15px
+}
+.contact .bigbox .tinybox{
+   display: flex;
+   gap: 15px;
+   flex: 200px;
+}
+.contact .bigbox .tinybox i{
+   width: 40px;
+   height: 40px;
+   color: var(--white);
+   font-size: 20px;
+   background: var(--blue);
+   text-align: center;
+   border-radius: 50%;
+   line-height: 40px;
+   /* 为了让图标居中行宽和高度设置一样 */
+}
+.contact .bigbox .tinybox h3{
+   color: var(--black);
+   font-size: 17px;
+   margin-bottom: 5px;
+}
+.contact .bigbox .tinybox p{
+   color: var(--light-color);
+   font-size: 14px;
+}
+
+/* =======================媒体查询====================== */
+
+/* 设置宽度在1200px内的样式 */
+@media (max-width:1200px) {
+   .container {
+     flex-direction: column;
+     padding: 20px;
+   }
+ 
+   .container .profile {
+     /* 恢复到之前的定位 */
+     position: static;
+ 
+     /* 设置profile居中方式一 */
+     /* margin: 0 auto; */
+ 
+     /* 设置profile居中方式二:更改了轴向,水平方向变成了侧轴,侧轴上某个元素居中,使用align-self */
+     align-self: center;
+ 
+     /* 更改了轴向之后,以前flex初始宽度400px变成了高度400px.重新设置为根据内容来调节 */
+     flex: auto;
+ 
+     border-right: none;
+     margin-bottom: 20px;
+     border-radius: 5px;
+     box-shadow: var(--box-shadow);
+   }
+ 
+   .container .information {
+     padding: 20px;
+     border-radius: 5px;
+     box-shadow: var(--box-shadow);
+   }
+ }
+ 
+ /* 设置宽度在600px内的样式 */
+ @media (max-width:600px) {
+   .container .profile {
+     width: 100%;  /* align-self:stretch也可以 */
+   }
+ 
+   .container .profile button a{
+     width: 100%;
+   }
+ 
+   .container .information .self p{
+     font-size: 12px;
+   }
+ 
+   .container .information .experiences p{
+     font-size: 12px;
+   }
+ }
