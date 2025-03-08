@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苦是生活，笑着生活</title>
+    <style>
+        /* 基础样式 */
+        h1 {
+            font-family: cursive;
+            font-size: 85px;
+            color: black;
+            text-align: center
+        }
+
+        h2 {
+            font-family: cursive;
+            font-size: 40px;
+            color: black;
+        }
+
+        .border {
+            border: 3px dashed black;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        h3 {
+            font-family: cursive;
+            font-size: 20px;
+            color: black;
+            text-align: center
+        }
+
+        /* 新增对称居中容器 */
+        .symmetry-container {
+            display: flex;
+            justify-content: center;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            gap: 40px;
+            /* 图文间距 */
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 15px;
+        }
+
+        /* 图片容器 */
+        .img-wrapper {
+            flex: 1;
+            /* 与文字等分宽度 */
+            max-width: 500px;
+            text-align: center;
+            /* 图片居中 */
+        }
+
+        /* 文字容器 */
+        .text-wrapper {
+            flex: 1;
+            /* 与图片等分宽度 */
+            max-width: 600px;
+        }
+
+        .modern-border {
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+
+        .mytable {
+            border: 2px solid #333;
+            width: 40%;
+            margin: 20px auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .mytable td {
+            border: 2px solid #333;
+            padding: 12px;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>落叶归根</h1>
+    <h3>背景音乐</h3>
+    <div style="text-align: center;">
+        <audio controls autoplay loop style="display: none;">
+            <source src="徐安康_Laom - keshi (Remix).ogg" type="audio/ogg">
+        </audio>
+        <button onclick="togglePlay()" style="cursor: pointer;">播放</button>
+    </div>
+
+    <script>
+        const audio = document.querySelector('audio');
+        document.addEventListener('click', () => {
+            audio.play().catch(() => { });
+        });
+
+        function togglePlay() {
+            audio.paused ? audio.play() : audio.pause();
+        }
+    </script>
+    <h2 class="border">基本资料</h2>
+    <div class="symmetry-container">
+        <div class="img-wrapper">
+            <img src="20231002146徐安康.webp" alt="电影海报" style="max-width: 100%; border-radius: 8px;">
+        </div>
+        <div class="text-wrapper">
+            <p class="modern-border">
+                《落叶归根》是由香港星皓娱乐有限公司出品，由张杨执导并联合王要编剧，赵本山、宋丹丹、洪启文、胡军、郭德纲、夏雨、郭涛、廖凡、午马等演员联袂出演的喜剧电影。该片于2007年1月19日在中国内地首映，1月25日在中国香港上映。
+                该片讲述了民工老赵为使好友老刘死后"落叶归根"，一路上历尽艰难将老刘尸体运回老家的故事。
+                2007年，该片获得第57届柏林国际电影节·天主教人道精神奖-大观单元。截止2024年10月24日，该片中国内地累计获得票房167.5万美元，全球累计票房171.5万美元。
+            </p>
+        </div>
+    </div>
+    <h2 class="border">背景信息</h2>
+    <table class="mytable">
+        <tr>
+            <td>外文名</td>
+            <td>going home</td>
+        </tr>
+        <tr>
+            <td>类 型</td>
+            <td>喜 剧</td>
+        </tr>
+        <tr>
+            <td>拍摄地点</td>
+            <td>云南昆明</td>
+        </tr>
+        <tr>
+            <td>导 演</td>
+            <td>张 杨</td>
+        </tr>
+        <tr>
+            <td>上映时间</td>
+            <td>2007年1月19日</td>
+        </tr>
+        <tr>
+            <td>片 长</td>
+            <td>110 分钟</td>
+        </tr>
+    </table><br>
+    <h2 class="border">相关音频</h2><br>
+    <video controls width="600" style="display: block; margin: 20px auto;">
+        <source src="xxx.mp4" type="video/mp4">
+    </video>
+    <P style="text-align: center;"><a href="https://www.bilibili.com/video/BV1mJ411r7TC?t=1.8">click here</a></P>
+    <br>
+</body>
+
+</html>
