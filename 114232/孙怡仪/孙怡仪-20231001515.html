@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> <!html语言为中文>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!设置网页宽度随用户设备自适应缩放，加载页面时网页不会被缩放>
+    <title>音乐介绍《量变临界点》</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0; /*元素外边距*/
+            padding: 0;/*元素内边距*/
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #294656;
+            color: #fff;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: rgba(9, 9, 9, 0.9);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0f7ebe;
+        }
+
+         /* 首页*/
+         .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background: url("封面.syy.jpg") center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .hero-content h1 {
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+            color:white;
+            text-align: center;
+        }
+        /* 曲目板块 */
+        .album-info {
+            padding: 4rem 5%;
+            background: #111;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .album-cover {
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255,51,102,0.2);
+        }
+
+        /* Live现场板块 */
+        .live-section {
+            padding: 4rem 5%;
+        }
+
+        .live-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .live-card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .live-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 页脚 */
+        footer {
+            background: #000;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        /* 视频播放器样式 */
+        .video-wrapper {
+            position: relative;
+            max-width: 800px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255,51,102,0.2);
+            background: #000;
+            margin: 0 auto;
+        }
+
+        .custom-video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        /* 自定义控制条 */
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .video-wrapper:hover .video-controls {
+            opacity: 1;
+        }
+
+        .songs-section {
+    padding: 4rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+}
+/*歌曲试听*/
+.songs-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.song-list {
+    margin-top: 2rem;
+}
+
+.song-item {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.song-item:hover {
+    transform: translateY(-3px);
+}
+
+.song-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.song-title {
+    font-size: 1.2rem;
+    color: #5096bf;
+}
+
+.play-button {
+    background: #5096bf;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.play-button:hover {
+    background: #e62e5f;
+    box-shadow: 0 3px 15px rgba(255, 51, 102, 0.3);
+}
+
+.custom-audio {
+    width: 100%;
+    margin: 1rem 0;
+    filter: invert(0.9); /* 使音频控件适配深色背景 */
+}
+
+.song-description {
+    color: #a0a0a0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    border-left: 3px solid #0f7ebe;
+    padding-left: 1rem;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="marsconcert.syy.jpg" >
+        </div>
+        <div class="nav-links"> <!实现点击跳转>
+            <a href="#home">首页</a>
+            <a href="#album">专辑介绍</a>
+            <a href="#songs">音乐试听</a>
+            <a href="#live">Live现场</a>
+            <a href="#footer">关于</a>
+        </div>
+    </nav>
+
+    <!-- 首页-->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>量变临界点<br>用旋律探寻共鸣<br>听感官与心流同频</h1>
+            <h1>华晨宇 第六张个人专辑</h1>
+            <a href="https://music.163.com/store/newalbum/detail?id=258512180" style="color: #fbf8f8;text-align: center;display: block;text-decoration: none;">立即聆听</a><!转换为块级元素关键>
+        </div>
+    </section>
+
+    <!-- 专辑介绍 -->
+    <section class="album-info" id="album">
+        <div class="info-grid">
+            <!-- MP4视频播放器 -->
+            <div class="video-wrapper">
+                <video class="custom-video" 
+                       poster="宣传视频.syy.mp4" 
+                       controls 
+                       autoplay 
+                       muted 
+                       loop
+                       playsinline>
+                    <source src="宣传视频.syy.mp4" type="video/mp4">
+                </video>
+                
+            </div>
+            
+            <div class="album-details">
+                <h2>专辑介绍</h2>
+                <p>生命的本质即是变化
+                    <br>持续向前 就能抵达通透的境界
+                    <br>欢迎来到量变临界点
+                    <br>迎接灵魂二度降生的起点
+                    <br>后来，我们什么都有了；不自觉停下脚步、忽略了生命的本质，就是不停的变化与向前。
+                    <br>持续的出发是一场精准的概念：出发不见得能抵达，但若要抵达，则必须出发。
+                    <br>华晨宇从温暖的支持与呵护之中，毅然选择横冲直撞、高速俯冲、强行再次破壳，最终迎来量变临界点----一个完全通透的境界。
+                    <br>在那里，依旧有悲伤、痛苦，也有温暖、幸福，然而透过宏观的通透视野，发现一切都只是必经的过程。有起必有落，有得必有失，感受当下，自我觉知，明白生命的变化从来都无法控制，我们能做的就是将其转化成能量，量变积累聚集成下一个临界点，静静等待爆发。
+                    <br>这趟充满自我觉知的音乐旅程必须有你参与，因为你就是令量变产生质变的、无数临界点的唯一。
+                    <br>华晨宇的量变临界点，2025 年 1 月10日，正式引爆。</p>
+                <h3>曲目列表</h3>
+                <ul>
+                    <li>风之海</li>
+                    <li>普通到不普通的人生</li>
+                    <li>那些我尚未知道的美丽</li>
+                    <li>永不熄灭的火焰</li>
+                    <li>忒休斯的船</li>
+                    <li>怪诞心理学</li>
+                    <li>温暖的房子</li>
+                    <li>不重逢</li>
+                    <li>人之爱</li>
+                    <li>晨光里有你</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-----音乐试听------>
+    <section class="songs-section" id="songs">
+        <div class="songs-container">
+            <h2>音乐试听</h2>
+            <div class="song-list">
+                <!---1--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">1. 风之海</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="风之海音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        生命漫长，保持温度，大海辽阔，拥抱自由。<br>风吹起海的自由，海浪扑进睡梦，拥抱你我。我们相信总有美好的事，会披风而来，与我们踏浪相逢。感受生命的本真。让记忆回甘，美好永存，便是我们给世界最轻松的寄语。
+                    </p>
+                </div>
+                <!---2--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">2.普通到不普通的人生</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="普通到不普通的人生音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        很多时候，我们都在问自己，是接受普通到/不普通的人生，还是选择从/普通/到不普通的人生？<br>也许我们都会有一个拒绝普通接受普通成为普通的过程，如果你能发现藏在普通烟火里的流光溢彩，人生也将因你思维的改变而变得有所不同。</p>
+                </div>
+                <!---3--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">3.那些我尚未知道的美丽</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="那些我尚未知道的美丽音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                       《普通到不普通的人生》的姊妹篇。《普通到不普通的人生》是向内释放的能量，《那些我尚未知道的美丽》是向外探索的动力。<br>那追风的人啊，若葆有天真，去翻山越岭寻觅花花世界的美丽，亦可见普通到不普通的灿烂人生。追赶那些“你”尚未知道的美丽。
+                    </p>
+                </div>
+                <!---4--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">4.永不熄灭的火焰</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="永不熄灭的火焰音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        我们伫立于人生的战场，新的号角从出生伊始便已吹响，主角正式登场。生存本就是一场与更完美自我的战争，只有进没有退。<br>人生之焰永恒燃烧，我与我周旋，宁做我。在这场人生游戏中，结局由我书写，勇敢地去追逐自己的荣耀与梦想吧。
+                    </p>
+                </div>
+                <!---5--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">5.忒休斯的船</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="忒休斯的船音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        一艘船，它的全部零件被替换成新的，那么它还是原来的那艘船吗？在人生之海，我经历了改变与重塑，我还是我吗？<br>以此引发对自我认知与灵魂本真的无尽思考，回望初心，自我审视。即使经历了改变，但只要坚守灵魂本真，就还是原本的自己。
+                    </p>
+                </div>
+                <!---6--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">6.怪诞心理学</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="怪诞心理学音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        生而为人，就一定要遵循既定的规则吗？成为安全的庸常，还是保持危险的独特？尖锐只是一层保护色，只为保护心中坚守的那一片净土。<br>生而不同，并非原罪，捧出赤诚的一颗心，渴望哪怕一刹那的真实触碰。
+                    </p>
+                </div>
+                <!---7--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">7.温暖的房子</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="温暖的房子音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        温暖的房子、安睡的枕头，是孩童所渴望的最纯净的幸福。但长大是单行道，那座温暖的房子最终也成为我们回不去的过往。<br>愿和平的钟声震荡，唤醒每个人心中最初的善意，让每个小小身影都有安睡美梦的能力，幼有所养老有所依。
+                    </p>
+                </div>
+                <!---8--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">8.不重逢</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="不重逢音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        成长是无数次推翻自己又重来的过程。而命运就像旷野之上的河流，从世界的地表经过，留下疼痛的记忆。<br>每一个我都曾与我告别，但是任何一个我，都有它非常坚韧的那一部分存在。时间从未停下，每一条今日的去路或许都是明日的坦途。
+                    </p>
+                </div>
+                <!---9--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">9.人之爱</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="人之爱音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        一场关于爱情中挣扎成长的深入探讨。从“人之爱”，到“仁之爱”、“忍之爱”直至“认知爱”，愿每个人都能找到自己对爱的答案，直面“爱”之本质。<br>爱，不只是承诺与欢愉，更是每个人重拾自我，触碰另一个灵魂时，散发出的光。
+                    </p>
+                </div>
+                <!---10--->
+                <div class="song-item">
+                    <div class="song-header">
+                        <h3 class="song-title">10.晨光里有你</h3>
+                        <button class="play-button" onclick="togglePlay('song1')">试听</button>
+                    </div>
+                    <audio id="song1" controls class="custom-audio">
+                        <source src="晨光里有你音频.syy.mp3" type="audio/mpeg">
+                    </audio>
+                    <p class="song-description">
+                        陪伴是最长情的告白，时光流转，你我情谊不变，让我化作一朵云，随你飘扬，守护温柔梦境；化作一棵树，扎根人生土壤，让你在风雨中也能感受到安宁。<br>偶有生活枷锁，但心中的信念会如晨光，指引前行的方向。愿你在人生的旅途中，迎接属于自己的晨光。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Live现场 -->
+    <section class="live-section" id="live">
+        <h2>点击观看专辑曲目Live现场</h2>
+        <div class="live-grid">
+            <div class="live-card">
+                <div class="live-content">
+                    <h3><a href="https://www.bilibili.com/video/BV1dB4y1Z7Gv?spm_id_from=333.788.recommend_more_video.-1&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">风之海</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV1Ye411676a/?spm_id_from=333.337.search-card.all.click&vd_source=68f8a0604d8e07f64abfc93db40fd50cv" style="color: #fbf8f8;text-decoration: none;">普通到不普通的人生</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV19D421K74a?spm_id_from=333.788.recommend_more_video.-1&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">那些我尚未知道的美丽</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV15T421X7XM/?spm_id_from=333.337.search-card.all.click&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">永不熄灭的火焰</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV1qE421F7Ms/?spm_id_from=333.337.search-card.all.click&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">忒休斯的船</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV1Jf421B7tj?spm_id_from=333.788.recommend_more_video.0&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">怪诞心理学</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV14i421z7Ww?spm_id_from=333.788.recommend_more_video.11&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">温暖的房子</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV1Ss4peuEzV?spm_id_from=333.788.recommend_more_video.-1&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">不重逢</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV1P9SRYFE8h?spm_id_from=333.788.recommend_more_video.2&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">人之爱</a></h3>
+                    <h3><a href="https://www.bilibili.com/video/BV1WwiRYoEHi?spm_id_from=333.788.recommend_more_video.-1&vd_source=68f8a0604d8e07f64abfc93db40fd50c" style="color: #fbf8f8;text-decoration: none;">晨光里有你</a></h3>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <section class="footer-section" id="footer">
+    <footer>
+        <p>一千个读者就有一千个哈姆雷特，希望听者在这十首歌曲中听到自己，获得些许感悟，找到属于自己的晨光。</p>
+        <p>© 114232孙怡仪 版权所有</p>
+    </footer>
+    </section>
+</body>
+</html>
