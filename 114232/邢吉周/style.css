@@ -1,0 +1,48 @@
+h1
+{
+    background-color: red;
+    color:white;
+    text-align: center;
+    font-size: 60px;
+}
+h6
+{
+    font-size: 35px;
+    letter-spacing: 10px;        /* 设置字符间距 */
+    border: 1px solid black;   /* 设置边框 */
+    padding: 5px;   /* 内边距，让文字与边框有一定距离 */
+    text-align: center;
+}
+h2
+{
+    background-color: lightblue; 
+    color: white; 
+    border: 2px solid blue;
+}
+h3
+{
+    background-color: gray;
+    color:firebrick;
+}
+h4
+{
+    font-size: 15px;
+    text-align: center;
+}
+h5
+{
+    background-color: bisque;
+    font-size: 20px;
+    text-align:left;
+    border: 1px solid black;
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h9
+{
+    background-color: red;
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
