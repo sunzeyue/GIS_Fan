@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谢伟杰的个人介绍</title> 
+    <!-- 标题  -->
+    <style>
+* {
+    box-sizing: border-box; 
+     padding: 0; 
+     /* 清除默认内边距 */ 
+    margin: 0; 
+    /* 清除默认外边距  */
+}
+
+/* 设置页面的背景颜色和整体布局 */
+body {
+    min-block-size: 100%; 
+    /* 完全填充 */
+    display: grid; 
+    /* 网格布局 */
+    place-content: center; 
+    /* 页面中垂直和水平居中 */
+    padding-block: 30dvh; 
+    /* 上下内边距 */  
+    background: #f7d6ff;
+     /* 页面背景色 */
+}
+
+/* 页面加载动画效果 */
+@keyframes slide-fade-in {
+    from {
+        opacity: 0; 
+        /* 设置初始透明度为 0 */
+        box-shadow: none; 
+        /* 初始没有阴影效果 */
+        transform: scale(.6) translateY(10vh); 
+        /* 初始时元素缩小至原始尺寸0.6倍，并向下移动 */
+    }
+}
+        /* 定义卡片的容器样式 */
+        .cards {
+            display: grid;
+            gap: 2rem;
+            /* 自动排列卡片，网格自动流动 */
+            grid-auto-flow: dense;
+            /* 设置每列的宽度 */
+            grid-template-columns: repeat(4, 30ch);
+        }
+
+        /* 定义卡片的样式 */
+        .card {
+            animation: slide-fade-in both;
+            /* 开始结束保持对应的样式*/
+            animation-timeline: view();
+            /* 定义动画根据滚轮变化 */
+            animation-range: contain 0% contain 50%;
+            /* 动画变化状态 */
+            border-radius: 10px; 
+            /* 边框圆角 */
+            line-height: 4; 
+            /* 设置行高 */
+            box-shadow: 0px 8px 20px #54d0ec22; 
+            /* 设置阴影效果 */
+            font-size: 32px; 
+            /* 字体大小 */
+            letter-spacing: 5px; 
+            /* 字母间距 */
+            color: #fff; 
+            /* 字体颜色 */
+            font-family: STXingkai; 
+            /* 字体 */
+            width: 100%; 
+            /* 设置宽度为100% */
+            height: 100%; 
+            /* 设置高度为100% */
+            overflow: hidden; 
+            /* 多余内容进行隐藏 */
+            background-image: linear-gradient(to bottom right,
+                    #91defe,
+                    #99c0f9,
+                    #bdb6ec,
+                    #d7b3e3,
+                    #efb3d5,
+                    #f9bccc); 
+                    /* 背景渐变色 */
+            display: flex;
+            justify-content: center; /* 内容水平居中 */
+            align-items: center; /* 内容垂直居中 */
+        }
+
+        /* 设置卡片内图片的宽度和高度 */
+        .card img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 设置每第四张卡片跨两列 */
+        .card:nth-of-type(4n) {
+            grid-column: span 2;
+        }
+
+        /* 设置每第五张卡片跨两列 */
+        .card:nth-of-type(5n) {
+            grid-column: span 2;
+        }
+
+        /* 设置每第七张卡片跨两行 */
+        .card:nth-of-type(7n) {
+            grid-row: span 2;
+        }
+
+        /* 设置透明度 */
+        .transplay{
+            opacity:0.3;
+        }
+         /* 设置音频播放器的样式 */
+         audio {
+            display:none;
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <audio id="audio" loop>
+        <source src="20221002926- 城南花已开（钢琴版）.mp3" type="audio/mp3">
+      </audio>     
+      <script>
+        // 音频播放
+        const audio = document.getElementById('audio');
+        audio.play().catch(function(error) {
+        //   自动播放失败
+          console.log("自动播放被阻止:", error);
+        });
+      </script>
+   
+    <div class="cards">
+        <div class="card">谢伟杰</div>
+        <div class="card">学号：<br>20221002926 </div>
+        <div class="card">班级：114221</div>
+        <div class="card">喜好：运动，阅读</div>
+        <div class="card"> 
+            <img src="20221002926-1.jpg">
+        </div>
+        <div class="card">家乡：<br>安徽省无为市</div>
+        <div class="card">名源<br>思天下安于无事<br>无为而治</div>
+        <div class="card">无为市</div>
+        <div class="card"> 
+            <img src="20221002926-2.jpg"class="transplay">
+        </div>
+        <div class="card"> 
+            <img src="20221002926-3.jpeg" >
+        </div>
+        <div class="card">历史文化<br>剔墨纱灯<br>鱼灯</div>
+        
+    </div>
+</body>
+
+</html>
+
