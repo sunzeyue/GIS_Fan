@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>武汉文化</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>  
+      body {
+        font-family:"Noto Serif SC", "宋体", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background:	#FFFAF0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;                
+      }
+      header{
+        background:linear-gradient(135deg, #8B0000, #A52A2A, #FFD700);                         
+        color: #fff;
+        padding: 50px 0;
+        text-align: center;
+        position: relative;
+        width: 100%;       
+      }
+      header h1 {
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+        letter-spacing: 3px;
+        animation: textAnimation 3s infinite alternate;
+      }
+      @keyframes textAnimation {
+        0% { color: #FFD700; }
+        50% { color: #8B0000; }
+        100% { color: #A52A2A; }
+      }
+      nav {
+       background:linear-gradient(135deg, #D2B48C, #C2A880);
+       padding: 15px 0;
+       text-align: center;
+       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+       width: 100%;
+       position: relative;                   
+      }
+      nav a {
+        margin: 0 20px;          
+        text-decoration: none;
+        color: #8B0000;
+        font-weight: bold;
+        transition: transform 0.3s ease, color 0.3s ease;
+        font-size: 18px;
+      }
+      nav a:hover {
+        transform: translateY(-4px);
+        color: #FFD700;
+      }
+      .nav-info {
+        font-size: 12px;
+        color: #8B0000;
+        font-weight: bold;
+        position: absolute; 
+        bottom: 5px; 
+        right: 20px; 
+        text-align: right;
+      }
+      section {
+        background: #fff8e7;
+        margin: 80px auto 20px;        
+        padding: 30px;
+        max-width: 800px;
+        width: 90%;
+        border: 2px solid #D2B48C;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        border-radius: 12px;        
+        animation: sectionFadeIn 1s ease-out;
+        position: relative; 
+
+      }
+      @keyframes sectionFadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      section h2 {
+        color: #8B0000;        
+        margin-left: 25px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        font-size: 24px;
+      }
+      section p {
+        margin-left: 45px;
+        text-align: justify;
+        font-size: 18px;
+      }
+      section img {
+        display: block;
+        margin: 20px auto;
+        width: 100%;         
+        max-width: 700px;                
+        border-radius: 8px;
+        height: 500px;          
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        animation: imgBounce 2s infinite alternate;
+      }
+      @keyframes imgBounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+      }        
+      footer {
+        text-align: center;
+        padding: 15px 0;
+        background: linear-gradient(135deg, #D2B48C, #C2A880);
+        margin-top: 20px;
+        color: #8B0000;
+        font-size: 1em;
+        border-top: 3px solid #FFD700;
+        width: 100%;
+      }
+      .scroll-to-top {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #8B0000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 30px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .scroll-to-top:hover {
+        transform: scale(1.1);
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+    <h1>🐉武&nbsp;汉&nbsp;文&nbsp;化🏯</h1>
+    </header>
+
+  <nav id="nav">
+    <a href="#history">📜历史沿革</a>
+    <a href="#food">🍜美食文化</a>
+    <a href="#art">🎭艺术传统</a>
+    <a href="#modern">🏙️现代风貌</a>
+    <a href="#celebrities">🌟文化名人</a>
+    <span class="nav-info">点击文字可跳转至对应页面</span>
+  </nav>
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+  </style>
+  <section id="history">
+    <h2>📜历史沿革</h2>
+    <p>
+      武汉作为长江中游的重要城市，拥有悠久的历史和深厚的文化底蕴。自古以来，这里就是军事、经济和文化交汇之地。历经多朝兴衰更替，武汉逐渐形成了独具魅力的历史风貌与地域特色。武汉的历史有着几千年的文明积淀，从楚国到三国、再到近现代，武汉一直扮演着重要的历史角色。这里不仅有世界闻名的黄鹤楼，还有众多历史遗址和文化古迹，吸引了无数游客前来探索这座城市的历史面貌。
+    </p>
+    <img src="https://www.hubei.gov.cn/jmct/jcms/lyjq/hbwajq/202108/W020210830612134196325.jpg" alt="黄鹤楼">
+    <div class="scroll-to-top" onclick="document.getElementById('nav').scrollIntoView();">↑</div>
+  </section>
+
+  <section id="food">
+    <h2>🍜美食文化</h2>
+    <p>
+      武汉的美食文化丰富多样，街头巷尾的小吃摊和传统餐馆充满市井气息。热干面、豆皮、三鲜豆腐皮等地道小吃，不仅满足了人们的味蕾，更传递出这座城市独特的生活方式与人情味。武汉的餐饮文化有着深厚的传统，从清晨的早点摊到深夜的宵夜，市民们总是能在每个角落找到美味的食物。此外，武汉的热干面被誉为“武汉的代表性美食”，其独特的口感和风味，已成为这座城市最具象征性的美食之一。
+    </p>
+    <img src="https://i.pinimg.com/736x/dc/d2/7d/dcd27dfb27ab3ba14676f34ea4270052.jpg" alt="美食">
+    <div class="scroll-to-top" onclick="document.getElementById('nav').scrollIntoView();">↑</div>
+  </section>
+
+  <section id="art">
+    <h2>🎭艺术传统</h2>
+    <p>
+      武汉在艺术与传统文化方面同样具有深厚底蕴。黄鹤楼作为城市的象征，吸引了无数文人墨客留下赞美诗篇；此外，武汉丰富的戏剧、曲艺和书法艺术也展示了这座城市的文化魅力。武汉的京剧、汉剧等传统戏曲形式在历史长河中逐渐形成了自己的特色，深受人们喜爱。此外，武汉的书法艺术也在全国范围内具有重要地位，许多书法家以其精湛的技艺和独特的风格为武汉赢得了艺术上的荣誉。
+    </p>
+    <img src="https://file.ccmapp.cn/group1/M00/21/EE/rApntmG59IWAbG8OAANKEOTfX4k978.jpg" alt="艺术">
+    <div class="scroll-to-top" onclick="document.getElementById('nav').scrollIntoView();">↑</div>
+  </section>
+
+  <section id="modern">
+    <h2>🏙️现代风貌</h2>
+    <p>
+      在保留传统文化精髓的同时，武汉不断吸纳现代文化元素。创新产业、艺术展览、音乐节等活动蓬勃发展，展现了一个兼容并蓄、充满活力的现代都市形象。武汉的现代化建设日新月异，高楼大厦如雨后春笋般崛起。特别是武汉的光谷区域，已成为中国科技创新的前沿阵地，吸引了无数年轻人和创业者在这里追逐梦想。同时，武汉丰富的夜生活和独特的城市景观也让这座城市成为国内外游客热衷的旅行目的地。
+    </p>
+    <img src="https://p7.itc.cn/q_70/images03/20220526/e773030efbb241c59f71a73bf42c7936.jpeg" alt="现代">
+    <div class="scroll-to-top" onclick="document.getElementById('nav').scrollIntoView();">↑</div>
+  </section>
+
+  <section id="celebrities">
+    <h2>🌟文化名人</h2>
+    <p>
+      武汉不仅是历史文化的发源地，还孕育了许多杰出的文化名人。他们在文学、艺术和革命等领域的卓越贡献，为这座城市增添了不朽的光彩。例如，著名的文学家鲁迅、革命家黄兴等都与武汉有着深厚的渊源。如今，武汉依然是许多优秀文化名人的故乡和工作地。武汉的文化氛围也因此更加浓厚，吸引了大量文艺工作者来此创作、展示才华。
+    </p>
+    <img src="https://pic3.zhimg.com/v2-1e5b0a68cdd2ecc43ed799d43f63ba98_1440w.jpg" alt="名人">
+    <div class="scroll-to-top" onclick="document.getElementById('nav').scrollIntoView();">↑</div>
+  </section>
+
+  <footer>
+    <p>📢&copy; 2025 武汉文化介绍网 | 🎨Designed by JLX🚀</p>
+  </footer>
+  </body>
+</html>
