@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="kzr_homepage_style.css">
+    <style>
+        h1 {
+            text-align: left;
+            color: rgb(243, 243, 243);
+        }
+
+        h2 {
+            color: rgb(70, 110, 196);
+            text-align: left;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .complain_p {
+            text-align: left;
+        }
+
+        .main {
+            width:auto;
+            height: auto;
+            background: linear-gradient(30deg, #3A44B0,#7681F8, #ff9fd7,#7681F8,#3A44B0);
+            display: flex;
+            flex-direction: row;
+            /* overflow: auto; */
+        }
+        .main-left {
+            width:100%;
+            position: relative;
+            margin-left: 320px;
+            margin-top:10px;
+            margin-bottom: 30px;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        .comtain_div {
+            padding-left: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .title{
+            height: 60px;
+            width: auto;
+            position: relative;
+            top:10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            padding-left: 20px;
+            padding: auto;
+            background-color: rgb(127, 168, 255);
+            z-index: 1;
+        }
+        .title-font{
+            /* font-size: 20px; */
+            color: #E7F0F8;
+        }
+
+        #basicImform_div {
+            width: 300px;
+            height: 100%;
+            position:fixed;
+            margin-top:10px;
+            margin-bottom: 50px;
+            background-color: rgb(226, 240, 255);
+            /* background: linear-gradient(45deg, #ff7e5f, #feb47b); */
+            
+            left: 15px;
+            border-color: white;
+            border-radius: 30px;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        #head_div {
+            height: auto;
+            width: auto;
+            right: 10px;
+            position: relative;
+            padding: 20px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, rgb(127, 168, 255),#7681F8);
+            z-index: 1;
+            overflow: auto;
+        }
+
+        #ability_div {
+            height: auto;
+            width: auto;
+            position: relative;
+            top: 10px;
+            padding: 20px;
+            border-radius: 30px;
+            top: 10px;
+            background-color: #E7F0F8;
+            z-index: 1;
+            overflow: auto;
+        }
+
+        #science_div {
+            height: 700px;
+            width: auto;
+            position: relative;
+            top: 10px;
+            border-radius: 30px;
+            padding: 20px;
+            background-color: #E7F0F8;
+            z-index: 1;
+            overflow: auto;
+        }
+
+        #photo_div {
+            width: 300px;
+            height: 170px;
+            top: 20px;
+            position: relative;
+            /* background-color: aqua; */
+            display: grid;
+            place-items: center;
+        }
+
+        #table_div {
+            top: 40px;
+            position: relative;
+        }
+
+        #selfPhoto {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            /*圆形*/
+            object-fit: cover;
+            /*比例不变*/
+        }
+
+        .audio_style {
+            width: 100px;
+            height: 20px;
+        }
+
+        /* 表格样式 */
+        #table_style {
+            display: grid;
+            place-items: center;
+        }
+
+        .first_col {
+            font-weight: bold;
+            text-align: justify;
+            width: 70px;
+            /*水平均匀分布*/
+            /* vertical-align: middle; 垂直居中 */
+        }
+
+        .second_col {
+            text-align: left;
+            width: 10px;
+        }
+
+        /* 底部 */
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        #logo_div {
+            /* width: 300px;
+            height: 170px; */
+            /* background-color: aqua; */
+            display: grid;
+            place-items: center;
+        }
+
+        #button_div {
+            background-color: rgb(127, 168, 255);
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 150px;
+            display: grid;
+            place-items: center;
+            z-index: 2;
+        }
+
+        /* #button_div2 {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            height: 50px;
+            display: grid;
+            place-items: center;
+            background-color: rgb(226, 240, 255);
+            border-radius: 30px;
+            z-index: 1;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="basicImform_div">
+            <div id="photo_div">
+                <img src="photo_kzr.JPG" id="selfPhoto" alt="没有可加载的图片">
+                <audio controls="contorls" class="audio_style">
+                    <source src="bgm2_kzr.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="table_div">
+                <h2 style="text-align:center"> 个人简介 </h2>
+                <table align="center">
+                    <tr>
+                        <td class="first_col">姓名</td>
+                        <td class="second_col"> 康倬瑞 </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">所在地</td>
+                        <td class="second_col"> 云南昆明 </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">出生年月</td>
+                        <td class="second_col"> 2004-12-21 </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">年龄</td>
+                        <td class="second_col"> 20 </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">学校</td>
+                        <td class="second_col"> 中国地质大学（武汉） </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">学院</td>
+                        <td class="second_col"> 地理与信息工程学院 </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">班级</td>
+                        <td class="second_col"> 114232 </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">实验室</td>
+                        <td class="second_col"> HPSCIL </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">tel</td>
+                        <td class="second_col"> 13208850971 </td>
+                    </tr>
+                    <tr>
+                        <td class="first_col">E-Mail</td>
+                        <td class="second_col"> kangzhuorui@cug.edu.cn </td>
+                    </tr>
+                </table>
+            </div>
+    
+            <!-- 底部 -->
+            <div id="button_div">
+                <div id="logo_div">
+                    <div>
+                        <inline-block>
+                            <img src="cug_logo_kzr.JPG" class="logo" alt="没有可加载的图片">
+                        </inline-block>
+                        <inline-block>
+                            <img src="urbanComp_logo_kzr.jpg" class="logo" alt="没有可加载的图片">
+                        </inline-block>
+                    </div>
+                    <div>
+                        <a href="https://urbancomp.net/s/kang-zhuo-rui" color="red">去UrbanComp查看更多信息</a>
+                    </div>
+    
+                </div>
+                <div>
+                    <p style="font-size:12px;color:black">@界面部分内容选取自康倬瑞李四光计划面试简历</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="main-left">
+            <div id="head_div">
+                <div class="comtain_div">
+                    <h1> 康倬瑞 </h1>
+                    <p style="text-align:left;color:rgb(226, 240, 255)">
+                        康倬瑞，地理与信息工程学院地理科学类114232班学生，第十八期李四光计划成员。曾获校级优秀共青团员、军训先进个人等称号。
+                        现任文体联络部副部长，踊跃参与志愿活动，服务广大师生。积极参加各类文体活动，多次在演讲比赛、摄影比赛中取得优异成绩。</p>
+                </div>
+            </div>
+
+            <div class="title">
+                <h2 class="title-font">个人能力</h2>
+            </div>
+    
+            <div id="ability_div">
+                <div class="comtain_div">
+                    <h2> 数理思维与编程基础 </h2>
+                    <p class="complain_p"> 擅长数理思维与逻辑思考</p>
+                    <ul>
+                        <li>Python95分；c++96分；数据结构93分</li>
+                        <li>线性代数95分；高等数学90分；概率论与数理统计97分</li>
+                        <li>第十届全国中学生数理化学科能力展示活动数学学科省二等奖</li>
+                    </ul>
+                </div>
+                <div class="comtain_div">
+                    <h2> 英语水平 </h2>
+                    <p class="complain_p"> 具备较好的词汇语法基础，在课堂展示活动中取得很好反响，具备专业英文文献阅读的能力</p>
+                    <ul>
+                        <li>第29届中国日报社“21世纪杯”全国英语演讲比赛校赛二等奖</li>
+                    </ul>
+                </div>
+                <div class="comtain_div">
+                    <h2> 沟通合作与统筹规划 </h2>
+                    <p class="complain_p">曾任团委部门部长、学生会主席等职务，能够为将来项目合作打下基础</p>
+                    <ul>
+                        <li>昆明市2018年优秀学生干部</li>
+                        <li>盘龙区2018年优秀学生团干部；2017年雏鹰少年</li>
+                        <li>校级优秀共青团员</li>
+                    </ul>
+                </div>
+                <div class="comtain_div">
+                    <h2> 表达能力 </h2>
+                    <p class="complain_p"> 拥有升旗仪式、校庆等大型活动主持经验，
+                        曾代表中学参与云南新闻广播、昆明电视台等媒体采访，擅长PPT汇报展示</p>
+                </div>
+                <div class="comtain_div">
+                    <h2> 创新点发掘 </h2>
+                    <p class="complain_p">多次省级、国家级作文比赛获奖经历，能够以新颖角度发现问题，讲好科研故事</p>
+                    <ul>
+                        <li>第十九届“叶圣陶杯”中学生作文大赛省级二等奖</li>
+                        <li>第十四届“为学杯”全国中学生创新作文大赛复赛选拔优秀奖</li>
+                    </ul>
+                </div>
+                <div class="comtain_div">
+                    <h2> 摄影 </h2>
+                    <p class="complain_p">擅长构图，具有一定的审美能力，能够更好地使用论文图片</p>
+                    <ul>
+                        <li>李四光学院“清明心·廉洁影”摄影比赛亚军</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="title">
+                <h2 class="title-font">科研经历</h2>
+            </div>
+            
+            <div id="science_div">
+                <div class="comtain_div">
+                    <h2> 昆明市轨道交通站点土地利用协同性研究 </h2>
+                    <p class="complain_p">指导教师：宋小青</p>
+                    <p> 轨道交通发展迅速，在土地利用产生对交通的需求的同时，交通系统对土地利用产生重要影响。研究轨道交通站点土地利用协同性至关重要。本文利用节点—场所模型、信息熵作为研究模型，
+                        利用ArcgisPro、Excel进行数据处理，将昆明市轨道交通站点分为从属、平衡、压力三种协同状态和失衡节点、失衡场所两种失衡状态。并针对每一种情况从人地关系等角度提出适合昆明
+                        发展的建设发展方向，通过因地制宜、评估交通供给、促进产业融合、完善相关政策等手段，促进站点土地利用多元发展，为城市发展注入活力。</p>
+                </div>
+                <div class="comtain_div">
+                    <h2> 南望山马尾松演替状况分析 </h2>
+                    <p class="complain_p">指导教师：黄咸雨</p>
+                    <p> 针对南望山上马尾松生长状况不佳的问题，对南望山土壤和植被分布情况展开调查分析，并结合珞珈山、龟山等地的文献资料，从各圈层之间的联系的角度，
+                        分析马尾松存在和消逝的原因，同时也认可了通过适当减少马尾松数量以促进向樟树等武汉本土植被演替的措施，完成实习报告，获评96分。</p>
+                </div>
+                <div class="comtain_div">
+                    <h2> 科技写作课程结课报告 </h2>
+                    <p class="complain_p">指导教师：孙嘉</p>
+                    <p> 掌握专业检索、高级检索等文献检索方式，使用endnote软件整理引用文献。学习科技论文写作结构基础，并在此基础上阅读专业文献，撰写阅读笔记，在结课报告中获评98分。</p>
+                </div>
+                <div class="comtain_div">
+                    <h2> 初中阶段寻访昆明文脉及高中阶段昆明历史古迹保护情况探索 </h2>
+                    <p class="complain_p">指导教师：赵玲、李文超、李陈艳</p>
+                    <p> 实地寻访昆明的文化古迹，如昆明老街建筑群、国立西南联合大学遗址等，了解文化古迹的保护情况，同时以设计问卷和实地走访结合的形式，针对不同人群
+                        设计不同问卷了解当地居民、游客、工作人员等对文化古迹保护的看法。探索后发现昆明大部分历史古迹保护情况良好，但仍有古迹遗址存在参观路线不便、
+                        人流管理不当、古迹破坏严重等问题，希望在将来能够用地信的思维解决这些问题。初中阶段曾代表学校参与研究成果相关的媒体采访，高中阶段在此基础上
+                        申报课题并优秀结题。</p>
+                </div>
+    
+            </div>
+        </div>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
