@@ -1,0 +1,68 @@
+<<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>左然人物介绍</title>
+    <style>
+      .center-text {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+        border: 1px solid hsl(133, 67%, 53%);
+        background-color: #e19090;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-text">
+      <p style="background-color: aqua">左然人物介绍</p>
+      <a href="https://imgse.com/i/pEYFP9x"
+        ><img
+          src="https://s21.ax1x.com/2025/03/05/pEYFP9x.png"
+          alt="pEYFP9x.png"
+          border="0"
+          width="250px;"
+          height="400px;"
+        />
+      </a>
+    </div>
+    <table class="center-text" border="1">
+      <thead>
+        <tr>
+          <td>姓名</td>
+          <td>左然</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>年龄</td>
+          <td>29岁</td>
+        </tr>
+        <tr>
+          <td>职业</td>
+          <td>律师</td>
+        </tr>
+        <tr>
+          <td>生日</td>
+          <td>4月26日</td>
+        </tr>
+        <tr>
+          <td>爱好</td>
+          <td>阅读、看电影、飙车兜风、厨艺、射击、钓鱼、戏曲</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="background-color: #e19090">
+      左然，米哈游研发的律政恋爱推理手游《未定事件簿》男主角之一。
+      毕业于未名大学，二十五岁取得博士学位，二十八岁取得了通过率仅为1%的高级律师资格。NXX成员、高级律师、忒弥斯律师事务所高级合伙人。是玩家的前辈和上司以及搭档。
+    </p>
+    <audio src="梁静茹 - 暖暖.mp3" autoplay controls loop="-1" preload="auto">
+      <source src="梁静茹 - 暖暖.mp3" type="audio/mpeg" />
+      您的浏览器不支持 audio 标签。
+    </audio>
+<h1>版权信息<a href="版权信息.html">跳转版权信息
+</a>
+  </body>
+</html>
