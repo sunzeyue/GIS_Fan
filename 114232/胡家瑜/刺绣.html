@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锦绣中华 - 传统刺绣艺术</title>
+    <style>
+        :root {
+            --main-color: #6b4f3a;
+            --bg-color: #f5e6cc;
+            --text-color: #4a3f35;
+            --highlight: #8b7355;
+        }
+
+        body {
+            font-family: '宋体', 'SimSun', serif;
+            line-height: 1.8;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+ 
+        .video-intro h2 {
+            font-size: 2.8rem;  /* 原2rem调整为2.8rem */
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+        }
+        /* 导航样式 */
+        .nav-container {
+            background: var(--main-color);
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* 内容容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 板块通用样式 */
+        .section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        /* 视频模块 */
+        .video-section {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 新增视频引言样式 */
+        .video-intro {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-intro h2 {
+            font-family: '华文行楷', cursive;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        /* 历史沿革优化 */
+         
+.history-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .history-text {
+            padding: 2rem;
+            background: linear-gradient(to right, #fff3e6, #ffffff);
+            border-left: 4px solid var(--highlight);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .history-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .history-img-group {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .history-img-group img {
+            width: 100%;
+            height: 350px;  /* 统一图片高度 */
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .history-img-group:hover img {
+            transform: scale(1.05);
+        }
+
+        .img-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(107, 79, 58, 0.8);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* 工艺技法优化 */
+        .tech-box {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: relative;
+            margin-left: 2rem;
+        }
+
+        .tech-box::before {
+            content: "✿";
+            position: absolute;
+            left: -1.5rem;
+            top: -1rem;
+            font-size: 2.5rem;
+            color: var(--highlight);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* 图文混排模块 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        /* 四大名绣表格 */
+        .embroidery-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border: 2px solid var(--highlight);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .embroidery-table td, .embroidery-table th {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+            transition: all 0.3s;
+        }
+
+        .embroidery-table th {
+            background: var(--highlight);
+            color: white;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .embroidery-table td {
+            background: #fffaf0;
+        }
+
+        .embroidery-table tr:hover td {
+            background: #fff3e0;
+            transform: scale(1.02);
+        }
+
+        .embroidery-table img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* 图片样式 */
+        .artwork-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .artwork-img:hover {
+            transform: scale(1.02);
+        }
+
+        /* 艺术图鉴窗棂布局 */
+        .window-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 20px;
+        }
+
+        .window-frame {
+            position: relative;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .window-frame:hover {
+            transform: translateY(-5px);
+        }
+
+        .window-frame img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            filter: sepia(0.2);
+        }
+
+        .wood-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 12px solid var(--main-color);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .window-gallery {
+                grid-template-columns: 1fr;
+            }
+            .window-frame img {
+                height: 300px;
+            }
+            .history-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="#history">历史沿革</a></li>
+                <li><a href="#types">四大名绣</a></li>
+                <li><a href="#technique">工艺技法</a></li>
+                <li><a href="#gallery">艺术图鉴</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <!-- 视频引言 -->
+        <div class="video-intro">
+            <h2>丝理千年 · 针黹春秋</h2>
+            <p>刺绣，是针尖上的水墨丹青，是丝线里的时光密码。<br>一针一线穿梭千年文明，让我们通过这段影像，感受指尖流转的东方美学...</p>
+        </div>
+
+        <!-- 视频模块 -->
+        <section class="section">
+            <div class="video-section">
+                <video controls poster="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy6.jpg">
+                    <source src="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy视频.mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- 历史沿革 -->
+         
+<section id="history" class="section">
+    <h2>千年针韵 · 历史沿革</h2>
+    <div class="history-section">
+        <div class="history-text">
+            <p>中国刺绣史可追溯至新石器时代，商周时期出现黼黻纹绣。至汉代，丝绸之路的繁荣使刺绣技艺突飞猛进...</p>
+            <p>唐宋时期，刺绣突破服饰范畴，发展出书画绣品。明代顾绣开创文人绣先河，清代形成四大名绣鼎立格局...</p>
+        </div>
+        
+        <div class="history-images">
+            <div class="history-img-group">
+                <img src="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy1.jpg" 
+                     alt="古代刺绣文物">
+                <div class="img-caption">战国时期刺绣残片（复原品）</div>
+            </div>
+            
+            <div class="history-img-group">
+                <img src="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy2.jpg" 
+                     alt="刺绣发展史">
+                <div class="img-caption">清代宫廷刺绣《百子图》局部</div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- 四大名绣 -->
+        <section id="types" class="section">
+            <h2>锦绣四方 · 四大名绣</h2>
+            <table class="embroidery-table">
+                <tr>
+                    <th>名称</th>
+                    <th>代表作</th>
+                    <th>艺术特色</th>
+                    <th>发源地</th>
+                </tr>
+                <tr>
+                    <td>蜀绣</td>
+                    <td><img src="C:\Users\jiayu1234a\Desktop\gis应用开发\蜀绣.jpg" alt="蜀绣"></td>
+                    <td>针法细腻、色彩明快<br>代表技法：晕针、铺针</td>
+                    <td>四川成都</td>
+                </tr>
+                <tr>
+                    <td>苏绣</td>
+                    <td><img src="C:\Users\jiayu1234a\Desktop\gis应用开发\苏绣.jpg" alt="苏绣"></td>
+                    <td>图案秀丽、针法灵活<br>代表作品：双面绣</td>
+                    <td>江苏苏州</td>
+                </tr>
+                <tr>
+                    <td>湘绣</td>
+                    <td><img src="C:\Users\jiayu1234a\Desktop\gis应用开发\湘绣.jpg" alt="湘绣"></td>
+                    <td>写实传神、色彩浓烈<br>特色工艺：鬅毛针</td>
+                    <td>湖南长沙</td>
+                </tr>
+                <tr>
+                    <td>粤绣</td>
+                    <td><img src="C:\Users\jiayu1234a\Desktop\gis应用开发\粤绣.jpg" alt="粤绣"></td>
+                    <td>金碧辉煌、装饰性强<br>常用材料：金银线</td>
+                    <td>广东地区</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 工艺技法 -->
+        <section id="technique" class="section">
+            <h2>指尖艺术 · 工艺技法</h2>
+            <div class="feature-grid">
+                <img src="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy3.jpg" 
+                     alt="刺绣工具" 
+                     class="artwork-img">
+                <div class="tech-box">
+                    <h3>刺绣五艺详解</h3>
+                    <ol>
+                        <li><strong>设计图样</strong>：白描勾线定骨架，三矾九染设色韵</li>
+                        <li><strong>上绷技巧</strong>：绢布经纬需端正，松紧适宜不偏斜</li>
+                        <li><strong>勾稿要诀</strong>：粉本拓印需精准，墨线轻描保洁净</li>
+                        <li><strong>丝线处理</strong>：劈丝分缕见真功，润色养线有秘方</li>
+                        <li><strong>针法运用</strong>：
+                            <ul>
+                                <li>平针：齐针套针铺底色</li>
+                                <li>抢针：长短参差造层次</li>
+                                <li>乱针：纵横交错显肌理</li>
+                                <li>盘金：金银勾勒增华彩</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p class="tip">※ 传统"三金三银"法则：金线压银线、粗线压细线、深色压浅色</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 艺术图鉴 -->
+        <section id="gallery" class="section">
+            <h2>方寸之美 · 艺术图鉴</h2>
+            <div class="window-gallery">
+                <div class="window-frame">
+                    <img src="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy4.jpg"alt="花鸟刺绣">
+                    <div class="wood-frame"></div>
+                </div>
+                <div class="window-frame">
+                    <img src="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy7.jpg">
+                    <div class="wood-frame"></div>
+                </div>
+                <div class="window-frame">
+                    <img src="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy5.jpg"alt="人物刺绣">
+                    <div class="wood-frame"></div>
+                </div>
+                <div class="window-frame">
+                    <img src="C:\Users\jiayu1234a\Desktop\gis应用开发\hjy8.jpg"alt="现代刺绣">
+                    <div class="wood-frame"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
