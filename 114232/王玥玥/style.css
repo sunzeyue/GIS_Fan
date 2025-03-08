@@ -1,0 +1,173 @@
+/* 全局样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 页眉样式 */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #bdc3c7;
+    font-size: 1.1rem;
+}
+
+/* 图片展示区 */
+.image-stage.photo {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    margin: 2rem 0;
+}
+
+.image-stage.photo img {
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 备注说明 */
+.notes {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+.notes h4 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.notes ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.notes li {
+    margin-bottom: 0.5rem;
+    color: #7f8c8d;
+}
+
+/* 音频播放器 */
+.audition {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.audition audio {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+/* QQ音乐链接 */
+.qqmusic-embed {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.qqmusic-embed a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #31c27c;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.qqmusic-embed a:hover {
+    background-color: #1e7a4f;
+}
+
+a {
+    color: #2c3e50;         
+    text-decoration: none;  
+    font-family: Arial, sans-serif; 
+    font-size: 16px;        
+    padding: 8px 12px;      
+    transition: all 0.3s;   
+}
+  
+  /* 鼠标悬停时的样式 */
+a:hover {
+    color: #e74c3c;         
+    text-decoration: underline; 
+    background-color: #f9f9f9;  
+}
+
+/* 页脚 */
+.music-legal {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ecf0f1;
+    margin-top: 2rem;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .image-stage.photo {
+        flex-wrap: nowrap;
+        padding: 1rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .audition audio {
+        width: 95%;
+    }
+}
