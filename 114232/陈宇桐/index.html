@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客页面</title>
+    <!-- 项目logo图标引入 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- fontawesome字体图标引入 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.1/css/all.css" rel="stylesheet">
+    <!-- css样式引入 -->
+    <link rel="stylesheet" href="./style1_cyt.css">
+</head>
+
+<body>
+    <main class="container">
+        <!-- 左边部分 -->
+        <aside class="profile">
+            <img src="./img/cyt.jpg" alt="个人照片正在加载中">
+            <h3>陈宇桐</h3>
+            <p>中地数码 WebGIS二次开发部</p>
+            <div class="iconfont-part">
+                <a class="fa-brands fa-github"></a>
+                <a class="fa-brands fa-weibo"></a>
+                <a class="fa-brands fa-weixin"></a>
+                <a class="fa-brands fa-qq"></a>
+            </div>
+            <button><a href="">联系我</a></button>
+        </aside>
+
+
+        <aside class="information">
+
+            <section class="self">
+                <audio id="audio" autoplay controls preload="auto">
+                    <source src="Stars_cyt.mp3" />
+                  </audio>
+    
+                <h3 class="title">个人介绍</h3>
+                <p>目前就读于中国地质大学（武汉），主修地理信息科学，辅修数学与应用数学，2023年10月起在中地数码公司进行为期1年的实习培训。具备扎实的前端开发能力，熟练掌握React、Vue、Angular等主流框架，能够高效解决业务需求和跨平台开发问题。熟悉OpenLayer、Mapbox、Leaflet、Cesium等GIS框架，具备地理信息展示与空间分析的实践经验。</p>
+                <p>在机器学习方面，掌握常见算法和模型，能够进行数据分析和预测功能实现。熟悉AWS、Azure等主流云计算平台，具备数据存储、处理和计算的能力。英语和数学能力优秀，能够熟练阅读技术文档并进行有效沟通，为数据分析与算法优化提供有力支持。</p>
+                <!-- 此处注意一下，盒子里面，两列还有盒子 -->
+                <div class="bigbox">
+                    <div class="tinybox">
+                        <h3><span>年龄:</span>&nbsp;&nbsp;20</h3>
+                        <h3><span>住址:</span>&nbsp;&nbsp;武汉市洪山区</h3>
+                        <h3><span>手机:</span>&nbsp;&nbsp;19867855177</h3>
+                        <h3><span>email:</span>&nbsp;&nbsp;trs1324@163.com</h3>
+                    </div>
+                    <div class="tinybox">
+                        <h3><span>岗位:</span>&nbsp;&nbsp;WebGIS</h3>
+                        <h3><span>外语:</span>&nbsp;&nbsp;英语六级</h3>
+                        <h3><span>工作经验:</span>&nbsp;&nbsp;1年</h3>
+                        <h3><span>项目经历:</span>&nbsp;&nbsp;10+</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tech">
+                <h3 class="title">技术栈模块</h3>
+                <!-- 在这个地方，一个图标加一行字，构成了小盒子，外层也包裹一个大盒子，但因为和前面一个有类似的布局方式，采取类名可以相同 -->
+                <div class="bigbox">
+                    <div class="tinybox">
+                        <img src="./img/icon1_cyt.png" alt="">
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="tinybox">
+                        <img src="./img/icon2_cyt.png" alt="">
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="tinybox">
+                        <img src="./img/icon3_cyt.png" alt="">
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="tinybox">
+                        <img src="./img/icon4_cyt.png" alt="">
+                        <h3>SASS</h3>
+                    </div>
+                    <div class="tinybox">
+                        <img src="./img/icon5_cyt.png" alt="">
+                        <h3>Jquery</h3>
+                    </div>
+                    <div class="tinybox">
+                        <img src="./img/icon6_cyt.png" alt="">
+                        <h3>Vue.js</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills">
+                <h3 class="title">技术熟练度</h3>
+                <div class="bigbox">
+                    <div class="tinybox">
+                        <div class="progress">
+                            <!-- 上层的文字 -->
+                            <h3>html<span>95%</span></h3>
+                            <!-- 下层的进度条 -->
+                            <div class="outer">
+                                <div class="inner" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <!-- 上层的文字 -->
+                            <h3>css<span>80%</span></h3>
+                            <!-- 下层的进度条 -->
+                            <div class="outer">
+                                <div class="inner" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <!-- 上层的文字 -->
+                            <h3>JavaScript<span>65%</span></h3>
+                            <!-- 下层的进度条 -->
+                            <div class="outer">
+                                <div class="inner" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <!-- 上层的文字 -->
+                            <h3>Machine Learning<span>70%</span></h3>
+                            <!-- 下层的进度条 -->
+                            <div class="outer">
+                                <div class="inner" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tinybox">
+                        <div class="progress">
+                            <!-- 上层的文字 -->
+                            <h3>jquery<span>90%</span></h3>
+                            <!-- 下层的进度条 -->
+                            <div class="outer">
+                                <div class="inner" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <!-- 上层的文字 -->
+                            <h3>Vue<span>74%</span></h3>
+                            <!-- 下层的进度条 -->
+                            <div class="outer">
+                                <div class="inner" style="width: 74%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <!-- 上层的文字 -->
+                            <h3>Electron<span>65%</span></h3>
+                            <!-- 下层的进度条 -->
+                            <div class="outer">
+                                <div class="inner" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <!-- 上层的文字 -->
+                            <h3>small app<span>70%</span></h3>
+                            <!-- 下层的进度条 -->
+                            <div class="outer">
+                                <div class="inner" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experiences">
+                <h3 class="title">学习工作经历</h3>
+                <div class="bigbox">
+                    <div class="tinybox">
+                        <span>2023年9月至今</span>
+                        <h3>中国地质大学(武汉)地理与信息工程学院</h3>
+                        <p>2023年9月至今就读于中国地质大学（武汉），学校主修方向为地理信息科学，辅修数学与应用数学，入选第18期李四光计划，获2024年国家奖学金、"英才工程奖学金"。在校期间，参与多个国家级项目，构筑系统性科研能力，研究兴趣为：①超智遥融合下的非线性地球系统模式研发；②空间计算智能与多模态时空数据挖掘</p>
+                    </div>
+                    
+                    <div class="tinybox">
+                        <span>2023年10月-2024年7月</span>
+                        <h3>中地数码二次开发部</h3>
+                        <p>2023年10月至2024年7月，在中地数码公司实习培训期间，我主要负责WebGIS开发工作，使用OpenLayer、Mapbox、Leaflet和Cesium等地图框架，开发并优化了交通监控和路径规划等功能，提升了实时交通数据的可视化展示与分析能力。同时，我还负责前端页面的设计与交互优化，确保了系统的稳定性和良好的用户体验。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact">
+                <h3 class="title">联系方式</h3>
+                <div class="bigbox">
+                    <div class="tinybox">
+                        <i class="fa-solid fa-map"></i>
+                        <div class="info">
+                            <h3>详细信息</h3>
+                            <p>武汉市洪山区中地数码</p>
+                        </div>
+                    </div>
+                    <div class="tinybox">
+                        <i class="fa-solid fa-map"></i>
+                        <div class="info">
+                            <h3>手机号</h3>
+                            <p>19867855177</p>
+                        </div>
+                    </div>
+                    <div class="tinybox">
+                        <i class="fa-solid fa-map"></i>
+                        <div class="info">
+                            <h3>Email</h3>
+                            <p>trs1324@163.com</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </main>
+</body>
+</html>
