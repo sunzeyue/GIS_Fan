@@ -1,0 +1,82 @@
+body{
+    background:linear-gradient(to bottom,#ffff00,#ffcc00);
+    margin:0;
+    padding:0;
+}
+h1{
+    text-align:center;
+    font-size:50px;
+    color:coral;
+    text-shadow:2px 2px 2px rgb(171, 123, 123)
+}
+.container {
+    display: flex;
+    align-items: center; /* 垂直居中，根据需要调整 */
+    gap: 20px; /* 方框和图片之间的间距 */
+}
+.text-box {
+    border: 2px solid #000; /* 方框的边框 */
+    padding: 20px; /* 方框内部的填充 */
+    margin: 20px; /* 方框的外边距 */
+    width: 800px;
+    p::first-letter{
+        font-size:140%;
+    }
+}
+p{
+     text-indent:2em;
+     font-size:150%;
+}
+.sidebar-image{
+    height:500px;
+    width:650px;
+}
+.container1{
+    display:flex;
+    align-items: center;
+    gap:35px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom:20px;
+    padding: 15px;
+    background-color: yellow;
+    box-shadow: 10px 10px 5px grey;
+}
+.food-image1{
+    width:300px;
+    height:auto; 
+    margin-left:40px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: block;
+}
+.food-image1:hover{
+    transform: scale(1.1);
+}
+.text1{
+   font-size:smaller;
+}
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* 文本颜色，可按需调整 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景，提升文本可读性 */
+    padding: 10px; /* 内边距，可按需调整 */
+    border-radius: 5px; /* 圆角，可按需调整 */
+    opacity: 0; /* 初始透明度为0，即隐藏状态 */
+    transition: opacity 0.3s ease; /* 过渡效果 */
+    pointer-events: none; /* 确保文本区域不阻挡鼠标事件 */
+}
+ 
+.container1:hover .hover-text {
+    opacity: 1; /* 鼠标悬停时显示文本 */
+}
+.custom-divider {
+    border: 0;
+    height: 1px;
+    background: #ed650a; /* 分割线颜色 */
+    margin: 20px 0;  /* 分割线上下的外边距 */
+}
