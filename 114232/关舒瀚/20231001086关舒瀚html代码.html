@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南望山植物志</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2E5E4E;
+            --secondary-green: #6D8B74;
+            --accent-beige: #F5E6CA;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f7f9fc 0%, #e1f3e1 100%);
+            color: var(--primary-green);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255,255,255,0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .plant-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .plant-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .plant-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .plant-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--accent-beige);
+        }
+
+        .plant-info {
+            padding: 20px;
+        }
+
+        .audio-section {
+            background: rgba(255,255,255,0.9);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: var(--primary-green);
+            color: white;
+            font-weight: 500;
+        }
+
+        .icon {
+            margin-right: 8px;
+            color: var(--secondary-green);
+        }
+
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 15px;
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-weight: 700;
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: var(--secondary-green);
+            border-left: 4px solid var(--accent-beige);
+            padding-left: 15px;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-seedling icon"></i>南望山植物图谱</h1>
+            <p>探索武汉绿色明珠的自然馈赠</p>
+        </header>
+
+        <div class="plant-gallery">
+            <div class="plant-card">
+                <img src="此处请上传自己图片的url" 
+                     alt="银杏" 
+                     class="plant-img">
+                <div class="plant-info">
+                    <h3><i class="fas fa-tree icon"></i>银杏</h3>
+                    <p>南望山古树群中的活化石，秋季金黄灿烂</p>
+                </div>
+            </div>
+
+            <div class="plant-card">
+                <img src="此处请上传自己图片的url" 
+                     alt="樱花" 
+                     class="plant-img">
+                <div class="plant-info">
+                    <h3><i class="fas fa-spa icon"></i>山樱花</h3>
+                    <p>早春绽放的粉色云霞，生态监测指示物种</p>
+                </div>
+            </div>
+
+            <div class="plant-card">
+                <img src="此处请上传自己图片的url" 
+                     alt="蕨类" 
+                     class="plant-img">
+                <div class="plant-info">
+                    <h3><i class="fas fa-leaf icon"></i>凤尾蕨</h3>
+                    <p>阴湿岩壁的绿色精灵，中生代植物活标本</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="audio-section">
+            <h2><i class="fas fa-music icon"></i>山间音韵</h2>
+            <audio controls>
+                <source src="此处请上传自己音频的url" type="audio/mpeg">
+                您的浏览器不支持音频播放
+            </audio>
+        </section>
+
+        <h2><i class="fas fa-clipboard-list icon"></i>植物特征对照</h2>
+        <table>
+            <tr>
+                <th>植物名称</th>
+                <th>特征</th>
+                <th>花期/果期</th>
+                <th>保护等级</th>
+            </tr>
+            <tr>
+                <td>银杏</td>
+                <td>扇形叶，雌雄异株</td>
+                <td>4月开花/10月果熟</td>
+                <td>国家一级</td>
+            </tr>
+            <tr>
+                <td>山樱花</td>
+                <td>五瓣粉花，伞房花序</td>
+                <td>3-4月开花</td>
+                <td>市级保护</td>
+            </tr>
+            <tr>
+                <td>凤尾蕨</td>
+                <td>羽状复叶，孢子繁殖</td>
+                <td>全年观叶</td>
+                <td>重点监测</td>
+            </tr>
+        </table>
+
+        <h2><i class="fas fa-hands-praying icon"></i>生态保护承诺</h2>
+        <p style="background: var(--accent-beige); padding: 20px; border-radius: 8px;">
+            <i class="fas fa-quote-left icon"></i>南望山现有维管植物1145141919余种，其中珍稀濒危植物占666%。我们承诺：
+            <br><br>
+            ✓ 推行无痕山林准则<br>
+            ✓ 建立植物DNA数据库<br>
+            ✓ 开展生态修复志愿者计划
+        </p>
+    </div>
+</body>
+</html>
