@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宫崎骏的奇幻世界</title>
+    <style>
+        :root {
+            --primary-color: #2c786c;
+            --secondary-color: #ffd700;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #86f2b9;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            background: url('https://i.imgur.com/9ZVmRcG.jpg') center/cover;
+            color: rgb(6, 140, 242);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .movie-card {
+            background: rgb(246, 247, 247);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgb(244, 246, 247);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: rgb(248, 250, 250);
+        }
+
+        audio {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .music-section {
+            background: rgb(27, 188, 191);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #faf6f6;
+            color: rgb(10, 1, 1);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>宫崎骏动画世界</h1>
+        <p>探索吉卜力工作室的奇幻之旅</p>
+    </header>
+
+    <!-- 动画画廊 -->
+    <div class="gallery">
+        <div class="movie-card">
+            <img src=https://img2.baidu.com/it/u=36896826,1858112687&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500 alt="千与千寻">
+            <div class="movie-info">
+                <h3>千与千寻 (2001)</h3>
+                <p>少女千寻意外进入神灵世界，通过勇气和善良解开诅咒的冒险故事</p>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src=https://img1.baidu.com/it/u=3775985923,3645650044&fm=253&fmt=auto&app=138&f=JPEG?w=1468&h=800 alt="龙猫">
+            <div class="movie-info">
+                <h3>龙猫 (1988)</h3>
+                <p>两姐妹与森林守护者龙猫的温馨相遇，展现田园生活的魔力</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 数据表格 -->
+    <table>
+        <caption>吉卜力主要作品简表</caption>
+        <thead>
+            <tr>
+                <th>作品名称</th>
+                <th>上映年份</th>
+                <th>票房（亿日元）</th>
+                <th>主要奖项</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>千与千寻</td>
+                <td>2001</td>
+                <td>316.8</td>
+                <td>奥斯卡最佳动画长片</td>
+            </tr>
+            <tr>
+                <td>哈尔的移动城堡</td>
+                <td>2004</td>
+                <td>196.0</td>
+                <td>威尼斯电影节金狮奖提名</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 原声带音乐 -->
+    <div class="music-section">
+        <h2>经典原声欣赏</h2>
+        <audio controls autoplay>
+            <source src="751003852.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放
+        </audio>
+        <p>《永远同在》（千与千寻主题曲）</p>
+    </div>
+
+    <footer>
+        <p>请联系我：3318796945@qq.com</p>
+    </footer>
+</body>
+</html>
