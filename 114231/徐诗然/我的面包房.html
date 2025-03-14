@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+    <title>✨梦幻面包房✨</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8e1d1; /* 温馨的浅棕色背景 */
+            color: #6d4b3b;
+            text-align: center;
+        }
+        h1 {
+            font-size: 60px;
+            color: #d48f5a;
+            margin: 20px 0 10px;
+        }
+        .divider {
+            width: 60%;
+            height: 2px;
+            background-color: #d48f5a;
+            margin: 10px auto;
+        }
+        .welcome-text {
+            font-size: 18px;
+            color: #8c5b3b;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+        .bread-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .bread-section {
+            flex: 1;
+            background-color: #fff1e6;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(139, 69, 19, 0.2);
+        }
+        .bread-section p {
+    display: flex;          /* 启用 flexbox 布局 */
+    align-items: flex-start; /* 使文本对齐到顶部 */
+   
+    margin: 5px 0; /* 调整段落上下的间距 */
+    line-height: 1.2;          /* 可选：调整段落之间的间距 */
+}
+        .bread-section:hover {
+    transform: translateY(-5px); /* 向上浮动的效果 */
+    box-shadow: 0px 8px 15px rgba(139, 69, 19, 0.3); /* 强化阴影效果 */
+}
+        .bread-description img {
+        
+    width: 60%;
+    height: auto;  
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 34px;
+            color: #d48f5a;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 24px;
+            color: #8c5b3b;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff7f50;
+        
+    
+              
+}
+
+    </style>
+</head>
+<body>
+    <h1>✨梦幻面包房✨</h1>
+    <div class="divider"></div>
+    <p class="welcome-text">🫧欢迎来到我的面包店，品尝美味的手工烘焙！🫧</p>
+   
+
+    <!-- 音乐文件（可使用本地文件或在线链接） -->
+    <audio id="music" src="图片/音乐.mp3"></audio>
+
+    <!-- 按钮 -->
+    <button class="music-button" onclick="toggleMusic()">🎶 点击播放音乐 🎶</button>
+
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("music");
+
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+   
+    
+
+</body>
+</html>
+    <div class="container">
+        
+        <!-- 可颂 -->
+        <div class="bread-wrapper">
+            <div class="bread-section bread-description">
+                <img src="图片/可颂.png" alt="可颂">
+                <h2>🥐可颂🥐</h2>
+                <p>酥脆多层，黄油香气浓郁的经典法式面包。</p>
+                <p class="price">价格：¥12</p>
+            </div>
+            <div class="bread-section bread-method">
+                
+               
+                    <h2>🥐 可颂制作方法</h2>
+                    <p>1️⃣ <strong>揉面 & 发酵</strong></p>
+                    <p>🔹 混合高筋面粉、糖、盐和酵母，加入牛奶和黄油，揉至光滑。发酵至两倍大。</p>
+                
+                    <p>2️⃣ <strong>黄油折叠 & 冷藏</strong></p>
+                    <p>🔹 擀开黄油，包入面团进行三折。</p>
+                    <p>🔹 冷藏 30 分钟后，再次擀开并重复三折。</p>
+                
+                    <p>3️⃣ <strong>整形</strong></p>
+                    <p>🔹 将面团擀成 3mm 厚，切割成三角形，卷成可颂形状。</p>
+                
+                    <p>4️⃣ <strong>烘烤</strong></p>
+                    <p>🔹 180°C 烘烤 18-20 分钟，至表面金黄酥脆。</p>
+                
+                    <p>5️⃣ <strong>黄油刷面</strong></p>
+                    <p>🔹 烘烤后趁热刷上一层黄油，让表面更香酥。</p>
+                </div>
+                
+        </div>
+         <!-- 其他面包 -->
+         <div class="bread-wrapper">
+            <div class="bread-section bread-description">
+                <img src="图片/脏脏包.png" alt="脏脏包">
+                <h2>🍫脏脏包🍫</h2>
+                <p>层层酥脆的可颂包裹浓郁巧克力，吃得越脏越美味！</p>
+                <p class="price">价格：¥18</p>
+            </div>
+            <div class="bread-section bread-method">
+                <h2>🍫脏脏包制作方法</h2>
+                <p>1️⃣ <strong>揉面 & 发酵</strong></p>
+                <p>🔹 将高筋面粉、低筋面粉、糖、盐和酵母混合，倒入牛奶揉成光滑面团，加入软化黄油继续揉至扩展阶段。</p>
+
+    <p>2️⃣ <strong>黄油折叠 & 冷藏</strong></p>
+    <p>🔹 擀开 150g 冷藏黄油，包入发酵好的面团。</p>
+    <p>🔹 进行三折，放入冰箱冷藏 30 分钟。</p>
+    <p>3️⃣ <strong>整形 </strong></p>
+    <p>🔹 将折叠好的面团擀成 3mm 厚的长方形，切割成三角形。</p>
+
+
+    <p>4️⃣ <strong>烘烤</strong></p>
+    <p>🔹 烤箱预热至 180°C，烘烤18-20 分钟，至表面金黄酥脆。</p>
+    
+
+    <p>5️⃣ <strong>巧克力涂层 & “脏脏” 装饰</strong></p>
+    <p>🔹 巧克力融化：隔水加热 100g 黑巧克力至融化。 用刷子均匀涂抹在面包表面，待稍干但未完全凝固时筛上一层可可粉</p>
+    
+            </div>
+        </div>
+        
+        <div class="bread-wrapper">
+            <div class="bread-section bread-description">
+                <img src="图片/碱水.jpg" alt="抹茶碱水包">
+                <h2>🍵抹茶碱水包🍵</h2>
+                <p>融合了抹茶的清香，独特的碱水风味。</p>
+                <p class="price">价格：¥15</p>
+            </div>
+            <div class="bread-section bread-method">
+                <h2>🍵 抹茶碱水包制作方法</h2>
+    <p>1️⃣ <strong>揉面 & 发酵</strong></p>
+    <p>🔹 混合高筋面粉、糖、盐、抹茶粉和酵母，加入温水揉至光滑，发酵至 1.5 倍大。</p>
+
+    <p>2️⃣ <strong>整形</strong></p>
+    <p>🔹 分割面团，搓成长条后打结，形成碱水包形状。</p>
+
+    <p>3️⃣ <strong>碱水浸泡</strong></p>
+    <p>🔹 3g 小苏打溶于 500ml 热水，面团放入浸泡 30 秒，取出沥干。</p>
+
+    <p>4️⃣ <strong>烘烤</strong></p>
+    <p>🔹 200°C 烘烤 15-18 分钟，至表面呈现深绿色。</p>
+
+    <p>5️⃣ <strong>表面点缀</strong></p>
+    <p>🔹 烘烤后撒少许粗盐，或刷上少量黄油增香。</p>
+            </div>
+        </div>
+
+        <div class="bread-wrapper">
+            <div class="bread-section bread-description">
+                <img src="图片/贝果.png" alt="核桃肉桂卷">
+                <h2>🥯贝果🥯</h2>
+                <p>肉桂的香气搭配核桃的脆感，回味无穷！</p>
+                <p class="price">价格：¥20</p>
+            </div>
+            <div class="bread-section bread-method">
+          
+            <h2>🥯 贝果制作方法</h2>
+    <p>1️⃣ <strong>揉面 & 发酵</strong></p>
+    <p>🔹 混合高筋面粉、糖、盐和酵母，加入温水揉至光滑。发酵至 1.5 倍大。</p>
+
+    <p>2️⃣ <strong>整形</strong></p>
+    <p>🔹 将面团分成小份，搓成圆环状，接口捏紧。</p>
+
+    <p>3️⃣ <strong>水煮</strong></p>
+    <p>🔹 将贝果放入热水中，两面各煮 30 秒，捞出沥干。</p>
+
+    <p>4️⃣ <strong>烘烤</strong></p>
+    <p>🔹 200°C 烘烤 15-18 分钟，至表面金黄。</p>
+
+    <p>5️⃣ <strong>涂抹奶油</strong></p>
+    <p>🔹 可切开后抹奶油芝士，搭配蜂蜜或果酱食用。</p>
+      </div>
+        </div>
+        
+        
+        <div class="bread-wrapper">
+            <div class="bread-section bread-description">
+                <img src="图片/肉桂.jpg" alt="核桃肉桂卷">
+                <h2>🍂 核桃肉桂卷</h2>
+                <p>肉桂的香气搭配核桃的脆感，回味无穷！</p>
+                <p class="price">价格：¥20</p>
+            </div>
+            <div class="bread-section bread-method">
+          
+            
+                    <h2>🍂 核桃肉桂卷制作方法</h2>
+                    <p>1️⃣ <strong>揉面 & 发酵</strong></p>
+                    <p>🔹 混合高筋面粉、糖、盐、酵母，加入牛奶和黄油揉至光滑，发酵至两倍大。</p>
+                
+                    <p>2️⃣ <strong>擀面 & 抹酱</strong></p>
+                    <p>🔹 将面团擀成长方形，均匀涂抹肉桂糖酱（黄油+红糖+肉桂粉）。</p>
+                
+                    <p>3️⃣ <strong>撒核桃 & 卷起</strong></p>
+                    <p>🔹 撒上切碎的核桃仁，从一侧卷起成长条。</p>
+                    <p>🔹 切成 3cm 厚的小段，排列在烤盘中。</p>
+                
+                    <p>4️⃣ <strong>二次发酵 & 烘烤</strong></p>
+                    <p>🔹 静置 30-40 分钟至 1.5 倍大。</p>
+                    <p>🔹 180°C 烘烤 18-20 分钟，至表面金黄。</p>
+                
+                    <p>5️⃣ <strong>淋糖霜</strong></p>
+                    <p>🔹 混合糖粉和牛奶，搅拌成糖霜，淋在烤好的肉桂卷上。</p>
+                </div>
+        </div>
+        
+        <div class="bread-wrapper">
+            <div class="bread-section bread-description">
+                <img src="图片/甜甜圈.jpg" alt="甜甜圈">
+                <h2>🍩甜甜圈🍩</h2>
+                <p>外酥里软，裹满糖霜的经典美式甜点。</p>
+                <p class="price">价格：¥10</p>
+            </div>
+            <div class="bread-section bread-method">
+              
+            <h2>🍩 甜甜圈制作方法</h2>
+    <p>1️⃣ <strong>揉面 & 发酵</strong></p>
+    <p>🔹 混合高筋面粉、糖、盐、鸡蛋和酵母，加入牛奶揉成光滑面团，发酵至两倍大。</p>
+
+    <p>2️⃣ <strong>整形</strong></p>
+    <p>🔹 将面团擀成 1cm 厚，切割成甜甜圈形状。</p>
+
+    <p>3️⃣ <strong>二次发酵</strong></p>
+    <p>🔹 静置 30 分钟，使体积膨胀。</p>
+
+    <p>4️⃣ <strong>油炸</strong></p>
+    <p>🔹 油温 170°C，下锅炸至两面金黄，捞出沥油。</p>
+
+    <p>5️⃣ <strong>巧克力裹面</strong></p>
+    <p>🔹 融化巧克力，蘸取甜甜圈表面，再撒上糖粉或彩糖装饰。</p>
+</div>
+        </div>
+      
+    </div>
+</body>
+</html>
+
+
+
+<h1>🍞 轻柔的面包店音乐 🍞</h1>
+
+    <!-- 音乐文件（可使用本地文件或在线链接） -->
+    <audio id="music" src="图片/音乐.mp3"></audio>
+
+    <!-- 按钮 -->
+    <button class="music-button" onclick="toggleMusic()">🎶 播放/暂停 🎶</button>
+
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("music");
+
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+
+</body>
+</html>
