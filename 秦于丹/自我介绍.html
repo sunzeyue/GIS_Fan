@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自我介绍</title>
+  <link rel="stylesheet" href="CSS/style1.css">
+</head>
+<body>
+  <div id="header">
+    <h1>你好，我是秦于丹</h1>
+  </div>
+
+  <img src="image/自我介绍.jpg" alt="你的照片">
+
+  <div id="content">
+    <h2>个人简介</h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <p>我来自安徽省亳州市。我是一名来自中国地质大学的学生，热爱户外运动。</p>
+      </div>
+      <div class="grid-item">
+        <p>专业：地理信息科学</p>
+      </div>
+      <div class="grid-item">
+        <p>班级：114221</p>
+      </div>
+      <div class="grid-item">
+        <p>学号：20221000914</p>
+      </div>
+      <div class="grid-item">
+        <p>Email: 2308615929@qq.com</p>
+      </div>
+      <div class="grid-item">
+        <p>电话: 1830346008</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>背景音乐</p>
+    <audio id="myAudio" src="music/背景音乐.mp3"></audio>
+    <button id="playPauseBtn" onclick="playPauseMusic()">播放</button>
+    <progress id="audioProgress" value="0" max="100"></progress> <br/>
+    <a href="https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.788.recommend_more_video.0&vd_source=d1385dce6573eedc4875e15e9df5db2d" target="_blank">详情请点击</a>
+  </div>
+
+  <script>
+    const audio = document.getElementById("myAudio");
+    const progress = document.getElementById("audioProgress");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+
+    function playPauseMusic() {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = "暂停";
+      } else {
+        audio.pause();
+        playPauseBtn.textContent = "播放";
+      }
+    }
+
+    audio.addEventListener("timeupdate", () => progress.value = (audio.currentTime / audio.duration) * 100);
+    progress.addEventListener("click", (e) => audio.currentTime = (e.offsetX / progress.offsetWidth) * audio.duration);
+    audio.addEventListener("ended", () => playPauseBtn.textContent = "播放");
+  </script>
+</body>
+</html>
