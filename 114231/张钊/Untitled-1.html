@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无畏契约EDG战队介绍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        #canvas {
+            border: 1px solid #000;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .audio-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .img-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>无畏契约EDG战队</h1>
+        <p>电子竞技的传奇战队</p>
+    </header>
+
+    <section>
+        <h2>战队介绍</h2>
+        <p>EDG（Edward Gaming）是一支知名的电子竞技战队，成立于2014年。作为国内最具实力的综合性电子竞技俱乐部之一的超会EDG电子竞技俱乐部其旗下的超会EDG无畏契约分部，自建队以来一直保持着高水平的赛事发挥和专业完备的运营能力。</p>
+        
+        <div class="img-container">
+            <img src="20231003124-EDG.jpg" alt="EDG战队成员" width="600">
+        </div>
+
+    </head>
+    <body>
+    
+    <div class="audio-container">
+        <h3>应援歌曲</h3>
+        <div class="audio-item">
+            <audio controls>
+                <source src="20231003124-歌曲.mp3" type="audio/mp3">
+                您的浏览器不支持音频播放。
+            </audio>
+    </div>
+
+        <p>EDG战队拥有一支实力强大的队伍，成员之间默契十足，曾多次在全球范围内的赛事中取得优异成绩。除了电子竞技，EDG也在社交媒体上与粉丝保持紧密联系，塑造了一个独特的品牌形象。</p>
+
+        <h3>战队荣誉</h3>
+        <ul>
+            <li>2024年5月，夺得VCT CN联赛第一赛段冠军</li>
+            <li>2024年7月20日，获2024VCT（无畏契约冠军巡回赛）CN联赛年度冠军</li>
+            <li>2024年8月25日，获2024无畏契约全球冠军赛冠军</li>
+            <li>2025年1月22日，获2025VCT CN启点赛冠军。</li>
+        </ul>
+        
+        <div>
+            <canvas id="myCanvas" width="500" height="300"></canvas>
+        </div>
+        
+        <script>
+            var canvas = document.getElementById('myCanvas');  
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FF5733';
+            ctx.fillRect(50, 50, 200, 100);
+            ctx.fillStyle = '#C70039';
+            ctx.font = '30px Arial';
+            ctx.fillText('EDG战队', 90, 110);
+        </script>
+    </section>
+
+    
+    
+
+    <footer>
+        <p>版权所有 &copy; 2025 EDG战队</p>
+        <p>114231-张钊-20231003124</p>
+    </footer>
+</body>
+</html>
