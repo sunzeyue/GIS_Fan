@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylvan's World</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 垂直居中 */
+            align-items: center; /* 水平居中 */
+            height: 100vh; /* 视口高度100% */
+            margin: 0; /* 去掉默认边距 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+            background-color: #b0eafc; /* 背景色 */
+        }
+
+        .demo {
+            width: 100%; /* 宽度 */
+            height: 100vh; /* 高度 */
+            background-image: url("1.png");
+            background-position: left top; /* 背景图片位置 */
+            background-repeat: repeat;
+            margin: 0;
+            background-size: 50px 50px;
+            display: flex; /* 使用 flex 布局 */
+            flex-direction: column; /* 垂直排列子元素 */
+            justify-content: center; /* 垂直居中 */
+            align-items: center; /* 水平居中 */
+            padding: 15px;
+        }
+
+        h1 {
+            font-size: 4em; 
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .enter-button {
+            margin-top: 20px;
+            padding: 10px 20px; /* 按钮内边距 */
+            font-size: 1.5em; /* 按钮字体大小 */
+            background-color: #4CAF50; /* 按钮背景色 */
+            color: white; /* 按钮字体颜色 */
+            border: none; /* 去掉边框 */
+            border-radius: 5px; /* 圆角 */
+            cursor: pointer; /* 鼠标指针变化 */
+            transition: background-color 0.3s; /* 背景色渐变 */
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .enter-button:hover {
+            background-color: #45a049; /* 悬停效果 */
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo">
+        <h1>Welcome to Sylvan's World</h1>
+        <a href="work1nextp.html">
+            <button class="enter-button">Ready to explore!</button>
+        </a>
+    </div>
+</body>
+
+</html>
