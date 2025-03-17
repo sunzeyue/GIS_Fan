@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的自我介绍</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        canvas {
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            border-radius: 50%;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .bio {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 音频 -->
+    <div class="music-player">
+        <iframe frameborder="no"
+         border="0"
+         marginwidth="0"
+         marginheight="0"
+         width=330
+         height=86
+         src="http://music.163.com/outchain/player?type=2&id=454231744&auto=1&height=66">
+        </iframe>
+    </div>
+
+    <!-- 画布区域 -->
+    <div class="container">
+        <canvas id="myCanvas" width="600" height="100"></canvas>
+    </div>
+
+    <!-- 自我介绍内容 -->
+    <div class="bio">
+        <h1>你好，我是詹创</h1>
+        <!-- 图像 -->
+        <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.xakBczPNdsiAVeOjvfx_NgHaHa?w=215&h=216&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="我的头像">
+        <p> 中国地质大学（武汉）大二学生</p>
+        <p> 游戏糕手</p>
+        <p> 运动达人</p>
+        <p> 终身学习者</p>
+        
+        <h2>技能树 </h2>
+        <ul>
+            <li>保洁</li>
+            <li>编程</li>
+            <li>做饭</li>
+        </ul>
+    </div>
+
+<script>
+    // 画布动画
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // 文字属性
+    ctx.font = '30px Arial';
+    ctx.fillStyle = '#4CAF50'; // 绿色
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    
+    // 绘制文字
+    ctx.fillText('欢迎来到我的个人空间', canvas.width/2, canvas.height/2);
+</script>
+</body>
+</html>
