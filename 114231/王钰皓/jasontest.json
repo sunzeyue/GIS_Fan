@@ -1,0 +1,12 @@
+{
+    "title":"自我介绍",
+    "name":"王钰皓",
+    "age":20,
+    "hometown":"石家庄",
+    "hobbies":["阅读","游泳","旅行"],
+    "education":{
+        "university":"中国地质大学",
+        "major":"地理信息科学"
+    }
+    
+}

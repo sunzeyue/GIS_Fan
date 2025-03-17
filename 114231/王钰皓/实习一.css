@@ -1,0 +1,32 @@
+.box {
+  width: 1000px;
+  height: 1000px;
+  margin:0 auto;
+  background-color: rgb(255, 255, 255,0.5);
+  background-image: url('./img/bgImg.png');
+  background-size: 100%;
+}
+.useImgbox {
+  width: 50px;
+  border-radius:40px;
+  overflow: hidden;
+}
+.useImgbox img {
+  width: 50px;
+}
+.titleBox {
+  width: 600px;
+  border-left: 10px solid #ce1616;
+  border-bottom: #ce1616 2px solid;
+  padding-left: 8px;
+  margin: 10px;
+  color:rgb(230, 101, 15)
+}
+.box2{
+  text-align:center;
+  width:50%;
+  height:60%;
+  position:relative;
+  bottom:0;
+  color : #ce1616;
+}
