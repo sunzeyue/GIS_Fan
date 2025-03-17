@@ -1,0 +1,160 @@
+ /* 基础样式 */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '微软雅黑', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: #f0f2f5;
+}
+
+
+/* 头部横幅 */
+.hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 内容模块通用样式 */
+section {
+    padding: 3rem 2rem;
+    background: white;
+    position: relative;
+    z-index: 3;
+    margin: 20px 0;
+}
+
+/* 简介模块 */
+.bio-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.bio-image {
+    width: 120px; /* 缩小图片尺寸 */
+    border-radius: 100px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 音频播放器 */
+.audio-player {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+audio {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* 图片墙 */
+.gallery {
+    background: white;
+    padding: 3rem 2rem;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.photo-item {
+    position: relative;
+    text-align: center;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem;
+}
+
+.photo-caption {
+    font-size: 0.95rem;
+    color: #444;
+    padding: 0 0.5rem;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* 标题样式 */
+h2 {
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+/* 页脚 */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .bio-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero {
+        height: 300px;
+    }
+
+    .bio-image {
+        width: 120px; /* 移动端更小尺寸 */
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .photo-caption {
+        font-size: 0.85rem;
+    }
+}
