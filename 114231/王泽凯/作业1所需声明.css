@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b7b4b4;
+    height: auto; /* 确保body的高度是自适应的 */
+    min-height: 100vh; /* 设置最小高度为视口高度，确保内容可以滚动 */
+    padding-bottom: 50px; /* 确保body的内容不会被footer遮挡 */
+}
+
+#musicButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.intro p {
+    line-height: 1.6;
+}
+
+.gallery .image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.gall img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.gallery img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.role-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0; /* 为按钮预留空间 */
+    position: relative; /* 新增定位基准 */
+}
+
+.role-description {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.role-image {
+    flex: 0 0 35%;
+    max-width: 35%;
+    position: static; /* 确保正常文档流 */
+}
+
+.role-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* 删除原有的.more-info样式，替换为 */
+.role-description {
+    flex: 1;
+    padding-right: 20px;
+    position: relative; /* 添加相对定位 */
+}
+
+.more-info {
+    position: absolute;
+    right: -10px; /* 贴合图片左侧 */
+    top: 50%;
+    transform: translate(100%, -50%); /* 向右偏移自身宽度 */
+    z-index: 1000;
+}
+
+.more-info button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    white-space: nowrap; /* 防止按钮文字换行 */
+}
+
+.more-info button:hover {
+    background-color: #ff1a1a;
+}
+
+.skill-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.skill-icon {
+    flex: 0 0 50px; /* 设置图标宽度 */
+    height: 50px; /* 设置图标高度 */
+    margin-right: 10px; /* 图标和文字之间的间距 */
+}
+
+.skill-icon img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* 图标圆角 */
+}
+
+.skill-description {
+    flex: 1;
+    line-height: 1.6;
+}
+
+.audio audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.stats table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stats th, .stats td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.stats th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* 确保footer的高度是固定的 */
+}

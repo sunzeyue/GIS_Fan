@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无畏契约游戏游戏介绍</title>
+    <link rel="stylesheet" href="作业1所需声明.css">
+</head>
+<body>
+        <!-- 添加背景音乐 -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="Music/Die For You - VALORANTGrabbitz.mp3" type="audio/mpeg">
+    </audio>
+        <!-- 游戏介绍 -->
+    <header>
+        <h1>无畏契约游戏介绍</h1>
+        <p>欢迎来到无畏契约游戏简介！</p>
+    </header>
+        <!-- 添加初始图片 -->
+    <div class="gall">
+        <img src="hero.picture/20231000773_开头图片.jpg" >
+    </div>
+        <!-- 简介部分 -->
+    <section class="intro">
+        <h2>游戏简介</h2>
+        <p>无畏契约是一款多人在线战斗竞技游戏，是以第一人称为视角的射击游戏，游戏以未来都市为背景，玩家可以选择不同的角色，每个角色都有独特的技能和武器，玩家需要通过团队合作和策略来击败敌人。</p>
+        <section class="video">
+            <video controls>
+                <source src="vedio/share.mp4" type="video/mp4">
+            </video>
+        </section>
+    </section>
+        <!-- 截图部分 -->
+    <section class="gallery">
+        <h2>游戏截图</h2>
+        <div class="image-container">
+            <img src="hero.picture/20231000773_游戏截图1.jpg" alt="游戏截图1">
+            <img src="hero.picture/20231000773_游戏截图2.png" alt="游戏截图2">
+        </div>
+    </section>
+        <!-- 游戏音乐部分 -->
+    <section class="audio">
+        <h2>游戏音乐-2023年无畏契约全球冠军赛主题曲</h2>
+        <audio controls>
+            <source src="Music/Ticking Away - 拳头游戏音乐.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放。
+        </audio>
+    </section>
+        <!-- 角色设定部分 -->
+        <section>
+            <h1>游戏角色设定</h1>
+            <p><strong>角色设定</strong></p>
+            <p>每局对战随机阵营，玩家可以自由选择角色，阵营内角色不可重复，部分角色需要通过解锁。</p>
+            <div class="role-container">
+                <div class="role-description">
+                    <div class="more-info">
+                        <a href="hero.html" target="_blank">
+                            <button>了解更多</button>
+                        </a>
+                    </div>
+                    <p><strong>决斗者（DUELIST）：</strong></p>
+                    <p>决斗者是独当一面的杀手，队伍皆仰赖其高超技巧，寻找开战的契机，歼灭敌方。</p>
+                    <p>英雄列表：捷风、雷兹、不死鸟、芮娜、夜戮</p>
+                    <p><strong>先锋（INITIATOR）：</strong></p>
+                    <p>先锋能从不同角度切入且击退守备方，替队伍在诡计多变的战场中制造优势。</p>
+                    <p>英雄列表：猎枭、铁臂、丝凯、KAY/O</p>
+                    <p><strong>控场者（CONTROLLER）：</strong></p>
+                    <p>控场者擅长分割地带，阻隔危险，替队伍作好迎接胜利的准备。</p>
+                    <p>英雄列表：炼狱、幽影、蝰蛇、亚星卓</p>
+                    <p><strong>守卫（SENTINEL）：</strong></p>
+                    <p>守卫顾名思义就是防守专家，无论是攻击或守备回合，都能够为队伍封锁区域以及掩护侧翼。</p>
+                    <p>英雄列表：零、贤者、奇乐</p>
+
+                </div>
+                <div class="role-image">
+                    <img src="hero.picture/20231000773_All_hero.jpg" alt="英雄图片">
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏数据统计部分 -->
+    <section class="stats">
+        <h2>游戏角色统计数据</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>角色</th>
+                    <th>胜率</th>
+                    <th>登场率</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>暮蝶</td>
+                    <td>49.9%</td>
+                    <td>49.2%</td>
+                </tr>
+                <tr>
+                    <td>芮娜</td>
+                    <td>48.7%</td>
+                    <td>46.1%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <p>若您对游戏感兴趣，点击这里进入<a href="https://val.qq.com/act/a20230801download/index.html?adtag=2636">官网</a>下载！</p>
+    <footer>
+        <p>版权所有 &copy; 2023 无畏契约游戏网页</p>
+    </footer>
+
+    <button id="musicButton" onclick="toggleMusic()">停止背景音乐</button>
+    <script>
+        function toggleMusic() {
+            var audio = document.getElementById('bgMusic');
+            var button = document.getElementById('musicButton');
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "停止背景音乐";
+            } else {
+                audio.pause();
+                button.textContent = "开始背景音乐";
+            }
+        }
+    </script>
+
+</body>
+</html>
