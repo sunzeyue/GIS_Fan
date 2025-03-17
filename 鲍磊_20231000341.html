@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薛之谦音乐世界</title>
+    <link rel="stylesheet" href="./1.css">
+    <style>
+        /* 添加样式以美化音频播放器 */
+        .audio-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .audio-player audio {
+            width: 100%;
+            max-width: 600px;
+        }
+        .audio-list {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .audio-list button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部横幅 -->
+    <header class="hero">
+        <img src="20231000341-1.jpg" alt="薛之谦舞台照" class="hero-image">
+        <div class="hero-text">
+            <h1>薛之谦</h1>
+            <p>音乐创作人 · 演员 · 词曲作家</p>
+        </div>
+    </header>
+
+    <!-- 简介部分 -->
+    <section class="bio">
+        <h2><i class="fas fa-user"></i> <center>人物简介</center></h2>
+        <div class="bio-content">
+            <img src="20231000341-2.jpeg" alt="薛之谦写真" class="bio-image">
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;薛之谦，1983年7月17日出生于上海，毕业于格里昂酒店管理学院，是中国内地男歌手、音乐制作人、演员、主持人。
+                2005年，他因参加选秀节目《我型我秀》正式出道。2006年，薛之谦发行首张同名专辑《薛之谦》，凭借歌曲《认真的雪》获得广泛关注。
+                此后，他凭借多张专辑和歌曲如《演员》《丑八怪》《绅士》等，多次获得音乐奖项。
+                除了音乐，薛之谦还涉足影视领域，主演过《妈妈像花儿一样》等作品。
+                2025年1月，他参加了央视春晚，演唱了歌曲《方的言》。
+            </p>
+        </div>
+    </section>
+
+    <!-- 音乐作品 -->
+    <section class="music">
+        <h2><i class="fas fa-music"></i> <center>代表作品</center></h2>
+        <div class="audio-player">
+            <audio id="audioPlayer" controls autoplay>
+                <source src="20231000341-9.mp3" type="audio/mpeg" data-title="《演员》- 2015年发行，QQ音乐年度盛典年度最佳国语歌曲">
+                <source src="20231000341-11.mp3" type="audio/mpeg" data-title="《丑八怪》- 2015年发行，代表作之一">
+                <source src="20231000341-12.mp3" type="audio/mpeg" data-title="《绅士》- 2015年发行，代表作之一">
+                <source src="20231000341-13.mp3" type="audio/mpeg" data-title="《认真的雪》- 2006年发行，成名曲">
+
+                您的浏览器不支持音频播放
+            </audio>
+            <div id="audioTitle"></div>
+            <div class="audio-list">
+                <button onclick="switchSong(0)">《演员》</button>
+                <button onclick="switchSong(1)">《丑八怪》</button>
+                <button onclick="switchSong(2)">《绅士》</button>
+                <button onclick="switchSong(3)">《认真的雪》</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图片墙 -->
+    <section class="gallery">
+        <h2><i class="fas fa-camera"></i> <center>精彩瞬间</h2>
+        <div class="photo-grid">
+            <div class="photo-item">
+                <img src="20231000341-5.jpg" alt="舞台表演">
+                <div class="photo-caption"><strong>2019全球巡回演唱会现场</strong></div>
+            </div>
+            <div class="photo-item">
+                <img src="20231000341-6.jpg" alt="录音室工作">
+                <div class="photo-caption"><strong>新专辑录制幕后花絮</strong></div>
+            </div>
+            <div class="photo-item">
+                <img src="20231000341-10.jpg" alt="专辑封面">
+                <div class="photo-caption"><strong>最新专辑《尘》封面设计</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 视频模块 -->
+<section class="video-section">
+    <h2><i class="fas fa-video"></i> <center>音乐现场</center></h2>
+    <div class="video-container">
+        <video controls poster="20231000341-19.jpg">
+            <source src="20231000341-20.mp4" type="video/mp4">
+            您的浏览器不支持视频播放
+        </video>
+    </div>
+</section>
+
+<style>
+/* 视频样式 */
+.video-section {
+    padding: 2rem 0;
+    background: #f8f9fa;
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+</style>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2025 迪西 版权所有 | 数据来源：百度百科</p>
+    </footer>
+
+    <script>
+        // 获取音频播放器和标题显示区域
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioTitle = document.getElementById('audioTitle');
+
+        // 更新歌曲标题
+        function updateTitle() {
+            const currentSource = audioPlayer.currentSrc;
+            const title = document.querySelector(`source[src="${currentSource}"]`).getAttribute('data-title');
+            audioTitle.textContent = title;
+        }
+
+        // 切换歌曲
+        function switchSong(index) {
+            const sources = audioPlayer.getElementsByTagName('source');
+            const selectedSource = sources[index];
+            audioPlayer.src = selectedSource.src;
+            audioPlayer.load();
+            audioPlayer.play();
+            updateTitle();
+        }
+
+        // 初始化歌曲标题
+        audioPlayer.addEventListener('loadeddata', updateTitle);
+        audioPlayer.addEventListener('play', updateTitle);
+    </script>
+
+<div class="bg-music-container">
+    <audio id="bgMusic" loop>
+        <source src="bgMusic.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放
+    </audio>
+    <button id="musicToggle" class="music-btn">
+        <img src="20231000341-15.png" alt="音乐控制" id="musicIcon" class="music-icon">
+    </button>
+</div>
+
+<style>
+    /* 优化后的背景音乐控件样式 */
+    .bg-music-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .music-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(51, 51, 51, 0.9);
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        padding: 12px;
+        overflow: hidden;
+        backdrop-filter: blur(5px);
+    }
+
+    .music-btn:hover {
+        transform: scale(1.15);
+        background: rgba(68, 68, 68, 0.95);
+    }
+
+    .music-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: opacity 0.3s ease;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+        .bg-music-container {
+            bottom: 20px;
+            right: 20px;
+        }
+        .music-btn {
+            width: 45px;
+            height: 45px;
+            padding: 10px;
+        }
+    }
+</style>
+
+<script>
+    // 背景音乐控制逻辑
+    const bgMusic = document.getElementById('bgMusic'); // 确保HTML中音频元素的ID是'bgMusic'
+    const musicToggle = document.getElementById('musicToggle');
+    const musicIcon = document.getElementById('musicIcon');
+    let isPlaying = false;
+
+    // 图标状态管理
+    const iconStates = {
+        play: '20231000341-15.png',
+        pause: '20231000341-16.png'
+    };
+
+    // 更新图标状态
+    function updateIcon(state) {
+        musicIcon.src = iconStates[state];
+        musicIcon.style.opacity = 0;
+        setTimeout(() => {
+            musicIcon.style.opacity = 1;
+        }, 50);
+    }
+
+    // 切换播放状态
+    function toggleMusic() {
+        isPlaying ? bgMusic.pause() : bgMusic.play();
+        isPlaying = !isPlaying;
+        updateIcon(isPlaying ? 'pause' : 'play');
+    }
+
+    // 自动播放处理
+    function handleAutoplay() {
+        // 尝试自动播放
+        bgMusic.play()
+            .then(() => {
+                // 自动播放成功
+                isPlaying = true;
+                updateIcon('pause');
+            })
+            .catch(() => {
+                // 自动播放被阻止，等待用户交互
+                const playAfterInteraction = () => {
+                    bgMusic.play()
+                        .then(() => {
+                            isPlaying = true;
+                            updateIcon('pause');
+                        })
+                        .catch(console.error);
+
+                    // 移除交互事件监听器
+                    ['click', 'touchstart'].forEach(event => {
+                        document.removeEventListener(event, playAfterInteraction);
+                    });
+                };
+
+                // 添加用户交互事件监听器
+                ['click', 'touchstart'].forEach(event => {
+                    document.addEventListener(event, playAfterInteraction, {once: true});
+                });
+            });
+    }
+
+    // 初始化
+    document.addEventListener('DOMContentLoaded', () => {
+        bgMusic.volume = 0.5; // 设置初始音量
+        updateIcon('play');
+        handleAutoplay(); // 调用自动播放处理函数
+    });
+
+    // 事件绑定
+    musicToggle.addEventListener('click', toggleMusic);
+    bgMusic.addEventListener('play', () => updateIcon('pause'));
+    bgMusic.addEventListener('pause', () => updateIcon('play'));
+
+    // 修改后的自动播放处理
+function handleAutoplay() {
+    // 尝试自动播放
+    const playPromise = bgMusic.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+            isPlaying = true;
+            updateIcon('pause');
+        }).catch(error => {
+            // 自动播放被阻止，显示提示
+            const playHint = document.createElement('div');
+            playHint.className = 'play-hint';
+            playHint.innerHTML = '点击任意位置开启背景音乐';
+            document.body.appendChild(playHint);
+
+            const enablePlay = () => {
+                bgMusic.play();
+                isPlaying = true;
+                updateIcon('pause');
+                document.body.removeChild(playHint);
+                // 移除事件监听
+                document.removeEventListener('click', enablePlay);
+                document.removeEventListener('touchstart', enablePlay);
+            };
+
+            document.addEventListener('click', enablePlay);
+            document.addEventListener('touchstart', enablePlay);
+        });
+    }
+}
+
+</script>
+
+</body>
+</html>
