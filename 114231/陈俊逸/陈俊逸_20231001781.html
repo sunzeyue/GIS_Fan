@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈俊逸的个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '微软雅黑', Arial, sans-serif;
+        }
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --white: #ffffff;
+            --text-color: #333333;
+            --bg-color: #f5f7fa;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding-bottom: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+        }
+
+        .nav {
+            background-color: #34495e;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid var(--primary-color);
+        }
+
+        .info-table {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-table ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .info-table li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.1em;
+        }
+
+        .info-table li:last-child {
+            border-bottom: none;
+        }
+
+        .section {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .contact {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.2); /* 透明背景 */
+            padding: 12px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .music-player button {
+            background-color: rgba(0, 0, 0, 0.3); /* 透明灰色背景 */
+            border: none;
+            color: white;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 25px;
+            transition: background-color 0.2s ease;
+        }
+
+        .music-player button:hover {
+            background-color: rgba(0, 0, 0, 0.5); /* 悬停时加深透明度 */
+        }
+
+        .footer {
+            background-color: #2c3e50;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .nav {
+                text-align: center;
+            }
+
+            .nav a {
+                display: inline-block;
+                margin: 10px 0;
+            }
+
+            .music-player {
+                bottom: 10px;
+                right: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .music-player audio {
+                width: 80px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>陈俊逸</h1>
+            <p>中国地质大学（武汉） | 地理与信息工程学院</p>
+        </div>
+
+        <div class="nav">
+            <a href="#about">关于我</a>
+            <a href="#experience">学习经历</a>
+            <a href="#achievements">学术成果</a>
+            <a href="#contact">联系我</a>
+        </div>
+
+        <div class="content">
+            <div class="profile">
+                <img src="20231001781-个人照片.jpg" alt="个人照片">
+                <h3>个人简介</h3>
+                <p>中国地质大学（武汉）地理与信息工程学院本科生，对地理信息系统、遥感技术和空间分析有浓厚兴趣。</p>
+            </div>
+
+            <div class="info-table">
+                <ul>
+                    
+                    <li> <strong>姓名： </strong>陈俊逸</li>
+                    <li> <strong>学院： </strong>地理与信息工程学院</li>
+                    <li> <strong>学号： </strong>20231001781</li>
+                    <li> <strong>邮箱： </strong>1585830399@qq.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="experience">
+            <h2>学习经历</h2>
+            <div>
+                <h3>2023至今</h3>
+                <p>中国地质大学（武汉）地理与信息工程学院</p>
+                <h3>2020-2023</h3>
+                <p>上饶中学</p>
+            </div>
+        </div>
+
+        <div class="section" id="achievements">
+            <h2>学术成果</h2>
+            <div>
+                <h3>GIS在地质灾害评估中的应用</h3>
+                <p>作为团队成员完成的课程项目。</p>
+                <h3>遥感技术在土地利用变化中的研究</h3>
+                <p>个人独立完成的研究报告。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>技能与兴趣</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <i class="fas fa-code"></i><br>GIS软件操作
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-map-marker-alt"></i><br>空间分析
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i><br>遥感技术
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <h2>联系我</h2>
+            <p>邮箱：1585830399@qq.com</p>
+            <p>电话：19808055667</p>
+            <p>地址：中国地质大学（武汉）</p>
+            <a href="mailto:1585830399@qq.com"><i class="fas fa-envelope"></i> 发送邮件</a>
+        </div>
+    </div>
+
+    <div class="music-player">
+        <button onclick="togglePlay()">
+            <i class="fas fa-play"></i> <!-- 默认显示播放图标 -->
+        </button>
+        <audio id="audio" src="20231001781-背景音乐.mp3"></audio>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 陈俊逸. All rights reserved.</p>
+        <p>中国地质大学（武汉）地理与信息工程学院</p>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const button = document.querySelector('.music-player button');
+        const icon = button.querySelector('i');
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+            } else {
+                audio.pause();
+                icon.classList.remove('fa-pause');
+                icon.classList.add('fa-play');
+            }
+        }
+    </script>
+
+</body>
+</html>
