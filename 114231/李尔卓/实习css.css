@@ -1,0 +1,66 @@
+/*导航栏*/
+.nav{
+    width: 90%;
+    height: 60px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5%;
+    background-color: #7e1491;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 50px;
+    color: rgba(247, 243, 9, 0.963);
+}
+/*Banner*/
+.Banner{
+    width: 100%;
+    height: 900px; 
+  
+}
+
+.Main{
+    width: 100%;
+    height: 800px;
+    background-color: rgb(216, 209, 199);
+    font-size: 25px;     
+}
+
+.Main p{
+    padding: 20px;
+    text-indent: 2em;
+
+}
+.photos{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+.photos img{
+    width: 19%;
+    height: 100%;
+    object-fit: cover;
+}
+/*底部*/
+.Fotter{
+    width: 100%;
+    height:100px;
+    line-height: 50px;
+    background-color: black;
+    
+
+    .Fotter-title,.Fotter-content{
+    width: 90%;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    }
+}
+
+
