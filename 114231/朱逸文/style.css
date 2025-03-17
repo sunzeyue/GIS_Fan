@@ -1,0 +1,444 @@
+/* 基础按钮样式 */
+.button {
+    background-color: #4CAF50; /* 绿色背景 */
+    border: none; /* 去掉边框 */
+    color: white; /* 白色字体 */
+    padding: 15px 32px; /* 内边距 */
+    text-align: center; /* 内容居中 */
+    text-decoration: none; /* 去掉下划线 */
+    display: inline-block; /* 使按钮块级显示 */
+    font-size: 16px; /* 字体大小 */
+    margin: 4px 2px; /* 外边距 */
+    cursor: pointer; /* 鼠标变成指针 */
+    border-radius: 8px; /* 圆角 */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 背景色和缩放效果的过渡 */
+}
+
+.button:hover {
+    background-color: #45a049; /* 鼠标悬停时的背景色 */
+    transform: scale(1.05); /* 鼠标悬停时的缩放效果 */
+}
+
+.button:active {
+    background-color: #3e8e41; /* 点击时的背景色 */
+    transform: scale(0.98); /* 点击时稍微缩小 */
+}
+
+/* 按钮2: 蓝色渐变 */
+.button2 {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* 渐变背景 */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.button2:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+.button2:active {
+    background: linear-gradient(45deg, #2a5bf0, #5d09c9);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.gdp {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Ensure equal width for GDP and Population columns */
+th:nth-child(2), td:nth-child(2),
+th:nth-child(3), td:nth-child(3) {
+    width: 400px; /* Adjust this width value as needed */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    bottom: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.news-container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden; /* 隐藏溢出的部分 */
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* 设置相对定位以便控制内容 */
+}
+
+.news-item {
+    display: none; /* 默认所有新闻项都不可见 */
+    text-align: center;
+    padding: 20px;
+    transition: opacity 1s ease-in-out; /* 平滑过渡效果 */
+}
+
+.news-item img {
+    width: 600px;
+    height: 337px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.news-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* The pagination button positioned at the bottom right inside the container */
+.pagination {
+    position: relative;
+    bottom: 20px;
+    right: -20px;
+}
+
+#next-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#next-btn:hover {
+    background-color: #45a049;
+}
+
+
+/* 设置header样式 */
+header {
+    height: 800px; /* 设置header的高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-out, height 1500ms ease-out; /* 设置滑动消失的过渡效果 */
+    position: relative;
+    z-index: 10; /* 确保header在其他内容上层 */
+}
+
+header.hidden {
+    transform: translateY(-100%); /* 将header向上移出屏幕 */
+    height: 0; /* 隐藏header时将高度设为0 */
+}
+
+
+body.header-hidden {
+    margin-top: 0;
+}
+
+header img {
+    width: 100%; /* 图片宽度设置为100%，自适应header */
+    height: 100%;
+    object-fit: fill; /* 确保图片适应高度并保持比例 */
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 20px; /* 为列之间添加左右间距 */
+    box-sizing: border-box;
+}
+
+/* 列后清除浮动 */
+.row:after {
+    content: "";
+    display: flex;
+    clear: both;
+}
+.column img {
+    width: 100%;
+    height: auto;
+    max-width: 80px;
+    border-bottom: 50px solid white;
+}
+.column a {
+    font-family: "Songti SC Medium", serif;
+    font-size: 20pt;
+}
+.column h2 {
+    font-family: "Songti SC Medium", serif;
+    text-align: center ;
+}
+.column p {
+    text-indent: 2em;
+    margin-left:30px;
+    margin-right:30px;
+}
+.h2 {
+    font-family: "Songti SC Medium", serif;
+    text-align: center;
+}
+p.indent {
+    text-indent: 2em;
+    margin-right:300px;
+    margin-left:300px;
+}
+.mxp-container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden; /* 隐藏溢出的部分 */
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* 设置相对定位以便控制内容 */
+}
+
+
+
+
+.mxp-item h1 {
+    font-family: "Songti SC Medium", serif;
+    text-align: center ;
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 0 20px; /* 为列之间添加左右间距 */
+    box-sizing: border-box;
+    position: relative;
+    top: 20px;
+}
+
+.column1 p{
+    text-align:center;
+    position: relative;
+    left: 1px;
+    top:-10px;
+}
+
+.column1 img {
+    width: 100%;
+    height: 40%;
+    object-fit: fill;
+
+}
+.column2{
+    float: left;
+    width: 25%;
+    padding: 0 0 10px 0;
+    box-sizing: border-box;
+    position: relative;
+    right: -30px;
+    top: 20px;
+}
+
+.column2 img{
+    width: 80%;
+    height: 40%;
+    object-fit: fill;
+}
+
+.column2 p {
+    text-align: center;
+    position: relative;
+    top:-15px;
+    left: -33px;
+}
+
+
+.column2 #img1 {
+    width: 80%;
+    height: 40%;
+    object-fit: fill;
+    position:relative;
+    top:-27px;
+}
+
+.column2 #p1 {
+    text-align: center;
+    position: relative;
+    top:-39px;
+    left: -33px;
+}
+
+
+
+.column3{
+    float: left;
+    width: 25%;
+    padding: 0 0 10px 0;
+    box-sizing: border-box;
+    position: relative;
+    top: 20px;
+}
+
+.column3 img{
+    width: 80%;
+    height: 40%;
+    object-fit: fill;
+}
+
+.column3 p {
+    text-align: center;
+    position: relative;
+    top:-15px;
+    left: -33px;
+}
+
+
+
+.column3 #img2 {
+    width: 79%;
+    height: 40%;
+    object-fit: fill;
+    position:relative;
+    top:-27px;
+    right:-3px;
+}
+
+.column3 #p2 {
+    text-align: center;
+    position: relative;
+    top:-39px;
+    left: -33px;
+}
+
+
+.a {
+    list-style-type:circle;
+
+    padding:0px;
+    margin:0px;
+}
+
+.a li {
+    display: block;  /* 确保列表项是块级元素，每个项目占一整行 */
+}
+
+p.indents {
+    text-indent: 2em;
+    margin-right:30px;
+    margin-left:30px;
+    text-align: left;
+}
+.column4 {
+    float: left;
+    margin-top:0;
+    width: 49%;
+    padding: 0 0px; /* 为列之间添加左右间距 */
+    box-sizing: border-box;
+
+}
+.column5 {
+    float: left;
+    margin-top:0;
+    width: 49%;
+    padding: 0 0px; /* 为列之间添加左右间距 */
+    box-sizing: border-box;
+
+}
