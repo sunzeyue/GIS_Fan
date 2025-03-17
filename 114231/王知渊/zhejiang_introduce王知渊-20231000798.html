@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浙江省介绍</title>
+    <link rel="stylesheet" href="styles.css">;
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="info-panel" id="infoPanel">
+        <div class="toggle-btn" id="toggleBtn">❯</div>
+        <h4>浙江特色</h4>
+        <ul>
+            <li onclick="changeScenery('image/hangzhou.jpg')">📍 杭州 - 西湖</li>
+            <li onclick="changeScenery('image/ningbo.jpg')">📍 宁波 - 天一阁</li>
+            <li onclick="changeScenery('image/shaoxing.jpg')">📍 绍兴 - 鲁迅故里</li>
+            <li onclick="changeScenery('image/wenzhou.jpg')">📍 温州 - 雁荡山</li>
+            <li onclick="changeScenery('image/huzhou.jpg')">📍 湖州 - 南浔古镇</li>
+            <li onclick="changeScenery('image/jiaxing.jpg')">📍 嘉兴 - 乌镇</li>
+        </ul>
+        <img id="sceneryImage" src="image/hangzhou.jpg" alt="浙江特色" class="scenery-image">
+    </div>
+
+    <div class="navbar">
+        <a href="javascript:void(0)" onclick="scrollToSection('intro')">浙江简介</a>
+        <a href="javascript:void(0)" onclick="scrollToSection('map')">浙江地图</a>
+        <a href="javascript:void(0)" onclick="scrollToSection('food')">浙江美食</a>
+        <a href="javascript:void(0)" onclick="scrollToSection('scenery')">浙江美景</a>
+        <a href="javascript:void(0)" onclick="scrollToSection('music')">浙江民乐</a>
+        <a href="javascript:void(0)" onclick="scrollToSection('economy')">浙江经济</a>
+    </div>
+    <div class="header">欢迎来到浙江省</div>
+
+    <section id="intro">
+        <div class="container">   
+        <h2>浙江简介</h2>
+        <dix class="flex-container">
+            <img src="image/logo.jpg" alt="logo" class="logo">
+
+        </dix>
+        <p>浙江省地处中国东南沿海长江三角洲南翼，因境内最大的河流钱塘江（又称浙江）江流曲折而得名。
+            浙江历史悠久，文化灿烂，自东汉到现代，载入史册的浙江籍文学家逾千人。“五四”运动以来，出
+            现了鲁迅、茅盾等一大批文化名人。浙江山川秀丽，风景优美，有14个国家级风景名胜区，1个国家
+            级旅游度假区和16个国家级森林公园。有杭州、绍兴、宁波、衢州、临海5座国家级历史文化名城，
+            国家级文物保护单位70多个。</p>
+        </div>
+    </section>
+
+    <hr>
+    <section id="map">
+        <div class="container">
+            <h2>浙江地图</h2>
+            <canvas id="myCanvas" width="300" height="200"></canvas>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- 特色美食 -->
+    <section id="food">
+        <div class="container">
+            <h2>浙江特色美食</h2>
+            <div class="flex-container">
+                <!-- 左侧美食图片 -->
+                <img id="foodImage" src="image/food_xihucuyu.jpg" alt="美食图片" class="food-image">
+            
+                <!-- 右侧美食列表 -->
+                <ul class="food-list">
+                    <li onclick="changeFood('image/food_xihucuyu.jpg')">🍜 <strong>西湖醋鱼</strong> —— 选用鲜活草鱼，酸甜适中，肉质鲜嫩。</li>
+                    <li onclick="changeFood('image/food_dongporou.jpg')">🥩 <strong>东坡肉</strong> —— 以苏东坡命名，色泽红润，肥而不腻。</li>
+                    <li onclick="changeFood('image/food_longjing.jpg')">🦐 <strong>龙井虾仁</strong> —— 采用西湖龙井茶与虾仁结合，鲜嫩清香。</li>
+                    <li onclick="changeFood('image/food_shaoxingchoudoufu.jpg')">🧀 <strong>绍兴臭豆腐</strong> —— 外脆里嫩，搭配独特的绍兴酒香。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- 图片 -->
+    <section id="scenery">
+        <div class="container">
+        <h2>浙江美景</h2>
+        <div class="content">
+            <ul id="imageList">
+                <li><img src="image/images.jpg" alt="西湖风景"></li>
+                <li><img src="image/images2.jpg" alt="水乡特色"></li>
+                <li><img src="image/images3.jpg" alt="城市景观"></li>
+            </ul>
+                <ol id="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- 音频 -->
+    <section id="music">
+    <div class="container">
+        <h2>浙江民乐欣赏</h2>
+        <audio controls>
+            <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放。
+        </audio>
+        <p>▲ 欣赏一曲浙江传统民乐</p>
+    </div>
+</section>
+
+    <hr>
+    <!-- <img id="hangZhouInChina" src="Zhejiang_in_China.png"> -->
+    <section id="economy">
+    <div class="container">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <h2>浙江省经济发展概况</h2>
+        <p>浙江省位于中国东南沿海，是中国经济最为发达的省份之一。近年来，浙江省经济持续增长，产业结构不断优化，人民生活水平显著提高。</p>
+
+        <h3>主要经济指标</h3>
+        <table>
+            <tr>
+                <th>指标</th>
+                <th>2022年</th>
+                <th>2023年</th>
+                <th>2024年</th>
+            </tr>
+            <tr>
+                <td>地区生产总值(GDP,亿元)</td>
+                <td>77715</td>
+                <td>82553</td>
+                <td>90100</td>
+            </tr>
+            <tr>
+                <td>第一产业增加值（亿元）</td>
+                <td>2325</td>
+                <td>2332</td>
+                <td>2586</td>
+            </tr>
+            <tr>
+                <td>第二产业增加值（亿元）</td>
+                <td>33205</td>
+                <td>33953</td>
+                <td>34800</td>
+            </tr>
+            <tr>
+                <td>第三产业增加值（亿元）</td>
+                <td>42185</td>
+                <td>46268</td>
+                <td>52800</td>
+            </tr>
+            <tr>
+                <td>人均GDP(元)</td>
+                <td>118496</td>
+                <td>125043</td>
+                <td>136000</td>
+            </tr>
+        </table>
+
+        <h3>GDP增长趋势</h3>
+        <canvas id="gdpChart" width="800" height="400"></canvas>
+    </div>
+<section>
+    <hr>
+    <script src="zhejiang_introduce.js"></script>
+    <footer class="footer">
+        <p>本网页由 <strong>王知渊20231000798</strong> 设计制作</p>
+        <p>最新更新时间：2024年3月5日</p>
+    </footer>
+</body>
+</html>
