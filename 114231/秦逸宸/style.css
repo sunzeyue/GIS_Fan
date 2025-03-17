@@ -1,0 +1,177 @@
+header{
+    background-color: blanchedalmond rgba(182, 162, 157, 0.5);
+    height:50px;
+    width: 100%;
+    position: fixed;
+}
+h1{
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 80px;
+    background-image: url(images/抠图处理后队徽.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    text-indent: 120px;
+}
+header ul{
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+header li{
+    display: inline;
+    margin-right: 4vw;
+}
+header a{
+    color: rgb(253, 253, 255);
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+h2{
+    color: rgb(245, 244, 247);
+}
+p{
+    color: rgb(245, 245, 245);
+    font-size: 36px;
+}
+
+*{
+padding: 0;
+margin: 0;
+}
+
+header,section,footer{
+    background-color: rgb(1, 1, 51);
+    border:5px #010320 solid;
+    padding: 30px 50px;
+}
+
+.news1{
+    background-color: rgb(2, 2, 42);
+    color: burlywood;
+    height: 85vh;
+    background-image: url("images/fef20a8c-e24c-4ada-9466-e5fac72910c1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.news1 h2{
+    font-size: 60px;
+}
+.news1 p{
+    color: rgb(250, 246, 246);
+    font-size: 18px;
+}
+
+.news2{
+    background-color: rgb(247, 247, 249);
+    color: rgb(252, 246, 247);
+    height: 75vh;
+    background-image: url("images/100l0v000000jz8ei30F7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.news2 h2{
+    font-size: 60px;
+}
+.news2 p{
+    color: rgb(250, 248, 248);
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+.news3{
+    background-color: blue;
+    color: rgb(193, 37, 76);
+    height: 60vh;
+    background-image: url("images/一线队集体合照.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news6{
+    background-color: blue;
+    color: rgb(193, 37, 76);
+    height: 30vh;
+    background-image: url("images/球队标语.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news5{
+    display: flex;
+    background-color: #08013a;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 180px 80px;
+}
+.news5 div{
+    width: 300px;
+    text-align: center;
+}
+.news5 img{
+    width:100%;
+    border-radius: 25px;
+}
+.news5 h3{
+    font-size: 20px;
+    margin: 20px 0;
+    color: aliceblue;
+}
+.news5 p{
+    font-size: 14px;
+    margin: 1.6em;
+}
+
+
+footer{
+    background-color:rgb(0, 10, 47);
+    color: beige;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.8em;
+}
+
+
+/*响应式设计语法，使得logo不压迫导览列*/
+@media screen and(max-width: 768px;){
+header ul{
+    display: none;
+}
+header h1{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.news1 h2{
+    font-size: 40px;
+}
+}
+    
