@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="20231001349images\02logo.png" alt="logo">
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="#basic-info">基本信息</a>
+                <a href="#gallery">图片展示</a>
+                <a href="#characters">人物介绍</a>
+                <a href="conect.html">联系我们</a>
+            </nav>
+        </div>
+        
+    </header>
+    <br><br>
+
+        <div class="banner2">
+            <img src="20231001349images\contact.jpg" alt="蜡笔小新全家福" >
+        </div>
+
+    
+    <section id="contact">
+        <h2>联系我们</h2>
+        <br>
+        <form onsubmit="return showMessage()">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">电子邮件:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">留言:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">提交</button>
+        </form>
+        <script>
+            function showMessage(){
+                alert("感谢您的参与！");
+                window.location.href="index.html" ;
+                return false;
+            }
+        </script>
+    </section>
+    <footer>
+        <h2>小新在这里祝您天天开心哦！</h2>
+        <br>
+        <br>
+        <p>&copy;Gis实习一 114231 李欣憶 20231001349</p>
+        <br>
+        <p>图片、视频、数据来源于网络</p>
+    </footer>
+</body>
+</html>

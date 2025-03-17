@@ -1,0 +1,315 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 页面基础样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* 顶部菜单 */
+header {
+    height: 70px;
+    background-color: #0472a9;
+    color: white;
+    padding: 5px 0;
+    text-align: right;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    
+}
+
+.logo{
+    display: flex;  /* 启用 flexbox 布局 */
+    align-items: center; /* 使图片和菜单项垂直居中 */
+    justify-content: space-between; /* 左右间距分布 */
+    width: 100%; /* 容器宽度填满整个页面 */
+    padding: 0 20px; /* 左右内边距，防止菜单项贴边 */
+}
+.logo img{
+    width: 4%;
+    height: auto;
+    border-radius: 60%;
+    display: flex; /* 启用 flexbox */
+    justify-content: space-between; /* 让内容在左右两侧分布 */
+    align-items: center; /* 垂直居中对齐图片和文字 */
+}
+
+.ttt{
+    font-size: 2rem;
+    color: #19709b;
+    text-align: center;
+    margin: 60px 0;
+}
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* 主体内容 */
+main {
+    padding: 20px;
+}
+
+/* 主页Banner */
+.banner{
+    text-align: center; /* 将图片在其容器内居中 */
+}
+.banner img {
+    width: 60%;
+    height: auto;
+    
+    border-radius: 10px; /* 添加圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+/* 基本信息 */
+#basic-info {
+    margin-top: 40px;
+}
+
+#basic-info h2 {
+    font-size: 2rem;
+    color: #167db0;
+    text-align: center;
+}
+
+#basic-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/*按钮*/
+/* 让按钮居中 */
+.button-container {
+    display: flex;
+    justify-content: center;  /* 水平居中 */
+    align-items: center;      /* 垂直居中（可选） */
+
+}
+
+/* 按钮样式 */
+.blue-button {
+    background-color: #3498db; /* 蓝色背景 */
+    color: white;              /* 白色文字 */
+    font-size: 18px;           /* 字体大小 */
+    padding: 12px 24px;        /* 按钮内边距 */
+    border: none;              /* 去除默认边框 */
+    border-radius: 8px;        /* 圆角 */
+    cursor: pointer;           /* 鼠标悬停变手型 */
+    transition: all 0.3s ease; /* 平滑过渡动画 */
+}
+
+/* 按钮悬停效果 */
+.blue-button:hover {
+    background-color: #2980b9; /* 悬停时变深蓝色 */
+}
+
+/* 按钮点击效果 */
+.blue-button:active {
+    background-color: #1f6690; /* 点击时更深的蓝色 */
+    transform: scale(0.95);   /* 点击时稍微缩小 */
+}
+
+
+/* 图片展示 */
+#gallery {
+    margin-top: 40px;
+}
+
+#gallery h2 {
+    font-size: 2rem;
+    color: #197bac;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 30%;
+    min-width: 200px;
+}
+
+.gallery-item img {
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+/* 人物介绍 */
+#characters {
+    margin-top: 40px;
+}
+
+#characters h2 {
+    font-size: 2rem;
+    color: #19709b;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.characters {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.character {
+    width: 10%;
+    min-width: 250px;
+    text-align: center;
+}
+
+.character h3 {
+    font-size: 1.5rem;
+    color: #1977a5;
+    margin-top: 10px;
+}
+
+.character p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.character img{
+    width: 210px;
+    height: auto;
+    border-radius: 10%;
+}
+
+
+.video-container {
+    width: 35%;           /* 视频容器宽度为80% */
+    max-width: 800px;     /* 最大宽度为800px */
+    margin: auto;         /* 水平居中 */
+    display: block;       /* 设置容器为块级元素 */
+}
+video {
+
+    width: 100%;  /* 设置视频宽度为父容器的100% */
+    height: auto; /* 高度自适应 */
+    border-radius: 15px; /* 设置视频的圆角，值可以根据需要调整 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 给视频添加阴影效果 */
+
+  }
+
+
+/*表格*/
+table {
+    width: 60%;  /* 设置表格宽度 */
+    margin: 20px auto; /* 让表格居中 */
+    border-collapse: collapse; /* 合并边框 */
+    font-size: 18px; /* 文字大小 */
+}
+
+/* 设置表头 */
+th {
+    background-color: #359be3; /* 绿色背景 */
+    color: white; /* 文字颜色 */
+    padding: 10px;
+}
+
+/* 设置表格的行和列 */
+td, th {
+    border: 1px solid #ddd; /* 灰色边框 */
+    padding: 10px;
+    text-align: center;
+}
+
+/* 隔行变色 */
+tbody tr:nth-child(even) {
+    background-color: #b7dcf1;
+}
+
+/* 鼠标悬停变色 */
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+
+/* 联系表单 */
+
+#contact {
+    margin-top: 40px;
+    text-align: center;
+}
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #1474a3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #0088cc;
+}
+.banner2{
+    text-align: center; /* 将图片在其容器内居中 */
+}
+.banner2 img {
+    width: 35%;
+    height: auto;
+    
+    border-radius: 10px; /* 添加圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+
+/* 页脚 */
+footer {
+    background-color: #157bae;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
