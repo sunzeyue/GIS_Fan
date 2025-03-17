@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的高中</title>
+    <link rel="stylesheet" href="supxu.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./picture/logo.png" alt="标志">
+        </div>
+        <div class="right-box">
+            <input type="text" class="search-box" placeholder="搜索...">
+            <a href="./web.html">首页</a>
+            <a href="https://www.gzsdfz.cn/">学校动态</a>
+            <a href="./web1.html">班级相册</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="photo-gallery">
+            <h2 class="content-title">毕业合影</h2>
+            <img src="./picture/合照1.jpg" alt="毕业合影" style="width: 30%; max-height: 400px;">
+            <img src="./picture/合照2.jpg" alt="毕业合影" style="width: 30%; max-height: 400px;">
+            <img src="./picture/合照3.jpg" alt="毕业合影" style="width: 50%; max-height: 400px;">
+        </section>
+    </main>
+
+    <div class="music-control">
+        <audio id="myAudio" autoplay>
+            <source src="./bgm/起风了.mp3" type="audio/mpeg">
+        </audio>
+        <button id="playPauseButton"></button>
+    </div>
+
+    <footer class="contact-info">
+        <p>学校地址：贵州省贵阳市</p>
+        <p>邮编：550000</p>
+        <h3>作者</h3>
+        <p>姓名：陈杰</p>
+        <p>班级：114231</p>
+        <p>学号：20231001937</p>   
+    </footer>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        var button = document.getElementById("playPauseButton");
+
+        button.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                button.style.backgroundImage = "url('./picture/暂停播放.png')";
+            } else {
+                audio.pause();
+                button.style.backgroundImage = "url('./picture/开始播放.png')";
+            }
+        });
+
+        audio.addEventListener("ended", function() {
+            button.style.backgroundImage = "url('./picture/开始播放.png')";
+        });
+    </script>
+</body>
+</html>

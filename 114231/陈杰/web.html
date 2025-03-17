@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的高中</title>
+    <link rel="stylesheet" href="supxu.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./picture/logo.png" alt="标志">
+        </div>
+        <div class="right-box">
+            <input type="text" class="search-box" placeholder="搜索...">
+            <a href="./web.html">首页</a>
+            <a href="https://www.gzsdfz.cn/">学校动态</a>
+            <a href="./web1.html">班级相册</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="project-content">
+            <h2 class="content-title">欢迎来到我的高中</h2>
+            <div class="detail-content">
+                <p>这里是贵州师范大学附属中学23届2班的主页，一个充满活力与温暖的集体。</p>
+                <p>班级的每一位同学都怀揣着梦想，努力学习，积极参加各种活动。</p>
+                <p>我们的目标是：优秀是我们唯一的追求！</p>
+            </div>
+        </section>
+        <section class="school-introduction">
+            <h2 class="content-title">学校简介</h2>
+            <div class="detail-content">
+                <p>贵州师范大学附属中学（The Middle School attached to the GuiZhou Normal University）位于贵州省贵阳市云岩区，是贵州省首批省级示范性高中。</p>
+                <p>学校创建于1901年，前期历经达德学堂、正谊中学和南明中学。</p>
+                <p>1950年9月，更名为贵州省立贵阳第二中学，1964年，更名为贵阳师范学院附属中学。</p>
+                <p>1985年，正式更名为贵州师范大学附属中学，并沿用至今。2001年，被贵州省教育厅评为首批省级示范性高中。</p>
+                <img src="./picture/校门1.jpg" alt="老校区" style="width: 30%; max-height: 400px;">
+                <img src="./picture/校门2.jpg" alt="新校区" style="width: 40%; max-height: 400px;">
+                <h3>历史沿革</h3>
+                <p><strong>达德中学</strong>：创办于1901年，时名达德算学馆，之后又两经易名，分别叫达德书社、达德学堂。1920年，升级为中学办学规模，并更名为达德中学。</p>
+                <p><strong>正谊中学</strong>：创办于1904年，时名正谊男女学部。1930年升级为中学办学规模，并更名正谊中学。</p>
+                <p><strong>南明中学</strong>：于1948年由张彭年、何朝宗二人复办。</p>
+                <p><strong>贵州师范大学附属中学</strong>：1950年9月，达德中学与正谊中学、南明中学三校合并，并更名为贵州省立贵阳第二中学。1964年，再次更名为贵阳师范学院附属中学。
+                <p>1985年，该校尘埃落定，最终更名为贵州师范大学附属中学，并沿用至今。2001年，被贵州省教育厅评为首批省级示范性高中。</p>
+                <p><strong>校训</strong>：仁、智、勇</p>
+                <p>语出《中庸》“知、仁、勇三者，天下之达德也”，为学校达德学堂的校训，其精神合乎德、智、体全面发展的教育方针，故承传沿用并赋予时代内涵。</p>
+                <ul>
+                    <li><strong>仁</strong>：仁者爱人——孝敬父母、感恩知耻、和谐相处、注重德性。</li>
+                    <li><strong>智</strong>：智者无惑——务实基础、养成习惯、勤于探究、勇于创新。</li>
+                    <li><strong>勇</strong>：勇者无惧——身体健康、心态良好、品质优秀、全面发展。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="gaokao-content">
+            <h2 class="content-title">理想在此刻绽放</h2>
+            <img src="./picture/高考.jpg" alt="高考去向图" style="width: 30%; max-height: 400px;">
+        </section>
+    </main>
+
+    <div class="music-control">
+        <audio id="myAudio" autoplay>
+            <source src="./bgm/起风了.mp3" type="audio/mpeg">
+        </audio>
+        <button id="playPauseButton"></button>
+    </div>
+
+    <footer class="contact-info">
+        <p>学校地址：贵州省贵阳市</p>
+        <p>邮编：550000</p>
+        <h3>作者</h3>
+        <p>姓名：陈杰</p>
+        <p>班级：114231</p>
+        <p>学号：20231001937</p>   
+    </footer>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        var button = document.getElementById("playPauseButton");
+
+        button.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                button.style.backgroundImage = "url('./picture/暂停播放.png')";
+            } else {
+                audio.pause();
+                button.style.backgroundImage = "url('./picture/开始播放.png')";
+            }
+        });
+
+        audio.addEventListener("ended", function() {
+            button.style.backgroundImage = "url('./picture/开始播放.png')";
+        });
+    </script>
+</body>
+</html>
