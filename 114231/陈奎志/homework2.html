@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唐人街探案系列电影</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #db7e56a0;
+            font-family: Arial, sans-serif;
+            margin: 0;/* 页面与边框之间的距离 */
+            padding: 0;/* 页面内容与边框之间的距离 */
+        }
+        header {
+            background-color: #535354;
+            padding: 20px;
+            text-align: center;/* 内容居中 */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;/* 标题字体大小 */
+        }
+        .container {  /* 内容容器 */
+            padding: 20px;
+        }
+        .image-row {  /* 图片元素容器 */
+            display: flex;/* 使图片元素在同一行 */
+            justify-content: space-between;/*图片之间均匀分布 */
+            gap: 10px; /* 图片之间的间距 */
+            margin: 20px 0;
+        }
+        .image-row img {
+            max-width: 100%;
+            width: 350px;
+            height: auto;/* 图片高度自适应 ,调整宽度，高度会按图片比例缩放 */
+            border-radius: 350px;/* 图片圆角效果 */
+            object-fit:cover;/* 图片自适应 */
+            flex: 1; /* 图片均匀分布 */
+            transition: transform 0.3s ease; /* 添加过渡效果 */
+        }
+        .image-row img:hover {
+       transform: scale(1.1); /* 悬停时放大图片 */
+        }
+        .image-caption { /* 常用类名，用于添加图片描述 */
+            margin-top: 18px; /* 文字与图片的间距 */
+            font-size: 20px;/* 字体大小 */
+            text-align: center;
+
+            color: #827373; /* 文字颜色 */
+        }
+
+ /* 基础样式 */
+        a {
+        color: #827373;
+        text-decoration: none;
+        cursor: pointer;/* 鼠标手势 */
+        }
+
+ /* 悬停效果  */
+        a:hover {
+        text-decoration: underline;/* 悬停时下划线 */
+        color: #827373;
+        } 
+
+/* 已访问链接 */
+        a:visited {
+        color: #827373
+        }
+       
+
+
+
+
+        audio {/* 音频播放器样式 */
+            width: 100%; /* 宽度占满容器 */
+            margin: 20px 0;/* 外边距 */
+        }
+
+
+
+        table {/* 设计表格样式 */
+            width: 100%;
+            border-collapse: collapse;/* 边框合并 */
+            margin: 50px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;/* 内容居左 */
+            border-bottom: 1px solid #444;/* 表格底部边框 */
+        }
+        th {
+            background-color: #333;
+        }
+        tr:hover {/* 鼠标悬停时表格背景颜色 */
+            background-color: #1f1f1f;
+        }
+
+
+        footer {/* 页脚样式 */
+            background-color: #1f1f1f;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+
+<!-- 以下为页面内容 -->
+<body>
+
+<header>
+    <h1>唐人街探案系列电影</h1>
+</header>
+
+<div class="container">
+    <h2>电影海报</h2>
+    <div class="image-row">
+        <div class="image-item">
+        <img src="陈奎志-唐探1.jpg"/>
+        <!-- <div class="image-caption">唐人街探案一</div> -->
+            <div class="image-caption">
+                <a href="https://www.bilibili.com/video/BV1AC9TYKE4Y/?spm_id_from=333.337.search-card.all.click&vd_source=56e7824b29219d2b583fe90e53f7cb6e" 
+                target="_blank" 
+                rel="noopener noreferrer">唐人街探案一
+                </a> 
+            </div>
+        </div>
+
+
+        <div class="image-item">
+        <img src="陈奎志-唐探2.jpg"/>
+        <!-- <div class="image-caption">唐人街探案二</div> -->
+            <div class="image-caption">
+                <a href="https://www.bilibili.com/video/BV1HQi1YaEsa/?spm_id_from=333.337.search-card.all.click&vd_source=56e7824b29219d2b583fe90e53f7cb6e" 
+                target="_blank" 
+                rel="noopener noreferrer">唐人街探案二
+                </a> 
+            </div>
+        </div>
+
+
+        <div class="image-item">
+        <img src="陈奎志-唐探3.jpg"/>
+        <!-- <div class="image-caption">唐人街探案三</div> -->
+            <div class="image-caption">
+                <a href="https://www.bilibili.com/video/BV1s8CjYzEoJ/?spm_id_from=333.337.search-card.all.click&vd_source=56e7824b29219d2b583fe90e53f7cb6e" 
+                target="_blank" 
+                rel="noopener noreferrer">唐人街探案三
+                </a> 
+            </div> 
+        </div>
+
+
+        <div class="image-item">
+        <img src="陈奎志-唐探1900.jpg"/>
+        <!-- <div class="image-caption">唐探1900</div> -->
+            <div class="image-caption">
+                <a href="https://www.bilibili.com/video/BV1CJAXeDE6x/?spm_id_from=333.337.search-card.all.click&vd_source=56e7824b29219d2b583fe90e53f7cb6e" 
+                target="_blank" 
+                rel="noopener noreferrer">唐探1900
+                </a> 
+            </div> 
+        </div>
+    </div>
+
+    <h2>背景音乐</h2>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <h2>电影介绍</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>名称</th>
+                <th>票房</th>
+                <th>概述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>唐人街探案1</td>
+                <td>8.23亿</td>
+                <td>泰国曼谷唐人街，探查神秘凶手</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>唐人街探案2</td>
+                <td>33.97亿</td>
+                <td>唐仁、秦风寻找杀害纽约唐人街教父七叔孙子的凶手，缉拿魔鬼医生</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>唐人街探案3</td>
+                <td>45.23亿</td>
+                <td>日本东京，烧脑密室杀人案</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>唐探1900</td>
+                <td>33亿</td>
+                <td>唐人街的前世今生，华人争取自身权利</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <p>&copy; 2025 唐人街主题网页. 陈奎志-2462342446@qq.com</p >
+</footer>
+
+</body>
+</html>
