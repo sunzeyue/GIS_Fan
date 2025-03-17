@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我最喜欢的动漫 - Chiikawa</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f0f9ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #2b6cb0;
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .character-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .character-img {
+            width: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        audio {
+            margin: 20px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ちいかわ (Chiikawa)</h1>
+        
+        <!-- 背景音乐 -->
+        <audio controls autoplay loop>
+            <source src="主题曲-自言自语.mp3" type="audio/mpeg">
+            您的浏览器不支持音频播放
+        </audio>
+
+        <!-- 角色介绍：吉伊 -->
+        <div class="character-card">
+            <img src="吉伊.png" alt="Chiikawa" class="character-img">
+            <div>
+                <h2>Chiikawa</h2>
+                <p>一只白色的小生物，大大的眼睛充满好奇心。虽然体型小巧但充满勇气，总是带着积极乐观的态度面对生活。</p>
+            </div>
+        </div>
+
+        <!-- 角色介绍：小八 -->
+        <div class="character-card">
+            <img src="小八.png" alt="Hachiware" class="character-img">
+            <div>
+                <h2>Hachiware</h2>
+                <p>一只乐观开朗的猫咪，阳光开朗，能完整说人类语言，是台词担当。</p>
+            </div>
+        </div>
+
+        <!-- 角色介绍：乌萨奇 -->
+        <div class="character-card">
+            <img src="乌萨奇.png" alt="Usagi" class="character-img">
+            <div>
+                <h2>Usagi</h2>
+                <p>一只神经大条的兔子，十足小吃货，“咿呀哈”台词出圈，神秘又自由奔放。</p>
+            </div>
+        </div>
+
+        <!-- 角色介绍：莫莫咖 -->
+        <div class="character-card">
+            <img src="莫莫咖.png" alt="Momonga" class="character-img">
+            <div>
+                <h2>Momonga</h2>
+                <p>原本并不是飞鼠，是为了能够"尽情地装可爱"掠夺了他人的身体，行为有些笨拙，但很可爱。</p>
+            </div>
+        </div>
+
+        <!-- 角色介绍：栗子馒头 -->
+        <div class="character-card">
+            <img src="栗子馒头.png" alt="Kurimanju" class="character-img">
+            <div>
+                <h2>Kurimanju</h2>
+                <p>热衷喝酒，因为太会吃而被粉丝称为"菇独的美食家”。它还会保护受欺负的小可爱，是沉稳成熟的大叔形象。</p>
+            </div>
+        </div>
+
+        <!-- 角色介绍：海獭 -->
+        <div class="character-card">
+            <img src="海獭.png" alt="Hattori" class="character-img">
+            <div>
+                <h2>Rakko</h2>
+                <p>一只可爱的海獭，总是带着各种小道具出现。性格温和善良，喜欢收集漂亮的石头和贝壳。</p>
+            </div>
+        </div>
+
+        <!-- 视频播放 -->
+        <div class="video-container">
+            <iframe width="560" height="315" 
+                src="chiikawa-第一话.mp4" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        // 自动播放音乐处理
+        document.addEventListener('click', function() {
+            const audio = document.querySelector('audio');
+            if (audio.paused) {
+                audio.play();
+            }
+        }, { once: true });
+    </script>
+</body>
+</html>
