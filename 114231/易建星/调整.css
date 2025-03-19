@@ -3,7 +3,7 @@
   padding:0;  
 }
 body{
-    background-image:url(./照片/蓝天白云.webp);
+    background-image:url(蓝天白云.webp);
     background-size:100%;
     line-height:40px;
     font-family:"楷体";
@@ -12,7 +12,7 @@ body{
     width:800px;
     margin:0 auto;
     background-color:rgba(white, white,white, 0.5);
-    background-image:url("./照片/蓝天白云.webp");
+    background-image:url("蓝天白云.webp");
     background-size:100%;
 }
 .useImgBox{
