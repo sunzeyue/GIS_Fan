@@ -9,13 +9,13 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="./picture/logo.png" alt="标志">
+            <img src="logo.png" alt="标志">
         </div>
         <div class="right-box">
             <input type="text" class="search-box" placeholder="搜索...">
-            <a href="./web.html">首页</a>
+            <a href="web.html">首页</a>
             <a href="https://www.gzsdfz.cn/">学校动态</a>
-            <a href="./web1.html">班级相册</a>
+            <a href="web1.html">班级相册</a>
         </div>
     </nav>
 
@@ -35,8 +35,8 @@
                 <p>学校创建于1901年，前期历经达德学堂、正谊中学和南明中学。</p>
                 <p>1950年9月，更名为贵州省立贵阳第二中学，1964年，更名为贵阳师范学院附属中学。</p>
                 <p>1985年，正式更名为贵州师范大学附属中学，并沿用至今。2001年，被贵州省教育厅评为首批省级示范性高中。</p>
-                <img src="./picture/校门1.jpg" alt="老校区" style="width: 30%; max-height: 400px;">
-                <img src="./picture/校门2.jpg" alt="新校区" style="width: 40%; max-height: 400px;">
+                <img src="校门1.jpg" alt="老校区" style="width: 30%; max-height: 400px;">
+                <img src="校门2.jpg" alt="新校区" style="width: 40%; max-height: 400px;">
                 <h3>历史沿革</h3>
                 <p><strong>达德中学</strong>：创办于1901年，时名达德算学馆，之后又两经易名，分别叫达德书社、达德学堂。1920年，升级为中学办学规模，并更名为达德中学。</p>
                 <p><strong>正谊中学</strong>：创办于1904年，时名正谊男女学部。1930年升级为中学办学规模，并更名正谊中学。</p>
@@ -55,13 +55,13 @@
 
         <section class="gaokao-content">
             <h2 class="content-title">理想在此刻绽放</h2>
-            <img src="./picture/高考.jpg" alt="高考去向图" style="width: 30%; max-height: 400px;">
+            <img src="高考.jpg" alt="高考去向图" style="width: 30%; max-height: 400px;">
         </section>
     </main>
 
     <div class="music-control">
         <audio id="myAudio" autoplay>
-            <source src="./bgm/起风了.mp3" type="audio/mpeg">
+            <source src="起风了.mp3" type="audio/mpeg">
         </audio>
         <button id="playPauseButton"></button>
     </div>
@@ -82,15 +82,15 @@
         button.addEventListener("click", function() {
             if (audio.paused) {
                 audio.play();
-                button.style.backgroundImage = "url('./picture/暂停播放.png')";
+                button.style.backgroundImage = "url('暂停播放.png')";
             } else {
                 audio.pause();
-                button.style.backgroundImage = "url('./picture/开始播放.png')";
+                button.style.backgroundImage = "url('开始播放.png')";
             }
         });
 
         audio.addEventListener("ended", function() {
-            button.style.backgroundImage = "url('./picture/开始播放.png')";
+            button.style.backgroundImage = "url('开始播放.png')";
         });
     </script>
 </body>
