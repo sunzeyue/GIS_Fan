@@ -13,24 +13,24 @@
         </div>
         <div class="right-box">
             <input type="text" class="search-box" placeholder="搜索...">
-            <a href="./web.html">首页</a>
+            <a href="web.html">首页</a>
             <a href="https://www.gzsdfz.cn/">学校动态</a>
-            <a href="./web1.html">班级相册</a>
+            <a href="web1.html">班级相册</a>
         </div>
     </nav>
 
     <main class="main-content">
         <section class="photo-gallery">
             <h2 class="content-title">毕业合影</h2>
-            <img src="./picture/合照1.jpg" alt="毕业合影" style="width: 30%; max-height: 400px;">
-            <img src="./picture/合照2.jpg" alt="毕业合影" style="width: 30%; max-height: 400px;">
-            <img src="./picture/合照3.jpg" alt="毕业合影" style="width: 50%; max-height: 400px;">
+            <img src="合照1.jpg" alt="毕业合影" style="width: 30%; max-height: 400px;">
+            <img src="合照2.jpg" alt="毕业合影" style="width: 30%; max-height: 400px;">
+            <img src="合照3.jpg" alt="毕业合影" style="width: 50%; max-height: 400px;">
         </section>
     </main>
 
     <div class="music-control">
         <audio id="myAudio" autoplay>
-            <source src="./bgm/起风了.mp3" type="audio/mpeg">
+            <source src="起风了.mp3" type="audio/mpeg">
         </audio>
         <button id="playPauseButton"></button>
     </div>
@@ -51,15 +51,15 @@
         button.addEventListener("click", function() {
             if (audio.paused) {
                 audio.play();
-                button.style.backgroundImage = "url('./picture/暂停播放.png')";
+                button.style.backgroundImage = "url('暂停播放.png')";
             } else {
                 audio.pause();
-                button.style.backgroundImage = "url('./picture/开始播放.png')";
+                button.style.backgroundImage = "url('开始播放.png')";
             }
         });
 
         audio.addEventListener("ended", function() {
-            button.style.backgroundImage = "url('./picture/开始播放.png')";
+            button.style.backgroundImage = "url('开始播放.png')";
         });
     </script>
 </body>
