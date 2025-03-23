@@ -10,7 +10,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: url(img/timg.jpg) no-repeat center center;
+    background: url(timg.jpg) no-repeat center center;
     background-size: contain;
     z-index: 999;
 }
