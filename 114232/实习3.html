@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 设置字符编码为 UTF - 8 -->
+    <meta charset="UTF-8" />
+    <!-- 设置页面标题 -->
+    <title>WebGIS</title>
+    <!-- 引入天地图 API，版本为 4.0，并携带密钥 -->
+    <script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=6f34e1488df81340af0b23bfd0eb7b6b"></script>
+    <link rel="stylesheet" href="CSS/styles.css"> <!-- 引入样式表 -->
+    <style>
+        /* 设置地图容器的样式，宽度为 100%，高度为 800px */
+        #mapDiv {
+            width: 100%;
+            height: 800px;
+        }
+    </style>
+</head>
+
+<body onload="initMap()">
+    <!-- 导航栏 -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">主网页</a></li>
+            <li><a href="实习1.html">个人介绍</a></li>
+            <li><a href="实习2.html">Canvas 绘图</a></li>
+            <li><a href="实习4.html">Openlayers地图</a></li>
+        </ul>
+    </nav>
+    <!-- 地图容器 -->
+    <div id="mapDiv"></div>
+
+    <script>
+        // 全局变量，用于存储地图对象
+        let map;
+        // 地图初始缩放级别
+        const zoomLevel = 15;
+        // 地图初始中心点经纬度
+        const initialLngLat = new T.LngLat(114.385456, 30.526921);
+
+        // 初始化地图的函数
+        function initMap() {
+            // 创建地图实例，并将其绑定到 id 为 mapDiv 的 DOM 元素上
+            map = new T.Map('mapDiv');
+            // 设置地图的中心点和缩放级别
+            map.centerAndZoom(initialLngLat, zoomLevel);
+
+            // 添加地图控件
+            addMapControls();
+            // 添加地图点击事件监听器
+            addMapClickEvent();
+            // 添加地图标记并设置鼠标悬停和移出事件
+            addMarker();
+            // 添加地图折线
+            addPolyline();
+            // 添加地图多边形
+            addPolygon();
+            // 显示 GeoJSON 图层
+            showGeoJSONLayer();
+        }
+
+        // 添加地图控件的函数
+        function addMapControls() {
+            // 创建比例尺控件
+            const scaleControl = new T.ScaleControl();
+            // 创建导航控件
+            const navigationControl = new T.NavigationControl();
+            // 创建鹰眼控件
+            const overviewControl = new T.OverViewControl();
+
+            // 将控件添加到地图上
+            map.addControl(scaleControl);
+            map.addControl(navigationControl);
+            map.addControl(overviewControl);
+        }
+
+        // 添加地图点击事件监听器的函数
+        function addMapClickEvent() {
+            // 为地图添加点击事件监听器，当点击地图时，在控制台输出点击位置的经纬度
+            map.addEventListener("click", function (e) {
+                console.log('点击地图位置：', e.lnglat);
+            });
+        }
+
+        // 添加地图标记的函数
+        function addMarker() {
+            // 创建地图标记，位置为初始中心点
+            const marker = new T.Marker(initialLngLat);
+
+            // 为标记添加鼠标悬停事件监听器
+            marker.addEventListener("mouseover", function () {
+                // 创建信息窗口
+                const infoWindow = new T.InfoWindow({
+                    content: "中国地质大学（武汉）",
+                    autoMove: true
+                });
+                // 打开信息窗口
+                infoWindow.open(map, initialLngLat);
+            });
+
+            // 为标记添加鼠标移出事件监听器
+            marker.addEventListener("mouseout", function () {
+                // 关闭信息窗口
+                map.closeInfoWindow();
+            });
+
+            // 将标记添加到地图上
+            map.addOverLay(marker);
+        }
+
+        // 添加地图折线的函数
+        function addPolyline() {
+            // 定义折线的顶点数组
+            const polylinePoints = [
+                new T.LngLat(114.385456, 30.526921),
+                new T.LngLat(114.386456, 30.527921),
+                new T.LngLat(114.387456, 30.528921)
+            ];
+
+            // 创建折线对象
+            const polyline = new T.Polyline(polylinePoints, {
+                strokeColor: "#FF0000",
+                strokeWeight: 3,
+                strokeOpacity: 1
+            });
+
+            // 将折线添加到地图上
+            map.addOverLay(polyline);
+        }
+
+        // 添加地图多边形的函数
+        function addPolygon() {
+            // 定义多边形的顶点数组
+            const polygonPoints = [
+                new T.LngLat(114.385456, 30.526921),
+                new T.LngLat(114.386456, 30.527921),
+                new T.LngLat(114.387456, 30.528921),
+                new T.LngLat(114.385456, 30.526921)
+            ];
+
+            // 创建多边形对象
+            const polygon = new T.Polygon(polygonPoints, {
+                strokeColor: "#00FF00",
+                fillColor: "#00FF00",
+                strokeWeight: 3,
+                strokeOpacity: 1,
+                fillOpacity: 0.5
+            });
+
+            // 将多边形添加到地图上
+            map.addOverLay(polygon);
+        }
+
+        // 显示 GeoJSON 图层的函数
+        function showGeoJSONLayer() {
+            // 定义 GeoJSON 数据
+            const geojson = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [114.385456, 30.526921]
+                        },
+                        "properties": {
+                            "name": "中国地质大学（武汉）"
+                        }
+                    }
+                ]
+            };
+
+            // 创建 GeoJSON 图层对象
+            const geoJSONLayer = new T.GeoJSONLayer({
+                geoJSON: geojson
+            });
+
+            // 将 GeoJSON 图层添加到地图上
+            map.addOverLay(geoJSONLayer);
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; 2025 版权所有</p>
+</footer>
+</html>
